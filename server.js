@@ -5,7 +5,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { createDraftOrder } from './lib/printful.js';
+import { createOrder, shippingRate } from './lib/printful.js';
+import { stripeEnabled, createCheckoutSession, getCheckoutSession, verifyWebhook } from './lib/stripe.js';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(root, 'public');
@@ -14,17 +15,21 @@ const ORDERS = path.join(root, 'data/orders.json');
 const PORT = +process.env.PORT || 3000;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'daddy';
 const PRINTFUL_DRAFTS = process.env.PRINTFUL_DRAFTS === '1';
-const STATUSES = ['ricevuto', 'pagato', 'in produzione', 'spedito', 'annullato'];
+const PRINTFUL_CONFIRM = process.env.PRINTFUL_CONFIRM === '1';
+const PUBLIC_URL = process.env.PUBLIC_URL; // es. https://daddymommyshop.com (per i link di ritorno da Stripe)
+const STATUSES = ['in attesa di pagamento', 'ricevuto', 'pagato', 'in produzione', 'spedito', 'annullato'];
+const FALLBACK_SHIPPING = { rate: 4.49, name: 'Spedizione standard', minDays: 3, maxDays: 7 };
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript',
   '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
 
 const readJson = async (f, fallback) => JSON.parse(await fs.readFile(f, 'utf8').catch(() => JSON.stringify(fallback)));
 const send = (res, code, data) => { res.writeHead(code, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(data)); };
-const body = (req) => new Promise((ok, ko) => {
-  let s = ''; req.on('data', (c) => { s += c; if (s.length > 1e5) ko(new Error('troppo grande')); });
-  req.on('end', () => { try { ok(JSON.parse(s || '{}')); } catch (e) { ko(e); } });
+const raw = (req) => new Promise((ok, ko) => {
+  let s = ''; req.on('data', (c) => { s += c; if (s.length > 1e6) ko(new Error('troppo grande')); });
+  req.on('end', () => ok(s));
 });
+const body = async (req) => JSON.parse((await raw(req)) || '{}');
 const isAdmin = (req) => {
   const a = req.headers.authorization || '';
   const given = Buffer.from(a.replace(/^Bearer /, ''));
@@ -60,25 +65,99 @@ function validateOrder(input, catalog) {
     ['name', 'email', 'phone', 'address', 'city', 'zip', 'province', 'country', 'note'].map((k) => [k, String(c[k] || '').trim().slice(0, 300)])) };
 }
 
+async function quoteShipping(items, catalog, country) {
+  try { return await shippingRate(items, catalog, country); } catch (e) { console.warn('spedizione:', e.message); return FALLBACK_SHIPPING; }
+}
+
+// Pagamento confermato: segna l'ordine come pagato e lo manda a Printful (una volta sola).
+async function markPaid(orderId, catalog, payment) {
+  const order = await withOrders((orders) => {
+    const o = orders.find((x) => x.id === orderId);
+    if (!o || o.paidAt) return null;
+    o.status = 'pagato'; o.paidAt = new Date().toISOString(); o.payment = payment;
+    return structuredClone(o);
+  });
+  if (!order) return;
+  try {
+    const pfOrder = await createOrder(order, catalog, PRINTFUL_CONFIRM);
+    await withOrders((orders) => { const o = orders.find((x) => x.id === orderId); o.printfulOrderId = pfOrder.id; if (PRINTFUL_CONFIRM) o.status = 'in produzione'; });
+  } catch (e) {
+    await withOrders((orders) => { orders.find((x) => x.id === orderId).printfulError = e.message; });
+  }
+}
+
+const baseUrl = (req) => PUBLIC_URL || `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}`;
+
 async function api(req, res, url) {
   const catalog = await readJson(CATALOG, { products: [] });
 
   if (req.method === 'GET' && url.pathname === '/api/catalog') return send(res, 200, catalog);
 
+  if (req.method === 'POST' && url.pathname === '/api/shipping') {
+    const input = await body(req);
+    const { items } = validateOrder({ ...input, customer: { name: 1, email: 'a@b.c', address: 1, city: 1, zip: 1 } }, catalog);
+    if (!items.length) return send(res, 400, { error: 'Carrello vuoto' });
+    return send(res, 200, await quoteShipping(items, catalog, String(input.country || 'IT').slice(0, 2)));
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/config') return send(res, 200, { payments: stripeEnabled() });
+
   if (req.method === 'POST' && url.pathname === '/api/orders') {
-    const { errors, items, customer } = validateOrder(await body(req), catalog);
+    const input = await body(req);
+    const { errors, items, customer } = validateOrder(input, catalog);
     if (errors.length) return send(res, 400, { errors });
+    const shipping = await quoteShipping(items, catalog, customer.country || 'IT');
+    const subtotal = Math.round(items.reduce((t, i) => t + i.price * i.qty, 0) * 100) / 100;
     const order = {
       id: 'YFD-' + Date.now().toString(36).toUpperCase(),
-      createdAt: new Date().toISOString(), status: 'ricevuto', customer, items,
-      total: Math.round(items.reduce((t, i) => t + i.price * i.qty, 0) * 100) / 100,
+      createdAt: new Date().toISOString(), status: stripeEnabled() ? 'in attesa di pagamento' : 'ricevuto',
+      lang: input.lang === 'en' ? 'en' : 'it', customer, items, subtotal, shipping,
+      total: Math.round((subtotal + shipping.rate) * 100) / 100,
     };
+    if (stripeEnabled()) {
+      try {
+        const session = await createCheckoutSession(order, baseUrl(req));
+        order.stripeSessionId = session.id;
+        await withOrders((orders) => orders.push(order));
+        return send(res, 201, { id: order.id, total: order.total, payUrl: session.url });
+      } catch (e) {
+        console.error(e);
+        return send(res, 502, { error: 'Il pagamento non si apre. Riprova tra poco.' });
+      }
+    }
     if (PRINTFUL_DRAFTS) {
-      try { order.printfulOrderId = (await createDraftOrder(order, catalog)).id; }
+      try { order.printfulOrderId = (await createOrder(order, catalog, false)).id; }
       catch (e) { order.printfulError = e.message; }
     }
     await withOrders((orders) => orders.push(order));
     return send(res, 201, { id: order.id, total: order.total });
+  }
+
+  // Ritorno da Stripe: controllo il pagamento (serve anche senza webhook).
+  const st = url.pathname.match(/^\/api\/orders\/([\w-]+)\/status$/);
+  if (req.method === 'GET' && st) {
+    const orders = await readJson(ORDERS, []);
+    const o = orders.find((x) => x.id === st[1]);
+    if (!o) return send(res, 404, { error: 'Ordine non trovato' });
+    if (!o.paidAt && o.stripeSessionId && stripeEnabled()) {
+      const session = await getCheckoutSession(o.stripeSessionId).catch(() => null);
+      if (session?.payment_status === 'paid') {
+        await markPaid(o.id, catalog, { provider: 'stripe', session: session.id, amount: session.amount_total / 100 });
+        return send(res, 200, { status: 'pagato', total: o.total });
+      }
+    }
+    return send(res, 200, { status: o.status, total: o.total });
+  }
+
+  if (req.method === 'POST' && url.pathname === '/api/stripe/webhook') {
+    const text = await raw(req);
+    if (!verifyWebhook(text, req.headers['stripe-signature'])) return send(res, 400, { error: 'Firma non valida' });
+    const event = JSON.parse(text);
+    if (event.type === 'checkout.session.completed' && event.data.object.payment_status === 'paid') {
+      const s = event.data.object;
+      await markPaid(s.metadata?.order_id || s.client_reference_id, catalog, { provider: 'stripe', session: s.id, amount: s.amount_total / 100 });
+    }
+    return send(res, 200, { received: true });
   }
 
   if (url.pathname.startsWith('/api/admin/')) {

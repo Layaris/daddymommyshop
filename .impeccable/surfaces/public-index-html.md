@@ -11,7 +11,7 @@ Proof/content: the lines and real shirt mockups; Printful prices and shipping ti
 Constraints: v1 Italian copy verbatim, English translation, Printful catalog, no online payment yet.
 
 ## Direction contract
-THESIS: A clean streetwear shop where the line is the hero. White, black and hot pink, Anton headlines, real mockups, price and size always in reach.
-REFUSES: chat UI metaphors, dark drenched backgrounds, decorative noise that hides the product.
+THESIS: The v1 bar-at-closing-time store (blush + wine, Shrikhand, receipt cart) with real Printful photos, a 3D tee in the hero and a blue light in the Uomo section.
+REFUSES: chat UI metaphors and the black/white streetwear look (both rejected by Daniele).
 FIRST VIEWPORT: headline, two shop CTAs, perks, and the featured shirt with its price.
 See DESIGN.md for tokens and components.

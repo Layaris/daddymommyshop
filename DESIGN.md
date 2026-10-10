@@ -1,28 +1,16 @@
 # Design
 
-Direction: classic streetwear store, done with care. Rejected: blush pink + wine (v1 look) and the "chat DM" world.
+Base: the first version (the bar at the end of the night). Daniele rejected the chat look and the black/white streetwear look; v1 is the one he likes.
 
 ## Tokens
-- Background #ffffff, surface #f1f0ec (matches the mockup backdrop), line #dddad3.
-- Ink #0d0d0d, secondary ink #55534e.
-- Pink #ff2e7e for decoration (ticker, spice pips, logo script). Pink #e0146a for anything carrying white text or pink text on white (AA 4.7:1).
-- Paper #fffaf0 for the napkin and the receipt.
-
-## Type
-- Anton, uppercase: headings, prices on the product page, section names.
-- Archivo: body and UI.
-- Mr Dafoe: logo script, napkin line, product tagline.
-- DM Mono: receipt and counters.
+- Default (home, Donna, Tutte): bg #f9e0e3 blush, surface #fff3f4, ink #2b0a17 wine, accent #d6124a lipstick, gold #e7a400.
+- Uomo (body[data-sec="uomo"]): bg #dbe4f6, surface #f1f5ff, ink #0b1838 night blue, accent #2346e8 electric blue, gold #ffb800. Colors transition in .5s.
+- Fonts: Shrikhand (display), Bricolage Grotesque (body), DM Mono (labels, prices, receipt).
 
 ## Components
-- Announcement bar (black), sticky header (logo, Uomo/Donna/Tutte pills, IT/EN switch, black cart pill with pink count).
-- Ticker of lines on pink. Kept on purpose from v1: decorative, aria-hidden, pauses on hover, off with reduced motion.
-- Hero: huge line "La frase giusta, addosso.", two CTAs, three perks; product shot with price chip and the napkin card that rotates lines.
-- Uomo/Donna tiles with a real mockup and gradient.
-- Product card: mockup, artwork on hover, name, tagline, price, spice pips.
-- Product page: gallery with thumbs (tee and artwork), size chips, full-width pink "Aggiungi al conto" which opens the cart.
-- Cart drawer "Il tuo conto" as a receipt (Tavolo 69).
-
-## Checked
-- impeccable detect: only the ticker marquee flagged (accepted, see above).
-- Screenshots at 1440 and 390 wide, no horizontal overflow.
+- Header, phrase ticker (kept from v1, pauses on hover), hero with v1 copy.
+- 3D tee (public/tee3d.js, three.js 0.160): puffed tee silhouette with the real artwork, drag to spin, design picker, napkin card.
+- Uomo/Donna tiles with real Printful lifestyle photos.
+- "Coppie che ci provano": real Printful couple photos with speech bubbles, 3D tilt on hover.
+- Product cards: flat Printful mockup, couple photo on hover. Product page: gallery + 3D view.
+- Cart "Il tuo conto" (receipt, Tavolo 69) with Printful shipping; checkout to Stripe.

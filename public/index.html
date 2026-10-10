@@ -5,16 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Your Favorite Daddy Shop</title>
 <meta name="description" content="Magliette con frasi da rimorchio. Stampate su richiesta, spedite a casa tua.">
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" content="#f9e0e3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;800&family=DM+Mono:wght@400;500&family=Mr+Dafoe&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!--APP-->
 <a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
-<div class="announce" data-i18n="announce">Stampata su richiesta · Spedizione in Italia e in Europa in 3–7 giorni lavorativi</div>
 <header class="top">
   <a class="brand" href="#/" data-i18n-label="home">
     <span class="brand-script">Your Favorite</span><span class="brand-block">Daddy Shop</span>
@@ -24,16 +23,12 @@
     <a href="#/donna" data-nav="donna" data-i18n="donna">Donna</a>
     <a href="#/tutte" data-nav="tutte" data-i18n="tutte">Tutte</a>
   </nav>
-  <div class="top-actions">
-    <div class="lang" role="group" data-i18n-label="language">
-      <button type="button" data-lang="it">IT</button><button type="button" data-lang="en">EN</button>
-    </div>
-    <button class="cart-btn" id="cart-btn" type="button" data-i18n-label="openCart">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
-      <span class="cart-label" data-i18n="cart">Carrello</span>
-      <span class="cart-count" id="cart-count">0</span>
-    </button>
+  <div class="lang" role="group" data-i18n-label="language">
+    <button type="button" data-lang="it">IT</button><button type="button" data-lang="en">EN</button>
   </div>
+  <button class="cart-btn" id="cart-btn" type="button" data-i18n-label="openCart">
+    <span data-i18n="cart">Carrello</span> <span class="cart-count" id="cart-count">0</span>
+  </button>
 </header>
 
 <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
@@ -53,11 +48,9 @@
   <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
     <div class="drawer-head">
       <h2 id="drawer-title" data-i18n="bill">Il tuo conto</h2>
-      <button class="icon-btn" type="button" data-close data-i18n-label="closeCart">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
+      <button class="icon-btn" type="button" data-close data-i18n-label="closeCart">×</button>
     </div>
-    <div class="drawer-body" id="drawer-body"></div>
+    <div id="drawer-body"></div>
   </div>
 </aside>
 

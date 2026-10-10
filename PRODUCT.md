@@ -39,7 +39,8 @@ Phone-first browsing from Instagram/TikTok links, often in the evening. Fulfilme
 - Name: Your Favorite Daddy Shop.
 - Voice: ironic, flirtatious, self-aware, never vulgar or demeaning. Footer note that consent is not a joke stays.
 - The copy of the first site (v1, 10 Oct 2026) is binding: keep it verbatim in Italian; English is its translation.
-- Daniele rejected the blush pink + wine look (Shrikhand) and then the "chat DM" redesign. He wants a classic, clear e-commerce that sells: big lines, real mockups, price and size visible, few steps to buy.
+- 10 Oct 2026, final word: the FIRST version's look (blush pink + wine, Shrikhand, receipt cart) is the base. He rejected both the chat redesign and a black/white streetwear redesign. Uomo section switches to a blue palette.
+- Lines printed on the tees are in English only.
 
 ## Evidence on Hand
 

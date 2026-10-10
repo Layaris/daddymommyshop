@@ -1,13 +1,19 @@
 {
   "store": "Your Favorite Daddy Shop",
   "storeId": 15135959,
-  "syncedAt": "2026-10-10T06:34:35.044Z",
+  "syncedAt": "2026-10-10T09:17:23.805Z",
   "products": [
     {
       "id": "sync:480105590",
+      "slug": "call-me-daddy",
       "name": "Call me daddy.",
-      "opener": "Ehi. Ti devo dire una cosa.",
-      "tagline": "Se hai il coraggio.",
+      "it": {
+        "traduzione": "Chiamami papà.",
+        "frase": "Se hai il coraggio."
+      },
+      "en": {
+        "frase": "If you dare."
+      },
       "sections": [
         "uomo",
         "donna"
@@ -15,16 +21,12 @@
       "spice": 5,
       "price": 29.9,
       "color": "Black",
-      "colorHex": "#111111",
+      "colorHex": "#141416",
       "blank": {
         "title": "Bella+Canvas 3001 unisex"
       },
-      "en": {
-        "traduzione": "Call me daddy.",
-        "frase": "If you dare."
-      },
-      "slug": "call-me-daddy",
-      "image2": "img/call-me-daddy-art.jpg",
+      "back": false,
+      "by": "yfd",
       "sizes": [
         {
           "size": "XS",
@@ -90,8 +92,16 @@
           "inStock": true
         }
       ],
-      "image": "img/call-me-daddy.jpg",
-      "remoteImage": "https://files.cdn.printful.com/",
+      "image": "img/pf/call-me-daddy/flat-front.jpg",
+      "couple": "img/pf/call-me-daddy/couple-front.jpg",
+      "gallery": [
+        "img/pf/call-me-daddy/flat-front.jpg",
+        "img/pf/call-me-daddy/couple-front.jpg",
+        "img/pf/call-me-daddy/men-s-lifestyle-front.jpg",
+        "img/pf/call-me-daddy/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/call-me-daddy.png",
+      "artBack": null,
       "source": {
         "type": "sync",
         "id": 480105590
@@ -100,10 +110,125 @@
       "rank": 0
     },
     {
+      "id": "sync:480120480",
+      "slug": "whos-your-daddy-tonight",
+      "name": "Who's your daddy tonight?",
+      "it": {
+        "traduzione": "Chi è il tuo papà stasera?",
+        "frase": "Davanti la domanda. Dietro la risposta."
+      },
+      "en": {
+        "frase": "Front: the question. Back: the answer."
+      },
+      "sections": [
+        "uomo",
+        "donna"
+      ],
+      "spice": 5,
+      "price": 35.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": true,
+      "by": "daniele",
+      "sizes": [
+        {
+          "size": "XS",
+          "syncVariantId": 5564186100,
+          "variantId": 9527,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186098,
+          "variantId": 4016,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186097,
+          "variantId": 4017,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "L",
+          "syncVariantId": 5564186096,
+          "variantId": 4018,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186099,
+          "variantId": 4019,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186092,
+          "variantId": 4020,
+          "price": 37.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186093,
+          "variantId": 5295,
+          "price": 39.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186094,
+          "variantId": 5310,
+          "price": 41.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186095,
+          "variantId": 12871,
+          "price": 43.9,
+          "inStock": true
+        }
+      ],
+      "image": "img/pf/whos-your-daddy-tonight/flat-front.jpg",
+      "couple": "img/pf/whos-your-daddy-tonight/couple-front.jpg",
+      "gallery": [
+        "img/pf/whos-your-daddy-tonight/flat-front.jpg",
+        "img/pf/whos-your-daddy-tonight/couple-front.jpg",
+        "img/pf/whos-your-daddy-tonight/men-s-lifestyle-front.jpg",
+        "img/pf/whos-your-daddy-tonight/women-s-lifestyle-front.jpg",
+        "img/pf/whos-your-daddy-tonight/flat-back.jpg",
+        "img/pf/whos-your-daddy-tonight/couple-back.jpg",
+        "img/pf/whos-your-daddy-tonight/women-s-lifestyle-back.jpg"
+      ],
+      "art": "img/art/whos-your-daddy-tonight.png",
+      "artBack": "img/art/whos-your-daddy-tonight-back.png",
+      "source": {
+        "type": "sync",
+        "id": 480120480
+      },
+      "available": true,
+      "rank": 1
+    },
+    {
       "id": "sync:480105591",
-      "name": "Mi presti un bacio? Te lo restituisco.",
-      "opener": "Mi serve un favore.",
-      "tagline": "Interessi da concordare.",
+      "slug": "borrow-a-kiss",
+      "name": "Can I borrow a kiss? I'll give it back.",
+      "it": {
+        "traduzione": "Mi presti un bacio? Te lo restituisco.",
+        "frase": "Interessi da concordare."
+      },
+      "en": {
+        "frase": "Interest to be agreed."
+      },
       "sections": [
         "uomo",
         "donna"
@@ -111,16 +236,12 @@
       "spice": 4,
       "price": 29.9,
       "color": "White",
-      "colorHex": "#ffffff",
+      "colorHex": "#f4f3ef",
       "blank": {
         "title": "Bella+Canvas 3001 unisex"
       },
-      "en": {
-        "traduzione": "Can I borrow a kiss? I'll give it back.",
-        "frase": "Interest to be agreed."
-      },
-      "slug": "presti-un-bacio",
-      "image2": "img/presti-un-bacio-art.jpg",
+      "back": false,
+      "by": "yfd",
       "sizes": [
         {
           "size": "XS",
@@ -186,20 +307,140 @@
           "inStock": true
         }
       ],
-      "image": "img/presti-un-bacio.jpg",
-      "remoteImage": "https://files.cdn.printful.com/",
+      "image": "img/pf/borrow-a-kiss/flat-front.jpg",
+      "couple": "img/pf/borrow-a-kiss/couple-front.jpg",
+      "gallery": [
+        "img/pf/borrow-a-kiss/flat-front.jpg",
+        "img/pf/borrow-a-kiss/couple-front.jpg",
+        "img/pf/borrow-a-kiss/men-s-lifestyle-front.jpg",
+        "img/pf/borrow-a-kiss/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/borrow-a-kiss.png",
+      "artBack": null,
       "source": {
         "type": "sync",
         "id": 480105591
       },
       "available": true,
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "id": "sync:480120481",
+      "slug": "happy-vibe",
+      "name": "I need a happy vibe, not a happy ending.",
+      "it": {
+        "traduzione": "Mi serve una bella vibe, non un lieto fine.",
+        "frase": "Solo energia positiva. Quasi."
+      },
+      "en": {
+        "frase": "Good energy only. Mostly."
+      },
+      "sections": [
+        "uomo",
+        "donna"
+      ],
+      "spice": 4,
+      "price": 29.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": false,
+      "by": "daniele",
+      "sizes": [
+        {
+          "size": "XS",
+          "syncVariantId": 5564186109,
+          "variantId": 9527,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186107,
+          "variantId": 4016,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186106,
+          "variantId": 4017,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "L",
+          "syncVariantId": 5564186105,
+          "variantId": 4018,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186108,
+          "variantId": 4019,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186101,
+          "variantId": 4020,
+          "price": 31.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186102,
+          "variantId": 5295,
+          "price": 33.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186103,
+          "variantId": 5310,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186104,
+          "variantId": 12871,
+          "price": 37.9,
+          "inStock": true
+        }
+      ],
+      "image": "img/pf/happy-vibe/flat-front.jpg",
+      "couple": "img/pf/happy-vibe/couple-front.jpg",
+      "gallery": [
+        "img/pf/happy-vibe/flat-front.jpg",
+        "img/pf/happy-vibe/couple-front.jpg",
+        "img/pf/happy-vibe/men-s-lifestyle-front.jpg",
+        "img/pf/happy-vibe/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/happy-vibe.png",
+      "artBack": null,
+      "source": {
+        "type": "sync",
+        "id": 480120481
+      },
+      "available": true,
+      "rank": 3
     },
     {
       "id": "sync:480105592",
-      "name": "Credi al colpo di fulmine o devo ripassare?",
-      "opener": "Domanda seria.",
-      "tagline": "Ripasso volentieri.",
+      "slug": "love-at-first-sight",
+      "name": "Do you believe in love at first sight, or should I walk by again?",
+      "it": {
+        "traduzione": "Credi al colpo di fulmine o devo ripassare?",
+        "frase": "Ripasso volentieri."
+      },
+      "en": {
+        "frase": "Happy to walk by again."
+      },
       "sections": [
         "uomo",
         "donna"
@@ -207,16 +448,12 @@
       "spice": 3,
       "price": 29.9,
       "color": "White",
-      "colorHex": "#ffffff",
+      "colorHex": "#f4f3ef",
       "blank": {
         "title": "Bella+Canvas 3001 unisex"
       },
-      "en": {
-        "traduzione": "Do you believe in love at first sight, or should I walk by again?",
-        "frase": "Happy to walk by again."
-      },
-      "slug": "colpo-di-fulmine",
-      "image2": "img/colpo-di-fulmine-art.jpg",
+      "back": false,
+      "by": "yfd",
       "sizes": [
         {
           "size": "XS",
@@ -282,20 +519,142 @@
           "inStock": true
         }
       ],
-      "image": "img/colpo-di-fulmine.jpg",
-      "remoteImage": "https://files.cdn.printful.com/",
+      "image": "img/pf/love-at-first-sight/flat-front.jpg",
+      "couple": "img/pf/love-at-first-sight/couple-front.jpg",
+      "gallery": [
+        "img/pf/love-at-first-sight/flat-front.jpg",
+        "img/pf/love-at-first-sight/couple-front.jpg",
+        "img/pf/love-at-first-sight/men-s-lifestyle-front.jpg",
+        "img/pf/love-at-first-sight/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/love-at-first-sight.png",
+      "artBack": null,
       "source": {
         "type": "sync",
         "id": 480105592
       },
       "available": true,
-      "rank": 2
+      "rank": 4
+    },
+    {
+      "id": "sync:480120483",
+      "slug": "whos-your-daddy",
+      "name": "Who's your daddy? Ask nicely or pay the price.",
+      "it": {
+        "traduzione": "Chi è il tuo papà? Chiedi gentilmente o paghi il prezzo.",
+        "frase": "Chiedi gentilmente. O paghi il prezzo."
+      },
+      "en": {
+        "frase": "Ask nicely. Or pay the price."
+      },
+      "sections": [
+        "uomo"
+      ],
+      "spice": 5,
+      "price": 35.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": true,
+      "by": "daniele",
+      "sizes": [
+        {
+          "size": "XS",
+          "syncVariantId": 5564186129,
+          "variantId": 9527,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186127,
+          "variantId": 4016,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186126,
+          "variantId": 4017,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "L",
+          "syncVariantId": 5564186125,
+          "variantId": 4018,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186128,
+          "variantId": 4019,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186119,
+          "variantId": 4020,
+          "price": 37.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186121,
+          "variantId": 5295,
+          "price": 39.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186123,
+          "variantId": 5310,
+          "price": 41.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186124,
+          "variantId": 12871,
+          "price": 43.9,
+          "inStock": true
+        }
+      ],
+      "image": "img/pf/whos-your-daddy/flat-front.jpg",
+      "couple": "img/pf/whos-your-daddy/couple-front.jpg",
+      "gallery": [
+        "img/pf/whos-your-daddy/flat-front.jpg",
+        "img/pf/whos-your-daddy/couple-front.jpg",
+        "img/pf/whos-your-daddy/men-s-lifestyle-front.jpg",
+        "img/pf/whos-your-daddy/women-s-lifestyle-front.jpg",
+        "img/pf/whos-your-daddy/flat-back.jpg",
+        "img/pf/whos-your-daddy/couple-back.jpg",
+        "img/pf/whos-your-daddy/women-s-lifestyle-back.jpg"
+      ],
+      "art": "img/art/whos-your-daddy.png",
+      "artBack": "img/art/whos-your-daddy-back.png",
+      "source": {
+        "type": "sync",
+        "id": 480120483
+      },
+      "available": true,
+      "rank": 5
     },
     {
       "id": "sync:480105593",
-      "name": "Non sono un fotografo, ma ci vedo bene insieme.",
-      "opener": "Fermi tutti.",
-      "tagline": "Sta registrando.",
+      "slug": "picture-us-together",
+      "name": "I'm no photographer, but I can picture us together.",
+      "it": {
+        "traduzione": "Non sono un fotografo, ma ci vedo bene insieme.",
+        "frase": "Sta registrando."
+      },
+      "en": {
+        "frase": "Now recording."
+      },
       "sections": [
         "uomo",
         "donna"
@@ -303,16 +662,12 @@
       "spice": 3,
       "price": 29.9,
       "color": "Black",
-      "colorHex": "#111111",
+      "colorHex": "#141416",
       "blank": {
         "title": "Bella+Canvas 3001 unisex"
       },
-      "en": {
-        "traduzione": "I'm no photographer, but I can picture us together.",
-        "frase": "Now recording."
-      },
-      "slug": "ci-vedo-bene",
-      "image2": "img/ci-vedo-bene-art.jpg",
+      "back": false,
+      "by": "yfd",
       "sizes": [
         {
           "size": "XS",
@@ -378,36 +733,153 @@
           "inStock": true
         }
       ],
-      "image": "img/ci-vedo-bene.jpg",
-      "remoteImage": "https://files.cdn.printful.com/",
+      "image": "img/pf/picture-us-together/flat-front.jpg",
+      "couple": "img/pf/picture-us-together/couple-front.jpg",
+      "gallery": [
+        "img/pf/picture-us-together/flat-front.jpg",
+        "img/pf/picture-us-together/couple-front.jpg",
+        "img/pf/picture-us-together/men-s-lifestyle-front.jpg",
+        "img/pf/picture-us-together/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/picture-us-together.png",
+      "artBack": null,
       "source": {
         "type": "sync",
         "id": 480105593
       },
       "available": true,
-      "rank": 3
+      "rank": 6
+    },
+    {
+      "id": "sync:480120489",
+      "slug": "parking-ticket",
+      "name": "Are you a parking ticket? 'Cause you've got FINE written all over you.",
+      "it": {
+        "traduzione": "Sei una multa? Perché sei da sanzionare, tanto sei bella.",
+        "frase": "Paga, bellezza."
+      },
+      "en": {
+        "frase": "Pay up, gorgeous."
+      },
+      "sections": [
+        "uomo",
+        "donna"
+      ],
+      "spice": 4,
+      "price": 29.9,
+      "color": "White",
+      "colorHex": "#f4f3ef",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": false,
+      "by": "yfd",
+      "sizes": [
+        {
+          "size": "XS",
+          "syncVariantId": 5564186147,
+          "variantId": 9526,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186145,
+          "variantId": 4011,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186144,
+          "variantId": 4012,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "L",
+          "syncVariantId": 5564186143,
+          "variantId": 4013,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186146,
+          "variantId": 4014,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186139,
+          "variantId": 4015,
+          "price": 31.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186140,
+          "variantId": 5294,
+          "price": 33.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186141,
+          "variantId": 5309,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186142,
+          "variantId": 12872,
+          "price": 37.9,
+          "inStock": true
+        }
+      ],
+      "image": "img/pf/parking-ticket/flat-front.jpg",
+      "couple": "img/pf/parking-ticket/couple-front.jpg",
+      "gallery": [
+        "img/pf/parking-ticket/flat-front.jpg",
+        "img/pf/parking-ticket/couple-front.jpg",
+        "img/pf/parking-ticket/men-s-lifestyle-front.jpg",
+        "img/pf/parking-ticket/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/parking-ticket.png",
+      "artBack": null,
+      "source": {
+        "type": "sync",
+        "id": 480120489
+      },
+      "available": true,
+      "rank": 7
     },
     {
       "id": "sync:480105594",
-      "name": "Sei stanca? Mi giri in testa da tutta la sera.",
-      "opener": "Sei sveglia?",
-      "tagline": "Giro dopo giro.",
+      "slug": "running-through-my-mind",
+      "name": "Tired? You've been running through my mind all night.",
+      "it": {
+        "traduzione": "Sei stanca? Mi giri in testa da tutta la sera.",
+        "frase": "Giro dopo giro."
+      },
+      "en": {
+        "frase": "Lap after lap."
+      },
       "sections": [
-        "uomo"
+        "uomo",
+        "donna"
       ],
       "spice": 3,
       "price": 29.9,
       "color": "White",
-      "colorHex": "#ffffff",
+      "colorHex": "#f4f3ef",
       "blank": {
         "title": "Bella+Canvas 3001 unisex"
       },
-      "en": {
-        "traduzione": "Tired? You've been running through my mind all night.",
-        "frase": "Lap after lap."
-      },
-      "slug": "giri-in-testa",
-      "image2": "img/giri-in-testa-art.jpg",
+      "back": false,
+      "by": "yfd",
       "sizes": [
         {
           "size": "XS",
@@ -473,20 +945,245 @@
           "inStock": true
         }
       ],
-      "image": "img/giri-in-testa.jpg",
-      "remoteImage": "https://files.cdn.printful.com/",
+      "image": "img/pf/running-through-my-mind/flat-front.jpg",
+      "couple": "img/pf/running-through-my-mind/couple-front.jpg",
+      "gallery": [
+        "img/pf/running-through-my-mind/flat-front.jpg",
+        "img/pf/running-through-my-mind/couple-front.jpg",
+        "img/pf/running-through-my-mind/men-s-lifestyle-front.jpg",
+        "img/pf/running-through-my-mind/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/running-through-my-mind.png",
+      "artBack": null,
       "source": {
         "type": "sync",
         "id": 480105594
       },
       "available": true,
-      "rank": 4
+      "rank": 8
+    },
+    {
+      "id": "sync:480120495",
+      "slug": "call-me-daddy-classic",
+      "name": "Call me daddy. The classic.",
+      "it": {
+        "traduzione": "Chiamami papà. L'originale.",
+        "frase": "L'originale. Senza spiegazioni."
+      },
+      "en": {
+        "frase": "The original. No explanations."
+      },
+      "sections": [
+        "uomo"
+      ],
+      "spice": 5,
+      "price": 29.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": false,
+      "by": "daniele",
+      "sizes": [
+        {
+          "size": "XS",
+          "syncVariantId": 5564186200,
+          "variantId": 9527,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186198,
+          "variantId": 4016,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186197,
+          "variantId": 4017,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "L",
+          "syncVariantId": 5564186196,
+          "variantId": 4018,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186199,
+          "variantId": 4019,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186192,
+          "variantId": 4020,
+          "price": 31.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186193,
+          "variantId": 5295,
+          "price": 33.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186194,
+          "variantId": 5310,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186195,
+          "variantId": 12871,
+          "price": 37.9,
+          "inStock": true
+        }
+      ],
+      "image": "img/pf/call-me-daddy-classic/flat-front.jpg",
+      "couple": "img/pf/call-me-daddy-classic/couple-front.jpg",
+      "gallery": [
+        "img/pf/call-me-daddy-classic/flat-front.jpg",
+        "img/pf/call-me-daddy-classic/couple-front.jpg",
+        "img/pf/call-me-daddy-classic/men-s-lifestyle-front.jpg",
+        "img/pf/call-me-daddy-classic/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/call-me-daddy-classic.png",
+      "artBack": null,
+      "source": {
+        "type": "sync",
+        "id": 480120495
+      },
+      "available": true,
+      "rank": 9
+    },
+    {
+      "id": "sync:480120829",
+      "slug": "stole-the-stars",
+      "name": "Is your dad a thief? He stole the stars and put them in your eyes.",
+      "it": {
+        "traduzione": "Tuo padre fa il ladro? Ha rubato le stelle per i tuoi occhi.",
+        "frase": "Colpo grosso."
+      },
+      "en": {
+        "frase": "Smooth criminal."
+      },
+      "sections": [
+        "uomo",
+        "donna"
+      ],
+      "spice": 3,
+      "price": 29.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": false,
+      "by": "yfd",
+      "sizes": [
+        {
+          "size": "XS",
+          "syncVariantId": 5564186796,
+          "variantId": 9527,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186794,
+          "variantId": 4016,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186793,
+          "variantId": 4017,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "L",
+          "syncVariantId": 5564186792,
+          "variantId": 4018,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186795,
+          "variantId": 4019,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186788,
+          "variantId": 4020,
+          "price": 31.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186789,
+          "variantId": 5295,
+          "price": 33.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186790,
+          "variantId": 5310,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186791,
+          "variantId": 12871,
+          "price": 37.9,
+          "inStock": true
+        }
+      ],
+      "image": "img/pf/stole-the-stars/flat-front.jpg",
+      "couple": "img/pf/stole-the-stars/couple-front.jpg",
+      "gallery": [
+        "img/pf/stole-the-stars/flat-front.jpg",
+        "img/pf/stole-the-stars/couple-front.jpg",
+        "img/pf/stole-the-stars/men-s-lifestyle-front.jpg",
+        "img/pf/stole-the-stars/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/stole-the-stars.png",
+      "artBack": null,
+      "source": {
+        "type": "sync",
+        "id": 480120829
+      },
+      "available": true,
+      "rank": 10
     },
     {
       "id": "sync:480105597",
-      "name": "Hai una mappa? Mi sono perso nei tuoi occhi.",
-      "opener": "Scusa...",
-      "tagline": "Classico intramontabile.",
+      "slug": "lost-in-your-eyes",
+      "name": "Got a map? I just got lost in your eyes.",
+      "it": {
+        "traduzione": "Hai una mappa? Mi sono perso nei tuoi occhi.",
+        "frase": "Classico intramontabile."
+      },
+      "en": {
+        "frase": "A timeless classic."
+      },
       "sections": [
         "uomo",
         "donna"
@@ -494,16 +1191,12 @@
       "spice": 2,
       "price": 29.9,
       "color": "Black",
-      "colorHex": "#111111",
+      "colorHex": "#141416",
       "blank": {
         "title": "Bella+Canvas 3001 unisex"
       },
-      "en": {
-        "traduzione": "Got a map? I just got lost in your eyes.",
-        "frase": "A timeless classic."
-      },
-      "slug": "perso-nei-tuoi-occhi",
-      "image2": "img/perso-nei-tuoi-occhi-art.jpg",
+      "back": false,
+      "by": "yfd",
       "sizes": [
         {
           "size": "XS",
@@ -569,442 +1262,127 @@
           "inStock": true
         }
       ],
-      "image": "img/perso-nei-tuoi-occhi.jpg",
-      "remoteImage": "https://files.cdn.printful.com/",
+      "image": "img/pf/lost-in-your-eyes/flat-front.jpg",
+      "couple": "img/pf/lost-in-your-eyes/couple-front.jpg",
+      "gallery": [
+        "img/pf/lost-in-your-eyes/flat-front.jpg",
+        "img/pf/lost-in-your-eyes/couple-front.jpg",
+        "img/pf/lost-in-your-eyes/men-s-lifestyle-front.jpg",
+        "img/pf/lost-in-your-eyes/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/lost-in-your-eyes.png",
+      "artBack": null,
       "source": {
         "type": "sync",
         "id": 480105597
       },
       "available": true,
-      "rank": 5
+      "rank": 11
     },
     {
-      "id": "template:85429333",
-      "slug": "design-n-1",
-      "name": "Design n° 1",
-      "tagline": "",
-      "sections": [
-        "uomo"
-      ],
-      "spice": 3,
-      "price": 29.9,
-      "color": "White",
-      "colorHex": "#ffffff",
-      "blank": {
-        "id": 108,
-        "title": "Men's Fitted T-Shirt",
-        "brand": "Next Level",
-        "model": "3600"
-      },
-      "sizes": [
-        {
-          "size": "XS",
-          "variantId": 4872,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "S",
-          "variantId": 4873,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "variantId": 4874,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "variantId": 4875,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "variantId": 4876,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "variantId": 4877,
-          "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "variantId": 4878,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "variantId": 52143,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "variantId": 52148,
-          "price": 37.9,
-          "inStock": true
-        }
-      ],
-      "image": "https://files.cdn.printful.com/upload/product-templates/f3/f3a7c41659ddb0b7414529a5f9cb33f0_l",
-      "remoteImage": "https://files.cdn.printful.com/upload/product-templates/f3/f3a7c41659ddb0b7414529a5f9cb33f0_l",
-      "source": {
-        "type": "template",
-        "id": 85429333
-      },
-      "available": true,
-      "unnamed": true
-    },
-    {
-      "id": "template:82227507",
-      "slug": "design-n-2",
-      "name": "Design n° 2",
-      "tagline": "",
-      "sections": [
-        "uomo",
-        "donna"
-      ],
-      "spice": 3,
-      "price": 29.9,
-      "color": "White",
-      "colorHex": "#fffefa",
-      "blank": {
-        "id": 438,
-        "title": "Unisex Classic Tee",
-        "brand": "Gildan",
-        "model": "5000"
-      },
-      "sizes": [
-        {
-          "size": "S",
-          "variantId": 11576,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "variantId": 11577,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "variantId": 11578,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "variantId": 11579,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "variantId": 11580,
-          "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "variantId": 12650,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "variantId": 12651,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "variantId": 12652,
-          "price": 37.9,
-          "inStock": true
-        }
-      ],
-      "image": "https://files.cdn.printful.com/upload/product-templates/00/0082b2557c1e9300c2da20c30fc6a456_l",
-      "remoteImage": "https://files.cdn.printful.com/upload/product-templates/00/0082b2557c1e9300c2da20c30fc6a456_l",
-      "source": {
-        "type": "template",
-        "id": 82227507
-      },
-      "available": true,
-      "unnamed": true
-    },
-    {
-      "id": "template:82226379",
-      "slug": "design-n-3",
-      "name": "Design n° 3",
-      "tagline": "",
-      "sections": [
-        "uomo",
-        "donna"
-      ],
-      "spice": 3,
-      "price": 29.9,
-      "color": "White",
-      "colorHex": "#ffffff",
-      "blank": {
-        "id": 715,
-        "title": "Unisex Sports Jersey",
-        "brand": "SOL'S",
-        "model": "11939"
-      },
-      "sizes": [
-        {
-          "size": "S",
-          "variantId": 17527,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "variantId": 17528,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "variantId": 17529,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "variantId": 17530,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "variantId": 17531,
-          "price": 31.9,
-          "inStock": true
-        }
-      ],
-      "image": "https://files.cdn.printful.com/upload/product-templates/d6/d6d3f031ef7dd218102808b6fb6d85c3_l",
-      "remoteImage": "https://files.cdn.printful.com/upload/product-templates/d6/d6d3f031ef7dd218102808b6fb6d85c3_l",
-      "source": {
-        "type": "template",
-        "id": 82226379
-      },
-      "available": true,
-      "unnamed": true
-    },
-    {
-      "id": "template:82147090",
-      "slug": "design-n-4",
-      "name": "Design n° 4",
-      "tagline": "",
-      "sections": [
-        "uomo",
-        "donna"
-      ],
-      "spice": 3,
-      "price": 29.9,
-      "color": "Black",
-      "colorHex": "#111111",
-      "blank": {
-        "id": 456,
-        "title": "Unisex Organic Cotton Creator 2.0 T-Shirt",
-        "brand": "Stanley/Stella",
-        "model": "STTU169"
-      },
-      "sizes": [
-        {
-          "size": "XS",
-          "variantId": 53682,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "S",
-          "variantId": 11869,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "variantId": 11870,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "variantId": 11871,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "variantId": 11872,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "variantId": 11873,
-          "price": 31.4,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "variantId": 17229,
-          "price": 32.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "variantId": 17233,
-          "price": 34.4,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "variantId": 17236,
-          "price": 36.15,
-          "inStock": true
-        }
-      ],
-      "image": "https://files.cdn.printful.com/upload/product-templates/f7/f7bd6355dfa32dcc23d8a74c7b41bba2_l",
-      "remoteImage": "https://files.cdn.printful.com/upload/product-templates/f7/f7bd6355dfa32dcc23d8a74c7b41bba2_l",
-      "source": {
-        "type": "template",
-        "id": 82147090
-      },
-      "available": true,
-      "unnamed": true
-    },
-    {
-      "id": "template:82147034",
-      "slug": "design-n-5",
-      "name": "Design n° 5",
-      "tagline": "",
-      "sections": [
-        "uomo"
-      ],
-      "spice": 3,
-      "price": 29.9,
-      "color": "Black",
-      "colorHex": "#0c0b0b",
-      "blank": {
-        "id": 108,
-        "title": "Men's Fitted T-Shirt",
-        "brand": "Next Level",
-        "model": "3600"
-      },
-      "sizes": [
-        {
-          "size": "XS",
-          "variantId": 4865,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "S",
-          "variantId": 4866,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "variantId": 4867,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "variantId": 4868,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "variantId": 4869,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "variantId": 4870,
-          "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "variantId": 4871,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "variantId": 52139,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "variantId": 52144,
-          "price": 37.9,
-          "inStock": true
-        }
-      ],
-      "image": "https://files.cdn.printful.com/upload/product-templates/ec/ec1331f560924de0e8a3b3cc3b92d100_l",
-      "remoteImage": "https://files.cdn.printful.com/upload/product-templates/ec/ec1331f560924de0e8a3b3cc3b92d100_l",
-      "source": {
-        "type": "template",
-        "id": 82147034
-      },
-      "available": true,
-      "unnamed": true
-    },
-    {
-      "id": "sync:371005574",
-      "name": "Who's Your Daddy Tonight?",
-      "opener": "Sono le 23:47.",
-      "tagline": "La domanda giusta, al momento giusto.",
-      "sections": [
-        "uomo",
-        "donna"
-      ],
-      "spice": 5,
-      "price": 30,
-      "color": "Black",
-      "colorHex": "#111111",
-      "blank": {
-        "title": "Printful Men's Premium Pima Cotton T-Shirt"
+      "id": "sync:480120833",
+      "slug": "filipina-girls",
+      "name": "Resisting Filipina girls: a lost cause.",
+      "it": {
+        "traduzione": "Resistere alle ragazze filippine: causa persa.",
+        "frase": "Causa persa, e ne vado fiero."
       },
       "en": {
-        "traduzione": "Who's your daddy tonight?",
-        "frase": "The right question at the right time."
+        "frase": "A lost cause, and proud of it."
       },
-      "slug": "who-s-your-daddy-tonight",
-      "image2": null,
+      "sections": [
+        "uomo"
+      ],
+      "spice": 3,
+      "price": 29.9,
+      "color": "White",
+      "colorHex": "#f4f3ef",
+      "blank": {
+        "title": "Bella+Canvas 3001 unisex"
+      },
+      "back": false,
+      "by": "daniele",
       "sizes": [
         {
+          "size": "XS",
+          "syncVariantId": 5564186874,
+          "variantId": 9526,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "S",
+          "syncVariantId": 5564186872,
+          "variantId": 4011,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "M",
+          "syncVariantId": 5564186871,
+          "variantId": 4012,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
           "size": "L",
-          "syncVariantId": 4667655657,
-          "variantId": 14218,
-          "price": 30,
-          "inStock": false
+          "syncVariantId": 5564186870,
+          "variantId": 4013,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "XL",
+          "syncVariantId": 5564186873,
+          "variantId": 4014,
+          "price": 29.9,
+          "inStock": true
+        },
+        {
+          "size": "2XL",
+          "syncVariantId": 5564186855,
+          "variantId": 4015,
+          "price": 31.9,
+          "inStock": true
+        },
+        {
+          "size": "3XL",
+          "syncVariantId": 5564186861,
+          "variantId": 5294,
+          "price": 33.9,
+          "inStock": true
+        },
+        {
+          "size": "4XL",
+          "syncVariantId": 5564186865,
+          "variantId": 5309,
+          "price": 35.9,
+          "inStock": true
+        },
+        {
+          "size": "5XL",
+          "syncVariantId": 5564186867,
+          "variantId": 12872,
+          "price": 37.9,
+          "inStock": true
         }
       ],
-      "image": "https://files.cdn.printful.com/files/97f/97fa9cf2ab3b22e55296bd6ee1862509_preview.png",
-      "remoteImage": "https://files.cdn.printful.com/files/97f/97fa9cf2ab3b22e55296bd6ee1862509_preview.png",
+      "image": "img/pf/filipina-girls/flat-front.jpg",
+      "couple": "img/pf/filipina-girls/couple-front.jpg",
+      "gallery": [
+        "img/pf/filipina-girls/flat-front.jpg",
+        "img/pf/filipina-girls/couple-front.jpg",
+        "img/pf/filipina-girls/men-s-lifestyle-front.jpg",
+        "img/pf/filipina-girls/women-s-lifestyle-front.jpg"
+      ],
+      "art": "img/art/filipina-girls.png",
+      "artBack": null,
       "source": {
         "type": "sync",
-        "id": 371005574
+        "id": 480120833
       },
-      "available": false,
-      "rank": 6
+      "available": true,
+      "rank": 12
     }
   ]
 }
