@@ -56,23 +56,26 @@ const base = overrides.prezzoBaseDefault;
 const synced = await pf('/store/products?limit=100');
 for (const sp of synced) {
   const key = `sync:${sp.id}`;
-  const o = overrides.prodotti[key] || {};
+  // Un prodotto Printful nato da un nostro design (local:...) ne eredita immagine e testi.
+  const twin = Object.entries(overrides.prodotti).find(([k, x]) => k.startsWith('local:') && x.nome?.toLowerCase() === sp.name.toLowerCase());
+  const o = { ...(twin?.[1] || {}), ...(overrides.prodotti[key] || {}) };
   if (o.nascondi) continue;
   const detail = await pf(`/store/products/${sp.id}`);
   const v0 = detail.sync_variants[0];
-  const price = o.prezzo ?? +v0.retail_price;
+  const price = Math.min(...detail.sync_variants.map((v) => +v.retail_price));
   const sizes = detail.sync_variants.map((v) => ({
-    size: v.size, syncVariantId: v.id, variantId: v.variant_id, price: o.prezzo ?? +v.retail_price,
+    size: v.size, syncVariantId: v.id, variantId: v.variant_id, price: +v.retail_price,
     inStock: v.availability_status === 'active',
-  }));
+  })).sort((a, b) => SIZE_ORDER.indexOf(a.size) - SIZE_ORDER.indexOf(b.size));
   const name = o.nome || sp.name;
   products.push({
-    id: key, slug: slugify(name), name, opener: o.apertura || '', tagline: o.frase || '', sections: o.sezioni || ['uomo', 'donna'],
+    id: key, name, opener: o.apertura || '', tagline: o.frase || '', sections: o.sezioni || ['uomo', 'donna'],
     spice: o.sfacciataggine || 3, price, color: v0.color, colorHex: v0.color === 'Black' ? '#111111' : '#ffffff',
-    blank: { title: v0.product.name.replace(/\s*\(.*\)$/, '') },
-    sizes, image: (await downloadImage(sp.thumbnail_url, slugify(name))) || sp.thumbnail_url,
+    blank: { title: o.maglietta || v0.product.name.replace(/\s*\(.*\)$/, '').split(' | ')[0] },
+    en: o.en || null, slug: twin ? twin[0].slice(6) : slugify(name), image2: o.immagine ? o.immagine.replace('.jpg', '-art.jpg') : null,
+    sizes, image: o.immagine || (await downloadImage(sp.thumbnail_url, slugify(name))) || sp.thumbnail_url,
     remoteImage: sp.thumbnail_url, source: { type: 'sync', id: sp.id },
-    available: sizes.some((s) => s.inStock),
+    available: sizes.some((s) => s.inStock), rank: Object.keys(overrides.prodotti).indexOf(twin ? twin[0] : key),
   });
 }
 
@@ -106,11 +109,13 @@ for (const [key, o] of Object.entries(overrides.prodotti)) {
     id: key, slug: key.slice(6), name: o.nome, opener: o.apertura || '', tagline: o.frase || '',
     sections: o.sezioni || ['uomo', 'donna'], spice: o.sfacciataggine || 3, price: o.prezzo ?? base,
     color: o.colore, colorHex: o.colore === 'Black' ? '#1a1a1c' : '#f6f5f2', blank, sizes,
-    image: o.immagine, source: { type: 'local', id: key.slice(6), design: o.design },
+    en: o.en || null, image: o.immagine, source: { type: 'local', id: key.slice(6), design: o.design },
     available: sizes.length > 0, onPrintful: false,
   });
 }
 products.unshift(...local);
+const rank = (p) => (p.rank >= 0 ? p.rank : 999);
+products.sort((a, b) => (b.available - a.available) || (rank(a) - rank(b)));
 
 const out = { store: 'Your Favorite Daddy Shop', storeId: +process.env.PRINTFUL_STORE_ID || 15135959,
   syncedAt: new Date().toISOString(), products };

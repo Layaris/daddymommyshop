@@ -1,50 +1,195 @@
-// Your Favorite Daddy Shop: il negozio come una chat.
-// Ogni maglietta è una conversazione: la frase arriva come messaggio, la
-// maglietta come foto, comprare è rispondere. Funziona con il server
-// (GET /api/catalog, POST /api/orders) o in anteprima statica con
-// window.__CATALOG__ e window.__PREVIEW__ = true.
+// Your Favorite Daddy Shop: vetrina, prodotto, carrello e checkout, in italiano e in inglese.
+// Funziona con il server (GET /api/catalog, POST /api/orders) oppure in anteprima
+// statica con window.__CATALOG__ e window.__PREVIEW__ = true.
 
-const SECTIONS = { uomo: 'Uomo', donna: 'Donna' };
 const PREVIEW = !!window.__PREVIEW__;
-const COLOR_IT = { White: 'bianca', Black: 'nera' };
 const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const eur = (n) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(n);
 const store = {
   get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage non disponibile */ } },
 };
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const wait = (ms) => new Promise((r) => setTimeout(r, reduced ? 0 : ms));
+
+/* ---------- Testi IT / EN ---------- */
+const TEXT = {
+  it: {
+    skip: 'Vai al contenuto',
+    announce: 'Stampata su richiesta · Spedizione in Italia e in Europa in 3–7 giorni lavorativi',
+    home: 'Your Favorite Daddy Shop, home', sections: 'Sezioni', language: 'Lingua',
+    uomo: 'Uomo', donna: 'Donna', tutte: 'Tutte',
+    cart: 'Carrello', openCart: 'Apri il carrello', closeCart: 'Chiudi il carrello', bill: 'Il tuo conto',
+    footText: 'Ogni maglietta è stampata su richiesta da Printful e spedita in 3–7 giorni lavorativi. Niente magazzino, niente sprechi, solo frasi che funzionano (quasi sempre).',
+    footSmall: 'Le frasi sono da usare con ironia. Il consenso non è una battuta.',
+    lines: [
+      'Call me daddy.',
+      "Who's your daddy tonight?",
+      'Sei stanca? Mi giri in testa da tutta la sera.',
+      'Credi al colpo di fulmine o devo ripassare?',
+      'Non sono un fotografo, ma ci vedo bene insieme.',
+      'Mi presti un bacio? Te lo restituisco.',
+      'Hai una mappa? Mi sono perso nei tuoi occhi.',
+      'Tuo padre fa il ladro? Ha rubato le stelle per i tuoi occhi.',
+    ],
+    sec: {
+      uomo: { title: 'Uomo', sub: 'Per chi entra nel locale e la serata cambia.' },
+      donna: { title: 'Donna', sub: 'Per chi la frase la dice per prima. E vince.' },
+      tutte: { title: 'Tutte', sub: 'Tutti i design del negozio. Ogni maglietta parte in stampa solo quando la ordini.' },
+    },
+    eyebrow: 'Magliette da rimorchio · stampate su richiesta',
+    heroA: 'La frase giusta,', heroB: 'addosso.',
+    heroSub: 'Se non hai il coraggio di dirla, indossala. Magliette ironiche per chi rimorchia con stile, o almeno ci prova.',
+    shopUomo: 'Shop Uomo', shopDonna: 'Shop Donna',
+    perks: ['Stampata su richiesta', 'Spedizione 3–7 giorni', 'Ristampa gratis se difettosa'],
+    napkin: 'Scritta sul tovagliolo', another: "Un'altra", lineN: (n, t) => `Frase n° ${n} di ${t}`,
+    featured: 'La più sfacciata', buyIt: 'Comprala',
+    designs: (n) => `${n} design`,
+    houseTitle: 'Le frasi della casa', houseSub: 'Tutti i design del negozio. Ogni maglietta parte in stampa solo quando la ordini.',
+    how: [
+      ['Scegli la frase', 'Ogni design ha il suo livello di sfacciataggine, da 1 a 5. Regolati con la serata.'],
+      ['La stampiamo per te', 'Stampa diretta su cotone di qualità, fatta da Printful quando arriva il tuo ordine.'],
+      ['Arriva a casa', 'Spedizione in Italia e in Europa in 3–7 giorni lavorativi, con tracciamento.'],
+    ],
+    howTitle: 'Come funziona',
+    soon: 'Nuove frasi in arrivo.',
+    soldOut: 'Esaurita', hot: 'Piccante', spice: 'Sfacciataggine', spiceOf: (n) => `Sfacciataggine ${n} su 5`,
+    tee: 'maglietta', colors: { White: 'bianca', Black: 'nera' },
+    size: 'Taglia', fit: (donna) => `vestibilità ${donna ? 'unisex' : 'uomo'}`,
+    addToBill: 'Aggiungi al conto', chooseSize: 'Scegli una taglia',
+    added: (name, size) => `${name} (${size}) aggiunta al conto`,
+    retired: 'Questa base non è più disponibile su Printful. Torna presto: la stiamo spostando su una maglietta nuova.',
+    specs: { tee: 'Maglietta', color: 'Colore', print: 'Stampa', ship: 'Spedizione' },
+    printVal: 'Diretta su tessuto (DTG)', shipVal: '3–7 giorni lavorativi',
+    returns: 'Stampata su richiesta: per questo non accettiamo resi per cambio idea, ma se arriva difettosa la ristampiamo gratis.',
+    pairWith: 'Abbinala con', front: 'Sulla maglietta', art: 'La grafica',
+    emptyBillTitle: 'Il conto è vuoto.', emptyBillSub: 'Scegli prima una frase.', backToShop: 'Torna al negozio',
+    who: 'Chi la indossa', where: 'Dove spediamo',
+    f: { name: 'Nome e cognome', email: 'Email', phone: 'Telefono (per il corriere)', address: 'Indirizzo', city: 'Città', zip: 'CAP', province: 'Provincia', country: 'Paese', note: 'Note (facoltative)' },
+    countries: { IT: 'Italia', SM: 'San Marino', CH: 'Svizzera', FR: 'Francia', DE: 'Germania', ES: 'Spagna', AT: 'Austria' },
+    payNotice: 'Il pagamento online arriva a breve. Per ora ricevi una conferma e ti scriviamo noi per pagare prima della stampa.',
+    send: (t) => `Invia l'ordine · ${t}`, sending: 'Invio in corso…',
+    fixFields: 'Compila i campi evidenziati.', fixEmail: "Controlla l'email: manca qualcosa.",
+    sendFail: (m) => `L'ordine non è partito: ${m}. Riprova tra poco.`,
+    received: 'Ordine ricevuto', thanksTitle: 'Ci sai fare.',
+    thanksSub: 'Abbiamo ricevuto il tuo ordine. Ti scriviamo a breve per il pagamento, poi la maglietta va in stampa.',
+    lostTitle: "Qui non c'è nessuno.", lostSub: 'Forse ti sei perso nei suoi occhi.',
+    closedTitle: 'Il bancone è chiuso.', closedSub: 'Non riusciamo a caricare le magliette. Ricarica la pagina tra poco.',
+    nothingYet: 'Ancora niente.', fillsUp: 'Il conto si riempie quando scegli una frase.', seeTees: 'Guarda le magliette',
+    table: (d) => `Tavolo 69 · ${d}`, sizeColor: (s, c) => `Taglia ${s} · ${c}`,
+    removeOne: 'Togli uno', addOne: 'Aggiungi uno', remove: 'Togli',
+    tees: 'Magliette', shipping: 'Spedizione', onConfirm: 'alla conferma', total: 'Totale', checkout: 'Vai alla cassa',
+    previewId: 'ANTEPRIMA',
+  },
+  en: {
+    skip: 'Skip to content',
+    announce: 'Printed on demand · Shipping to Italy and Europe in 3–7 business days',
+    home: 'Your Favorite Daddy Shop, home', sections: 'Sections', language: 'Language',
+    uomo: 'Men', donna: 'Women', tutte: 'All',
+    cart: 'Cart', openCart: 'Open the cart', closeCart: 'Close the cart', bill: 'Your bill',
+    footText: 'Every tee is printed on demand by Printful and shipped in 3–7 business days. No warehouse, no waste, just lines that work (almost always).',
+    footSmall: 'Wear these lines with a wink. Consent is no joke.',
+    lines: [
+      'Call me daddy.',
+      "Who's your daddy tonight?",
+      "Tired? You've been running through my mind all night.",
+      'Do you believe in love at first sight, or should I walk by again?',
+      "I'm no photographer, but I can picture us together.",
+      "Can I borrow a kiss? I'll give it back.",
+      'Got a map? I just got lost in your eyes.',
+      'Is your dad a thief? He stole the stars and put them in your eyes.',
+    ],
+    sec: {
+      uomo: { title: 'Men', sub: 'For the guy who walks in and the night changes.' },
+      donna: { title: 'Women', sub: 'For the one who says the line first. And wins.' },
+      tutte: { title: 'All', sub: 'Every design in the shop. Each tee goes to print only when you order it.' },
+    },
+    eyebrow: 'Pickup-line tees · printed on demand',
+    heroA: 'The right line,', heroB: 'worn.',
+    heroSub: "If you don't dare say it, wear it. Cheeky tees for people who flirt with style, or at least give it a shot.",
+    shopUomo: 'Shop Men', shopDonna: 'Shop Women',
+    perks: ['Printed on demand', 'Ships in 3–7 days', 'Free reprint if faulty'],
+    napkin: 'Written on a napkin', another: 'Another one', lineN: (n, t) => `Line ${n} of ${t}`,
+    featured: 'The boldest one', buyIt: 'Get it',
+    designs: (n) => `${n} design${n === 1 ? '' : 's'}`,
+    houseTitle: 'House lines', houseSub: 'Every design in the shop. Each tee goes to print only when you order it.',
+    how: [
+      ['Pick the line', 'Every design has its own boldness level, from 1 to 5. Match it to the night.'],
+      ['We print it for you', 'Direct-to-garment print on quality cotton, made by Printful when your order comes in.'],
+      ['It lands at your door', 'Shipping to Italy and Europe in 3–7 business days, with tracking.'],
+    ],
+    howTitle: 'How it works',
+    soon: 'New lines coming soon.',
+    soldOut: 'Sold out', hot: 'Spicy', spice: 'Boldness', spiceOf: (n) => `Boldness ${n} of 5`,
+    tee: 'tee', colors: { White: 'white', Black: 'black' },
+    size: 'Size', fit: (donna) => `${donna ? 'unisex' : "men's"} fit`,
+    addToBill: 'Add to bill', chooseSize: 'Pick a size',
+    added: (name, size) => `${name} (${size}) added to your bill`,
+    retired: "This blank is no longer available on Printful. Check back soon: we're moving it to a new tee.",
+    specs: { tee: 'Tee', color: 'Color', print: 'Print', ship: 'Shipping' },
+    printVal: 'Direct to garment (DTG)', shipVal: '3–7 business days',
+    returns: "Printed on demand, so we don't take returns for a change of heart, but if it arrives faulty we reprint it for free.",
+    pairWith: 'Pair it with', front: 'On the tee', art: 'The artwork',
+    emptyBillTitle: 'Your bill is empty.', emptyBillSub: 'Pick a line first.', backToShop: 'Back to the shop',
+    who: "Who's wearing it", where: 'Where we ship',
+    f: { name: 'Full name', email: 'Email', phone: 'Phone (for the courier)', address: 'Address', city: 'City', zip: 'Postcode', province: 'Province / State', country: 'Country', note: 'Notes (optional)' },
+    countries: { IT: 'Italy', SM: 'San Marino', CH: 'Switzerland', FR: 'France', DE: 'Germany', ES: 'Spain', AT: 'Austria' },
+    payNotice: "Online payment is coming soon. For now you get a confirmation and we'll message you to pay before printing.",
+    send: (t) => `Place order · ${t}`, sending: 'Sending…',
+    fixFields: 'Fill in the highlighted fields.', fixEmail: 'Check your email: something is missing.',
+    sendFail: (m) => `The order didn't go through: ${m}. Try again in a moment.`,
+    received: 'Order received', thanksTitle: "You've got moves.",
+    thanksSub: "We got your order. We'll message you shortly about payment, then your tee goes to print.",
+    lostTitle: 'Nobody here.', lostSub: 'Maybe you got lost in their eyes.',
+    closedTitle: 'The bar is closed.', closedSub: "We can't load the tees right now. Reload the page in a moment.",
+    nothingYet: 'Nothing yet.', fillsUp: 'Your bill fills up when you pick a line.', seeTees: 'See the tees',
+    table: (d) => `Table 69 · ${d}`, sizeColor: (s, c) => `Size ${s} · ${c}`,
+    removeOne: 'Remove one', addOne: 'Add one', remove: 'Remove',
+    tees: 'Tees', shipping: 'Shipping', onConfirm: 'on confirmation', total: 'Total', checkout: 'Checkout',
+    previewId: 'PREVIEW',
+  },
+};
+
+const LOCALE = { it: 'it-IT', en: 'en-IE' };
+let lang = store.get('yfd-lang', null) || ((navigator.language || 'it').toLowerCase().startsWith('it') ? 'it' : 'en');
+if (!TEXT[lang]) lang = 'it';
+const T = () => TEXT[lang];
+const eur = (n) => new Intl.NumberFormat(LOCALE[lang], { style: 'currency', currency: 'EUR' }).format(n);
 
 let catalog = { products: [] };
-let products = [];
 let cart = store.get('yfd-cart', []);
 
-const byId = (id) => products.find((p) => p.id === id);
-const bySlug = (slug) => products.find((p) => p.slug === slug);
-const inSection = (s) => products.filter((p) => !s || p.sections.includes(s));
+const shown = () => catalog.products.filter((p) => !p.unnamed);
+const byId = (id) => catalog.products.find((p) => p.id === id);
+const bySlug = (slug) => catalog.products.find((p) => p.slug === slug);
+const inSection = (s) => shown().filter((p) => s === 'tutte' || p.sections.includes(s));
 const sizeOf = (p, size) => p?.sizes.find((s) => s.size === size);
-const clock = (i) => `23:${String(41 + (i * 3) % 18).padStart(2, '0')}`;
-const colorName = (p) => COLOR_IT[p.color] || p.color;
+const nameOf = (p) => (lang === 'en' && p.en?.traduzione) || p.name;
+const lineOf = (p) => (lang === 'en' && p.en?.frase) || p.tagline || '';
+const colorOf = (p) => T().colors[p.color] || p.color;
+const altOf = (p) => `${nameOf(p)}, ${T().tee} ${colorOf(p)}`;
 
-/* ---------- Pezzi grafici ---------- */
-const TICKS = '<svg class="ticks read" viewBox="0 0 18 12" aria-label="letto"><path d="M1 6.5l3.2 3.2L11 2.5M7.5 9.7L16.7 1"/></svg>';
-const SEND = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 20.4l17.4-7.5a1 1 0 0 0 0-1.8L3.4 3.6a.9.9 0 0 0-1.3 1l1.6 6.1 9.3 1.3-9.3 1.3-1.6 6.1a.9.9 0 0 0 1.3 1z"/></svg>';
-
+/* ---------- Immagini: mockup o maglietta disegnata ---------- */
+function isDark(hex) {
+  const h = (hex || '#fff').replace('#', '');
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
+  return (r * 299 + g * 587 + b * 114) / 1000 < 128;
+}
 function teeSvg(p) {
-  const dark = p.color === 'Black';
-  return `<svg viewBox="0 0 400 400" role="img" aria-label="Maglietta ${esc(colorName(p))} con la scritta ${esc(p.name)}">
-    <rect width="400" height="400" fill="#e6e4df"/>
-    <path d="M148 46 C160 62 240 62 252 46 L300 60 L360 116 L320 162 L296 146 L298 368 C232 375 168 375 102 368 L104 146 L80 162 L40 116 L100 60 Z" fill="${dark ? '#1a1a1c' : '#f6f5f2'}"/>
-    <foreignObject x="132" y="110" width="136" height="150"><div xmlns="http://www.w3.org/1999/xhtml" style="font:900 22px/1 Rubik,sans-serif;letter-spacing:-.03em;color:${dark ? '#fff4e2' : '#14113d'};text-align:center;overflow-wrap:anywhere">${esc(p.name)}</div></foreignObject>
+  const dark = isDark(p.colorHex);
+  const words = nameOf(p).toUpperCase().split(/\s+/);
+  const rows = []; let row = '';
+  for (const w of words) { if ((row + ' ' + w).trim().length > 10 && row) { rows.push(row); row = w; } else row = (row + ' ' + w).trim(); }
+  if (row) rows.push(row);
+  const fs = rows.length > 3 ? 24 : 30;
+  const y0 = 230 - ((rows.length - 1) * fs * 1.05) / 2;
+  const text = rows.map((r, i) => `<tspan x="200" y="${y0 + i * fs * 1.05}">${esc(r)}</tspan>`).join('');
+  return `<svg class="tee-svg" viewBox="0 0 400 400" role="img" aria-label="${esc(altOf(p))}">
+    <path d="M140 40 L100 52 L40 105 L72 160 L108 140 L108 370 L292 370 L292 140 L328 160 L360 105 L300 52 L260 40 Q200 76 140 40 Z"
+      fill="${esc(p.colorHex)}" stroke="${dark ? 'rgba(255,255,255,.1)' : 'rgba(0,0,0,.14)'}" stroke-width="2"/>
+    <text text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="${fs}" fill="${dark ? '#fff4e6' : '#0d0d0d'}">${text}</text>
   </svg>`;
 }
-function pic(p) {
-  if (!p.image) return teeSvg(p);
-  return `<img src="${esc(p.image)}" alt="Maglietta ${esc(colorName(p))} con la scritta ${esc(p.name)}" data-fallback="${esc(p.id)}">`;
-}
-// Se un mockup remoto non si carica, al suo posto disegno la maglietta.
+const imgTag = (p, src, cls = '', lazy = true) => `<img class="${cls}" src="${esc(src)}" alt="${esc(altOf(p))}" ${lazy ? 'loading="lazy"' : ''} data-fallback="${esc(p.id)}">`;
 document.addEventListener('error', (e) => {
   const el = e.target;
   if (el.tagName === 'IMG' && el.dataset.fallback) {
@@ -53,258 +198,356 @@ document.addEventListener('error', (e) => {
   }
 }, true);
 
-const heat = (n) => `<div class="heat">Sfacciataggine <span class="heat-bar" aria-label="${n} su 5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span></div>`;
-const meta = (t, mine) => `<div class="meta">${t}${mine ? TICKS : ''}</div>`;
-const msg = (body, { cls = '', t = '', mine = false, tail = false, i = 0 } = {}) =>
-  `<div class="msg arrive ${mine ? 'mine' : ''} ${tail ? 'tail' : ''} ${cls}" style="--i:${i}">${body}${t ? meta(t, mine) : ''}</div>`;
+function badge(p) {
+  if (!p.available) return `<span class="tag off">${T().soldOut}</span>`;
+  if (p.spice >= 5) return `<span class="tag">${T().hot}</span>`;
+  return '';
+}
+const spice = (n) => `<span class="spice" title="${esc(T().spiceOf(n))}"><span class="spice-label">${T().spice}</span>
+  <span class="spice-pips" aria-hidden="true">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span><span class="sr">${esc(T().spiceOf(n))}</span></span>`;
 
-/* ---------- Pannello conversazioni ---------- */
-function inbox(section, currentId) {
-  const list = inSection(section);
-  return `
-  <div class="inbox-top">
-    <h2>${section ? SECTIONS[section] : 'Le frasi'}</h2>
-    <nav class="pills" aria-label="Sezioni">
-      <a class="pill" href="#/tutte" ${!section ? 'aria-current="page"' : ''}>Tutte</a>
-      <a class="pill" href="#/uomo" ${section === 'uomo' ? 'aria-current="page"' : ''}>Uomo</a>
-      <a class="pill" href="#/donna" ${section === 'donna' ? 'aria-current="page"' : ''}>Donna</a>
-    </nav>
+const card = (p) => `<a class="card${p.available ? '' : ' is-off'}" href="#/p/${esc(p.slug)}">
+  <div class="card-media">
+    ${badge(p)}
+    ${p.image ? imgTag(p, p.image, 'img-a') : teeSvg(p)}
+    ${p.image2 ? imgTag(p, p.image2, 'img-b') : ''}
   </div>
-  <ul class="convos">${list.map((p) => `
-    <li><a class="convo" href="#/p/${esc(p.slug)}" ${p.id === currentId ? 'aria-current="true"' : ''}>
-      <span class="convo-pic">${pic(p)}</span>
-      <span class="convo-name">${esc(p.name)}</span>
-      <span class="convo-time">${eur(p.price)}</span>
-      <span class="convo-last">${esc(p.opener || p.tagline || colorName(p))}</span>
-      ${!p.available ? '<span class="convo-flag off">Esaurita</span>' : p.spice >= 5 ? '<span class="convo-flag">Piccante</span>' : '<span></span>'}
-    </a></li>`).join('')}
-  </ul>
-  <div class="inbox-foot">
-    <p>Ogni maglietta è stampata su richiesta da Printful e spedita in 3–7 giorni lavorativi.</p>
-    <p>Le frasi sono da usare con ironia. Il consenso non è una battuta.</p>
-  </div>`;
-}
+  <div class="card-body">
+    <span class="card-name">${esc(nameOf(p))}</span>
+    ${lineOf(p) ? `<span class="card-line">${esc(lineOf(p))}</span>` : ''}
+    <span class="card-foot"><span class="price">${eur(p.price)}</span>${spice(p.spice)}</span>
+  </div>
+</a>`;
 
-/* ---------- Conversazioni ---------- */
-function productThread(p, { home = false } = {}) {
-  const idx = products.indexOf(p);
-  const first = p.sizes.findIndex((s) => s.inStock !== false);
-  const sizes = p.sizes.map((s, i) => `<label><input type="radio" name="size" value="${esc(s.size)}" ${s.inStock === false ? 'disabled' : ''} ${i === first ? 'checked' : ''}><span>${esc(s.size)}</span></label>`).join('');
-  const t = clock(idx);
+/* ---------- Pagine ---------- */
+function home() {
+  const t = T();
+  const star = shown().find((p) => p.available) || shown()[0];
   return `
-  <div class="day">${home ? 'Stasera' : 'Oggi'}</div>
-  ${p.opener ? msg(`<p>${esc(p.opener)}</p>`, { t, i: 0 }) : ''}
-  ${msg(`<p class="line-text">${home ? '<span class="sr">In vetrina: </span>' : ''}${esc(p.name)}</p>`, { cls: 'line', t, i: 1 })}
-  ${msg(`${pic(p)}<div class="photo-cap"><strong id="pdp-price">${eur(p.sizes[first]?.price ?? p.price)}</strong><span>${esc(p.blank?.title || 'T-shirt')} · ${esc(colorName(p))}</span></div>`, { cls: 'photo tail', t, i: 2 })}
-  <div id="convo-tail"></div>
-  ${p.available ? `
-  <form class="reply" id="add-form" aria-label="Scegli la taglia e aggiungi al carrello">
-    <div class="reply-label"><span>Rispondi con la tua taglia</span><span>vestibilità unisex</span></div>
-    <fieldset class="sizes"><legend class="sr">Taglia</legend>${sizes}</fieldset>
-    <button class="send" type="submit">Lo voglio${SEND}</button>
-  </form>` : `
-  <div class="reply"><p class="reply-label"><span>Questa maglietta non è più disponibile su Printful. Torna presto: la stiamo rifacendo.</span></p></div>`}
-  ${msg(`${p.tagline ? `<p>${esc(p.tagline)}</p>` : ''}${heat(p.spice)}`, { t, tail: true, i: 4 })}
-  <div class="msg arrive" style="--i:5"><dl class="details">
-    <div><dt>Maglietta</dt><dd>${esc(p.blank?.title || '')}</dd></div>
-    <div><dt>Colore</dt><dd>${esc(colorName(p))}</dd></div>
-    <div><dt>Stampa</dt><dd>Diretta su tessuto</dd></div>
-    <div><dt>Spedizione</dt><dd>3–7 giorni lavorativi</dd></div>
-  </dl>${meta(t)}</div>
-  <p class="sys">Stampata solo quando la ordini. Se arriva difettosa la ristampiamo gratis.</p>`;
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">${t.eyebrow}</p>
+      <h1>${t.heroA} <em>${t.heroB}</em></h1>
+      <p class="hero-sub">${t.heroSub}</p>
+      <div class="cta">
+        <a class="btn hot" href="#/uomo">${t.shopUomo}</a>
+        <a class="btn ghost" href="#/donna">${t.shopDonna}</a>
+      </div>
+      <ul class="perks">${t.perks.map((x) => `<li>${x}</li>`).join('')}</ul>
+    </div>
+    ${star ? `<div class="hero-visual">
+      <a class="hero-shot" href="#/p/${esc(star.slug)}">
+        ${star.image ? imgTag(star, star.image, '', false) : teeSvg(star)}
+        <span class="hero-price"><span><small>${t.featured}</small>${esc(nameOf(star))}</span><b>${eur(star.price)} · ${t.buyIt}</b></span>
+      </a>
+      <div class="napkin" aria-live="polite">
+        <p class="napkin-eyebrow">${t.napkin}</p>
+        <p class="napkin-line" id="napkin-line">${esc(t.lines[0])}</p>
+        <div class="napkin-foot"><span id="napkin-n">${t.lineN(1, t.lines.length)}</span><button type="button" id="napkin-next">${t.another}</button></div>
+      </div>
+    </div>` : ''}
+  </section>
+
+  <section class="split" aria-label="${esc(t.sections)}">
+    ${['uomo', 'donna'].map((s) => {
+      const fav = { uomo: 'ci-vedo-bene', donna: 'presti-un-bacio' }[s];
+      const pick = inSection(s).find((p) => p.slug === fav && p.image) || inSection(s).find((p) => p.available && p.image);
+      return `<a href="#/${s}" class="split-${s}">
+        ${pick ? `<img src="${esc(pick.image)}" alt="" loading="lazy">` : ''}
+        <span class="split-text"><span class="count">${t.designs(inSection(s).length)}</span><span class="big">${t.sec[s].title}</span><span class="sub">${t.sec[s].sub}</span><span class="arrow" aria-hidden="true">→</span></span>
+      </a>`;
+    }).join('')}
+  </section>
+
+  <section class="block">
+    <div class="sec-head"><h2>${t.houseTitle}</h2><p>${t.houseSub}</p></div>
+    <div class="grid">${shown().map(card).join('')}</div>
+  </section>
+
+  <section class="how" aria-labelledby="how-title">
+    <h2 id="how-title">${t.howTitle}</h2>
+    <ol>${t.how.map(([a, b], i) => `<li><span class="how-n">0${i + 1}</span><strong>${a}</strong><p>${b}</p></li>`).join('')}</ol>
+  </section>`;
 }
 
-function checkoutThread() {
-  if (!cart.length) return `<div class="day">Oggi</div>${msg('<p>Il carrello è vuoto. Prima scegli una frase.</p><a class="link-btn" href="#/tutte">Guarda le frasi</a>', { tail: true })}`;
+function section(s) {
+  const t = T(); const list = inSection(s);
+  return `
+  <section class="page-head">
+    <p class="eyebrow">${t.designs(list.length)}</p>
+    <h1>${t.sec[s].title}</h1>
+    <p>${t.sec[s].sub}</p>
+  </section>
+  <section class="block">${list.length ? `<div class="grid">${list.map(card).join('')}</div>` : `<p class="note">${t.soon}</p>`}</section>`;
+}
+
+function product(slug) {
+  const t = T(); const p = bySlug(slug);
+  if (!p || p.unnamed) return notFound();
+  const sec = p.sections[0];
+  const first = p.sizes.findIndex((x) => x.inStock !== false);
+  const sizes = p.sizes.map((s, i) => `<label><input type="radio" name="size" value="${esc(s.size)}" ${s.inStock === false ? 'disabled' : ''} ${i === first ? 'checked' : ''}><span>${esc(s.size)}</span></label>`).join('');
+  const others = shown().filter((x) => x.id !== p.id && x.available && x.sections.some((s) => p.sections.includes(s))).slice(0, 4);
+  const shots = [[p.image, t.front], [p.image2, t.art]].filter(([src]) => src);
+  return `
+  <section class="product">
+    <div class="gallery">
+      <div class="gallery-main">${badge(p)}${shots.length ? imgTag(p, shots[0][0], '', false) : teeSvg(p)}</div>
+      ${shots.length > 1 ? `<div class="thumbs" role="group">${shots.map(([src, label], i) => `<button type="button" data-shot="${esc(src)}" aria-label="${esc(label)}" ${i === 0 ? 'aria-pressed="true"' : 'aria-pressed="false"'}><img src="${esc(src)}" alt=""></button>`).join('')}</div>` : ''}
+    </div>
+    <div class="product-info">
+      <p class="crumbs"><a href="#/${sec}">${t.sec[sec].title}</a> / ${esc(nameOf(p))}</p>
+      <h1>${esc(nameOf(p))}</h1>
+      ${lineOf(p) ? `<p class="tagline">${esc(lineOf(p))}</p>` : ''}
+      <div class="pdp-row"><p class="price big" id="pdp-price">${eur(p.sizes[first]?.price ?? p.price)}</p>${spice(p.spice)}</div>
+      ${p.available ? `
+      <form id="add-form">
+        <div class="field-label">${t.size} <span>${t.fit(p.sections.includes('donna'))}</span></div>
+        <fieldset class="sizes"><legend class="sr">${t.size}</legend>${sizes}</fieldset>
+        <button class="btn hot wide" type="submit">${t.addToBill}</button>
+      </form>` : `<p class="notice">${t.retired}</p>`}
+      <ul class="perks small">${t.perks.map((x) => `<li>${x}</li>`).join('')}</ul>
+      <dl class="specs">
+        <div><dt>${t.specs.tee}</dt><dd>${esc(p.blank?.title || '')}</dd></div>
+        <div><dt>${t.specs.color}</dt><dd>${esc(colorOf(p))}</dd></div>
+        <div><dt>${t.specs.print}</dt><dd>${t.printVal}</dd></div>
+        <div><dt>${t.specs.ship}</dt><dd>${t.shipVal}</dd></div>
+      </dl>
+      <p class="note">${t.returns}</p>
+    </div>
+  </section>
+  ${others.length ? `<section class="block"><div class="sec-head"><h2>${t.pairWith}</h2></div><div class="grid">${others.map(card).join('')}</div></section>` : ''}`;
+}
+
+function checkout() {
+  const t = T();
+  if (!cart.length) return `<section class="thanks"><h1>${t.emptyBillTitle}</h1><p>${t.emptyBillSub}</p><a class="btn hot" href="#/">${t.backToShop}</a></section>`;
   const c = store.get('yfd-customer', {});
   const v = (k) => esc(c[k] || '');
-  const recap = cart.map((i) => { const p = byId(i.productId); return `${i.qty}× ${esc(p.name)} (${esc(i.size)})`; }).join('<br>');
+  const f = (id, label, attrs, cls = '') => `<div class="f ${cls}"><label for="c-${id}">${label}</label><input id="c-${id}" name="${id}" ${attrs} value="${v(id)}"></div>`;
   return `
-  <div class="day">Oggi</div>
-  ${msg(`<p>${recap}</p>`, { mine: true, tail: true, t: 'adesso', i: 0 })}
-  ${msg('<p>Ottimi gusti. Dove te le spediamo?</p>', { t: 'adesso', i: 1 })}
-  <div class="msg form-msg tail arrive" style="--i:2">
+  <section class="checkout">
     <form class="form" id="checkout-form" novalidate>
-      <h3>Chi la indossa</h3>
-      <div class="f half"><label for="c-name">Nome e cognome</label><input id="c-name" name="name" autocomplete="name" required value="${v('name')}"></div>
-      <div class="f half"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required value="${v('email')}"></div>
-      <div class="f"><label for="c-phone">Telefono, per il corriere</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" value="${v('phone')}"></div>
-      <h3>Dove la spediamo</h3>
-      <div class="f"><label for="c-address">Indirizzo</label><input id="c-address" name="address" autocomplete="street-address" required value="${v('address')}"></div>
-      <div class="f third"><label for="c-city">Città</label><input id="c-city" name="city" autocomplete="address-level2" required value="${v('city')}"></div>
-      <div class="f third"><label for="c-zip">CAP</label><input id="c-zip" name="zip" autocomplete="postal-code" inputmode="numeric" required value="${v('zip')}"></div>
-      <div class="f third"><label for="c-province">Provincia</label><input id="c-province" name="province" autocomplete="address-level1" maxlength="2" placeholder="MI" value="${v('province')}"></div>
-      <div class="f"><label for="c-country">Paese</label>
+      <h2>${t.who}</h2>
+      ${f('name', t.f.name, 'autocomplete="name" required', 'half')}
+      ${f('email', t.f.email, 'type="email" autocomplete="email" required', 'half')}
+      ${f('phone', t.f.phone, 'type="tel" autocomplete="tel"')}
+      <h2>${t.where}</h2>
+      ${f('address', t.f.address, 'autocomplete="street-address" required')}
+      ${f('city', t.f.city, 'autocomplete="address-level2" required', 'third')}
+      ${f('zip', t.f.zip, 'autocomplete="postal-code" required', 'third')}
+      ${f('province', t.f.province, 'autocomplete="address-level1" maxlength="2" placeholder="MI"', 'third')}
+      <div class="f"><label for="c-country">${t.f.country}</label>
         <select id="c-country" name="country" autocomplete="country">
-          ${[['IT', 'Italia'], ['SM', 'San Marino'], ['CH', 'Svizzera'], ['FR', 'Francia'], ['DE', 'Germania'], ['ES', 'Spagna'], ['AT', 'Austria']].map(([k, n]) => `<option value="${k}" ${(c.country || 'IT') === k ? 'selected' : ''}>${n}</option>`).join('')}
+          ${Object.entries(t.countries).map(([k, n]) => `<option value="${k}" ${(c.country || 'IT') === k ? 'selected' : ''}>${n}</option>`).join('')}
         </select></div>
-      <div class="f"><label for="c-note">Note, se servono</label><textarea id="c-note" name="note" rows="2">${v('note')}</textarea></div>
+      <div class="f"><label for="c-note">${t.f.note}</label><textarea id="c-note" name="note" rows="2">${v('note')}</textarea></div>
       <p class="errors" id="errors" role="alert"></p>
+      <p class="notice">${t.payNotice}</p>
+      <button class="btn hot wide" type="submit">${t.send(eur(total()))}</button>
     </form>
-  </div>
-  ${msg('<p>Il pagamento online arriva a breve. Per ora ricevi la conferma e ti scriviamo noi per pagare, prima di stampare.</p>', { t: 'adesso', i: 3 })}
-  <div class="reply"><button class="send" type="submit" form="checkout-form">Invia l'ordine · ${eur(total())}${SEND}</button></div>`;
+    <div class="checkout-side">${receipt(false)}</div>
+  </section>`;
 }
 
-function thanksThread(id) {
-  return `
-  <div class="day">Oggi</div>
-  ${msg("<p>Ordine inviato.</p>", { mine: true, tail: true, t: 'adesso', i: 0 })}
-  ${msg(`<p>Ricevuto. Ci sai fare.</p><p>Ti scriviamo a breve per il pagamento, poi la maglietta va in stampa.</p><span class="order-id">${esc(id)}</span>`, { t: 'adesso', tail: true, i: 1 })}
-  <p class="sys"><a href="#/tutte">Torna alle frasi</a></p>`;
+function thanks(id) {
+  const t = T();
+  return `<section class="thanks">
+    <p class="eyebrow">${t.received}</p>
+    <h1>${t.thanksTitle}</h1>
+    <p>${t.thanksSub}</p>
+    <p class="order-id">${esc(id)}</p>
+    <a class="btn ghost" href="#/">${t.backToShop}</a>
+  </section>`;
 }
-const lostThread = () => `<div class="day">Oggi</div>${msg('<p>Qui non c\'è nessuno. Forse ti sei perso nei suoi occhi.</p><a class="link-btn" href="#/tutte">Torna alle frasi</a>', { tail: true })}`;
+const notFound = () => `<section class="thanks"><h1>${T().lostTitle}</h1><p>${T().lostSub}</p><a class="btn hot" href="#/">${T().backToShop}</a></section>`;
 
 /* ---------- Carrello ---------- */
-const total = () => cart.reduce((t, i) => t + (sizeOf(byId(i.productId), i.size)?.price ?? 0) * i.qty, 0);
-const count = () => cart.reduce((t, i) => t + i.qty, 0);
+const total = () => cart.reduce((n, i) => n + (sizeOf(byId(i.productId), i.size)?.price ?? 0) * i.qty, 0);
+const count = () => cart.reduce((n, i) => n + i.qty, 0);
 function saveCart(bump = true) {
   cart = cart.filter((i) => byId(i.productId) && i.qty > 0);
   store.set('yfd-cart', cart);
   const el = $('#cart-count');
-  el.textContent = count(); el.dataset.n = count();
+  el.textContent = count();
+  el.toggleAttribute('data-empty', !count());
   if (bump) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
 }
-function cartBody() {
-  if (!cart.length) return `<div class="empty"><p>Ancora niente qui.</p><p>Scegli una frase e rispondi con la tua taglia.</p><a class="send" href="#/tutte" data-close>Guarda le frasi</a></div>`;
-  return `<div class="items">${cart.map((i, idx) => {
+function receipt(editable) {
+  const t = T();
+  if (!cart.length) return `<div class="empty"><p class="empty-title">${t.nothingYet}</p><p class="note">${t.fillsUp}</p><a class="btn hot" href="#/tutte" data-close>${t.seeTees}</a></div>`;
+  const lines = cart.map((i, idx) => {
     const p = byId(i.productId); const s = sizeOf(p, i.size);
-    return `<div class="item"><span class="item-pic">${pic(p)}</span><div>
-      <p class="item-name">${esc(p.name)}</p><p class="item-meta">Taglia ${esc(i.size)} · ${esc(colorName(p))}</p>
-      <div class="item-row">
-        <span class="qty"><button type="button" data-qty="${idx}" data-d="-1" aria-label="Togli una">−</button><output>${i.qty}</output><button type="button" data-qty="${idx}" data-d="1" aria-label="Aggiungi una">+</button></span>
-        <span class="item-price">${eur(s.price * i.qty)}</span>
-      </div>
-      <button class="remove" type="button" data-remove="${idx}">Togli dal carrello</button>
-    </div></div>`;
-  }).join('')}</div>
-  <div class="sum"><div><span>Magliette</span><span>${count()}</span></div><div><span>Spedizione</span><span>calcolata alla conferma</span></div>
-    <div class="tot"><span>Totale</span><span>${eur(total())}</span></div></div>
-  <a class="send" href="#/cassa" data-close>Vai alla cassa${SEND}</a>`;
+    return `<div class="line">
+      ${editable ? `<span class="line-thumb">${p.image ? `<img src="${esc(p.image)}" alt="">` : ''}</span>` : ''}
+      <span class="line-main">
+        <span class="line-top"><span class="line-name">${esc(nameOf(p))}</span><span>${eur(s.price * i.qty)}</span></span>
+        <span class="line-meta">${t.sizeColor(esc(i.size), esc(colorOf(p)))}${editable ? '' : ` · ×${i.qty}`}</span>
+        ${editable ? `<span class="line-actions"><span class="qty"><button type="button" data-qty="${idx}" data-d="-1" aria-label="${t.removeOne}">−</button><output>${i.qty}</output><button type="button" data-qty="${idx}" data-d="1" aria-label="${t.addOne}">+</button></span>
+        <button class="remove" type="button" data-remove="${idx}">${t.remove}</button></span>` : ''}
+      </span>
+    </div>`;
+  }).join('');
+  return `<div class="receipt">
+    <div class="receipt-head">Your Favorite Daddy Shop<br>${t.table(new Date().toLocaleDateString(LOCALE[lang]))}</div>
+    ${lines}
+    <div class="totals">
+      <div><span>${t.tees}</span><span>${count()}</span></div>
+      <div><span>${t.shipping}</span><span>${t.onConfirm}</span></div>
+      <div class="grand"><span>${t.total}</span><span>${eur(total())}</span></div>
+    </div>
+  </div>
+  ${editable ? `<a class="btn hot wide" href="#/checkout" data-close>${t.checkout} · ${eur(total())}</a>` : ''}`;
 }
 let lastFocus = null;
 function openCart() {
   lastFocus = document.activeElement;
-  $('#drawer-body').innerHTML = cartBody();
+  $('#drawer-body').innerHTML = receipt(true);
   $('#drawer').hidden = false;
   document.body.style.overflow = 'hidden';
-  $('.sheet-panel .round').focus();
+  requestAnimationFrame(() => $('#drawer').classList.add('open'));
+  $('.drawer-panel .icon-btn').focus();
 }
 function closeCart() {
-  $('#drawer').hidden = true;
+  $('#drawer').classList.remove('open');
   document.body.style.overflow = '';
+  setTimeout(() => { $('#drawer').hidden = true; }, 220);
   lastFocus?.focus?.();
 }
-function toast(text) {
-  const t = $('#toast'); t.textContent = text; t.classList.add('show');
-  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2200);
+function toast(msg) {
+  const el = $('#toast'); el.textContent = msg; el.classList.add('show');
+  clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('show'), 2400);
+}
+
+/* ---------- Lingua ---------- */
+function applyLang() {
+  const t = T();
+  document.documentElement.lang = lang;
+  $$('[data-i18n]').forEach((el) => { const v = t[el.dataset.i18n]; if (typeof v === 'string') el.textContent = v; });
+  $$('[data-i18n-label]').forEach((el) => el.setAttribute('aria-label', t[el.dataset.i18nLabel]));
+  $$('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  $('#ticker').innerHTML = [...t.lines, ...t.lines].map((l) => `<span>${esc(l)}</span>`).join('');
 }
 
 /* ---------- Router ---------- */
 function render() {
-  const [route, raw] = location.hash.replace(/^#\/?/, '').split('/');
-  const arg = decodeURIComponent(raw || '');
-  const app = $('#app'); const main = $('#main');
-  let section = null, current = null, html, view = 'thread';
-  if (!route) { current = products[0]; html = current ? productThread(current, { home: true }) : lostThread(); view = 'home'; }
-  else if (route === 'tutte' || SECTIONS[route]) { section = SECTIONS[route] ? route : null; current = inSection(section)[0]; html = current ? productThread(current) : lostThread(); view = 'inbox'; }
-  else if (route === 'p') { current = bySlug(arg); html = current ? productThread(current) : lostThread(); section = current?.sections.length === 1 ? current.sections[0] : null; }
-  else if (route === 'cassa') html = checkoutThread();
-  else if (route === 'grazie') html = thanksThread(arg);
-  else html = lostThread();
-  app.dataset.view = view;
-  $('#inbox').innerHTML = inbox(section, current?.id);
+  const hash = location.hash.replace(/^#\/?/, '');
+  const [route, arg] = hash.split('/');
+  const main = $('#main');
+  let html;
+  if (!route) html = home();
+  else if (T().sec[route]) html = section(route);
+  else if (route === 'p') html = product(decodeURIComponent(arg || ''));
+  else if (route === 'checkout') html = checkout();
+  else if (route === 'grazie') html = thanks(decodeURIComponent(arg || ''));
+  else html = notFound();
   main.innerHTML = html;
-  $('#back').hidden = view !== 'thread';
-  if (route) {
-    window.scrollTo(0, 0);
-    main.scrollTop = 0;
-    if (view === 'thread') main.focus({ preventScroll: true });
-  }
-  bind(route, current);
+  const current = route === 'p' ? bySlug(decodeURIComponent(arg || ''))?.sections[0] : route;
+  $$('[data-nav]').forEach((a) => (a.dataset.nav === current ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
+  bindPage(route, arg);
 }
 
-function bind(route, p) {
-  const form = $('#add-form');
-  if (form && p) {
+function bindPage(route, arg) {
+  const t = T();
+  if (!route) {
+    let n = 0;
+    $('#napkin-next')?.addEventListener('click', () => {
+      n = (n + 1) % t.lines.length;
+      const line = $('#napkin-line');
+      line.classList.remove('swap'); void line.offsetWidth; line.classList.add('swap');
+      line.textContent = t.lines[n];
+      $('#napkin-n').textContent = t.lineN(n + 1, t.lines.length);
+    });
+  }
+  if (route === 'p') {
+    const p = bySlug(decodeURIComponent(arg));
+    $$('[data-shot]').forEach((b) => b.addEventListener('click', () => {
+      const img = $('.gallery-main img');
+      if (img) img.src = b.dataset.shot;
+      $$('[data-shot]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    }));
+    const form = $('#add-form');
+    if (!p || !form) return;
     const price = () => { $('#pdp-price').textContent = eur(sizeOf(p, form.size.value)?.price ?? p.price); };
-    form.addEventListener('change', price); price();
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('change', price);
+    price();
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
       const size = form.size.value;
-      if (!size) return toast('Scegli prima una taglia');
+      if (!size) return toast(t.chooseSize);
       const line = cart.find((i) => i.productId === p.id && i.size === size);
       if (line) line.qty++; else cart.push({ productId: p.id, size, qty: 1 });
       saveCart();
-      // La risposta compare in chat, poi il negozio "scrive" e conferma.
-      const tail = $('#convo-tail');
-      tail.insertAdjacentHTML('beforeend', msg(`<p>Lo voglio. Taglia ${esc(size)}.</p>`, { mine: true, tail: true, t: 'adesso' }));
-      tail.insertAdjacentHTML('beforeend', '<div class="typing arrive" aria-label="sta scrivendo"><i></i><i></i><i></i></div>');
-      await wait(700);
-      tail.lastElementChild.remove();
-      tail.insertAdjacentHTML('beforeend', msg(`<p>Fatto, è nel carrello. ${count()} ${count() === 1 ? 'maglietta' : 'magliette'}, ${eur(total())}.</p><button class="link-btn" type="button" data-open-cart>Apri il carrello</button>`, { t: 'adesso', tail: true }));
+      toast(t.added(nameOf(p), size));
+      openCart();
     });
   }
-  if (route === 'cassa') bindCheckout();
-}
-
-function bindCheckout() {
-  const form = $('#checkout-form');
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form));
-    const missing = [...form.querySelectorAll('[required]')].filter((el) => !el.value.trim());
-    form.querySelectorAll('input').forEach((el) => el.removeAttribute('aria-invalid'));
-    missing.forEach((el) => el.setAttribute('aria-invalid', 'true'));
-    const emailBad = data.email && !/^\S+@\S+\.\S+$/.test(data.email);
-    if (emailBad) $('#c-email').setAttribute('aria-invalid', 'true');
-    if (missing.length || emailBad) {
-      $('#errors').textContent = missing.length ? 'Mancano i campi evidenziati.' : "L'email non sembra giusta: controlla la chiocciola.";
-      (missing[0] || $('#c-email')).focus();
-      return;
-    }
-    store.set('yfd-customer', data);
-    const btn = document.querySelector('button[form="checkout-form"]');
-    btn.disabled = true; btn.textContent = 'Invio in corso…';
-    try {
-      let id;
-      if (PREVIEW) id = 'ANTEPRIMA-' + Date.now().toString(36).toUpperCase();
-      else {
-        const res = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: data, items: cart }) });
-        const out = await res.json();
-        if (!res.ok) throw new Error((out.errors || [out.error]).join('. '));
-        id = out.id;
+  if (route === 'checkout') {
+    const form = $('#checkout-form');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      const missing = $$('[required]', form).filter((el) => !el.value.trim());
+      $$('input', form).forEach((el) => el.removeAttribute('aria-invalid'));
+      missing.forEach((el) => el.setAttribute('aria-invalid', 'true'));
+      const emailBad = data.email && !/^\S+@\S+\.\S+$/.test(data.email);
+      if (emailBad) $('#c-email').setAttribute('aria-invalid', 'true');
+      if (missing.length || emailBad) {
+        $('#errors').textContent = missing.length ? t.fixFields : t.fixEmail;
+        (missing[0] || $('#c-email')).focus();
+        return;
       }
-      cart = []; saveCart(false);
-      location.hash = `#/grazie/${encodeURIComponent(id)}`;
-    } catch (err) {
-      $('#errors').textContent = `L'ordine non è partito (${err.message}). Riprova tra poco.`;
-      btn.disabled = false; btn.innerHTML = `Invia l'ordine · ${eur(total())}${SEND}`;
-    }
-  });
+      store.set('yfd-customer', data);
+      const btn = form.querySelector('button[type=submit]');
+      btn.disabled = true; btn.textContent = t.sending;
+      try {
+        let id;
+        if (PREVIEW) id = `${t.previewId}-${Date.now().toString(36).toUpperCase()}`;
+        else {
+          const res = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: { ...data, lang }, items: cart }) });
+          const out = await res.json();
+          if (!res.ok) throw new Error((out.errors || [out.error]).join('. '));
+          id = out.id;
+        }
+        cart = []; saveCart(false);
+        location.hash = `#/grazie/${encodeURIComponent(id)}`;
+      } catch (err) {
+        $('#errors').textContent = t.sendFail(err.message);
+        btn.disabled = false; btn.textContent = t.send(eur(total()));
+      }
+    });
+  }
 }
 
 /* ---------- Avvio ---------- */
 async function start() {
+  applyLang();
   try {
     catalog = window.__CATALOG__ || await (await fetch('/api/catalog')).json();
   } catch {
-    $('#main').innerHTML = `<div class="day">Oggi</div>${msg('<p>Non riusciamo a caricare le magliette. Ricarica la pagina tra poco.</p>', { tail: true })}`;
+    $('#main').innerHTML = `<section class="thanks"><h1>${T().closedTitle}</h1><p>${T().closedSub}</p></section>`;
     return;
   }
-  // In vetrina solo i design con un nome: i modelli Printful senza nome restano fuori finché non li battezzi.
-  products = catalog.products.filter((p) => !p.unnamed);
   saveCart(false);
   $('#cart-btn').addEventListener('click', openCart);
-  document.addEventListener('click', (e) => { if (e.target.closest('[data-open-cart]')) openCart(); });
+  $$('[data-lang]').forEach((b) => b.addEventListener('click', () => {
+    if (b.dataset.lang === lang) return;
+    lang = b.dataset.lang; store.set('yfd-lang', lang);
+    applyLang(); render();
+    if (!$('#drawer').hidden) $('#drawer-body').innerHTML = receipt(true);
+  }));
   $('#drawer').addEventListener('click', (e) => {
     const q = e.target.closest('[data-qty]'); const r = e.target.closest('[data-remove]');
-    if (q) { const i = cart[+q.dataset.qty]; i.qty = Math.max(1, Math.min(20, i.qty + +q.dataset.d)); saveCart(); $('#drawer-body').innerHTML = cartBody(); }
-    else if (r) { cart.splice(+r.dataset.remove, 1); saveCart(); $('#drawer-body').innerHTML = cartBody(); }
+    if (q) { const i = cart[+q.dataset.qty]; i.qty = Math.max(1, Math.min(20, i.qty + +q.dataset.d)); saveCart(); $('#drawer-body').innerHTML = receipt(true); }
+    else if (r) { cart.splice(+r.dataset.remove, 1); saveCart(); $('#drawer-body').innerHTML = receipt(true); }
     else if (e.target.closest('[data-close]')) closeCart();
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#drawer').hidden) closeCart(); });
-  window.addEventListener('hashchange', render);
+  window.addEventListener('hashchange', () => {
+    render();
+    window.scrollTo(0, 0);
+    if (location.hash.replace(/^#\/?/, '')) $('#main').focus({ preventScroll: true });
+  });
   render();
 }
 start();

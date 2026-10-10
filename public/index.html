@@ -5,48 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Your Favorite Daddy Shop</title>
 <meta name="description" content="Magliette con frasi da rimorchio. Stampate su richiesta, spedite a casa tua.">
-<meta name="theme-color" content="#2a2de0">
+<meta name="theme-color" content="#0d0d0d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Rubik:wght@400;500;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;800&family=DM+Mono:wght@400;500&family=Mr+Dafoe&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!--APP-->
-<a class="skip" href="#main">Vai alla conversazione</a>
-<header class="head">
-  <a class="back" id="back" href="#/" aria-label="Torna alle conversazioni" hidden>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+<a class="skip" href="#main" data-i18n="skip">Vai al contenuto</a>
+<div class="announce" data-i18n="announce">Stampata su richiesta · Spedizione in Italia e in Europa in 3–7 giorni lavorativi</div>
+<header class="top">
+  <a class="brand" href="#/" data-i18n-label="home">
+    <span class="brand-script">Your Favorite</span><span class="brand-block">Daddy Shop</span>
   </a>
-  <a class="who" href="#/" aria-label="Your Favorite Daddy Shop, home">
-    <span class="avatar"><span>Daddy</span></span>
-    <span class="who-text">
-      <span class="who-name">Your Favorite Daddy Shop</span>
-      <span class="who-status"><i></i>online · risponde con frasi da rimorchio</span>
-    </span>
-  </a>
-  <button class="bag" id="cart-btn" type="button" aria-label="Apri il carrello">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
-    <span class="badge" id="cart-count">0</span>
-  </button>
+  <nav class="nav" data-i18n-label="sections">
+    <a href="#/uomo" data-nav="uomo" data-i18n="uomo">Uomo</a>
+    <a href="#/donna" data-nav="donna" data-i18n="donna">Donna</a>
+    <a href="#/tutte" data-nav="tutte" data-i18n="tutte">Tutte</a>
+  </nav>
+  <div class="top-actions">
+    <div class="lang" role="group" data-i18n-label="language">
+      <button type="button" data-lang="it">IT</button><button type="button" data-lang="en">EN</button>
+    </div>
+    <button class="cart-btn" id="cart-btn" type="button" data-i18n-label="openCart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <span class="cart-label" data-i18n="cart">Carrello</span>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </div>
 </header>
 
-<div class="app" id="app">
-  <aside class="inbox" id="inbox" aria-label="Le frasi"></aside>
-  <main class="thread" id="main" tabindex="-1"></main>
-</div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
 
-<aside class="sheet" id="drawer" aria-label="Carrello" hidden>
-  <div class="sheet-scrim" data-close></div>
-  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
-    <div class="sheet-grip" aria-hidden="true"></div>
-    <div class="sheet-head">
-      <h2 id="sheet-title">Carrello</h2>
-      <button class="round" type="button" data-close aria-label="Chiudi il carrello">
+<main id="main" tabindex="-1"></main>
+
+<footer class="foot">
+  <div class="foot-brand">
+    <span class="brand-script">Your Favorite</span><span class="brand-block">Daddy Shop</span>
+  </div>
+  <p data-i18n="footText">Ogni maglietta è stampata su richiesta da Printful e spedita in 3–7 giorni lavorativi. Niente magazzino, niente sprechi, solo frasi che funzionano (quasi sempre).</p>
+  <p class="foot-small" data-i18n="footSmall">Le frasi sono da usare con ironia. Il consenso non è una battuta.</p>
+</footer>
+
+<aside class="drawer" id="drawer" data-i18n-label="cart" hidden>
+  <div class="drawer-scrim" data-close></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <div class="drawer-head">
+      <h2 id="drawer-title" data-i18n="bill">Il tuo conto</h2>
+      <button class="icon-btn" type="button" data-close data-i18n-label="closeCart">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
-    <div id="drawer-body"></div>
+    <div class="drawer-body" id="drawer-body"></div>
   </div>
 </aside>
 

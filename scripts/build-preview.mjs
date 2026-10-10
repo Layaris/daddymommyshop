@@ -11,12 +11,16 @@ const css = await fs.readFile(pub('styles.css'), 'utf8');
 const js = await fs.readFile(pub('app.js'), 'utf8');
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'data/catalog.json'), 'utf8'));
 
+const inline = async (file) => {
+  if (!file?.startsWith('img/')) return null; // le immagini remote non si caricano in anteprima: disegno la maglietta
+  const buf = await fs.readFile(pub(file)).catch(() => null);
+  if (!buf) return null;
+  const type = file.endsWith('.png') ? 'image/png' : file.endsWith('.webp') ? 'image/webp' : 'image/jpeg';
+  return `data:${type};base64,${buf.toString('base64')}`;
+};
 for (const p of catalog.products) {
-  if (p.image?.startsWith('img/')) {
-    const buf = await fs.readFile(pub(p.image));
-    const type = p.image.endsWith('.png') ? 'image/png' : p.image.endsWith('.webp') ? 'image/webp' : 'image/jpeg';
-    p.image = `data:${type};base64,${buf.toString('base64')}`;
-  } else p.image = null; // le immagini remote non si caricano in anteprima: disegno la maglietta
+  p.image = await inline(p.image);
+  p.image2 = await inline(p.image2);
 }
 
 const body = html.match(/<!--APP-->([\s\S]*)<!--\/APP-->/)[1];

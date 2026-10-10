@@ -1,11 +1,10 @@
 {
   "store": "Your Favorite Daddy Shop",
   "storeId": 15135959,
-  "syncedAt": "2026-10-10T06:18:07.003Z",
+  "syncedAt": "2026-10-10T06:34:35.044Z",
   "products": [
     {
-      "id": "local:call-me-daddy",
-      "slug": "call-me-daddy",
+      "id": "sync:480105590",
       "name": "Call me daddy.",
       "opener": "Ehi. Ti devo dire una cosa.",
       "tagline": "Se hai il coraggio.",
@@ -16,81 +15,92 @@
       "spice": 5,
       "price": 29.9,
       "color": "Black",
-      "colorHex": "#1a1a1c",
+      "colorHex": "#111111",
       "blank": {
-        "id": 71,
-        "title": "Unisex Staple T-Shirt",
-        "brand": "Bella + Canvas",
-        "model": "3001"
+        "title": "Bella+Canvas 3001 unisex"
       },
+      "en": {
+        "traduzione": "Call me daddy.",
+        "frase": "If you dare."
+      },
+      "slug": "call-me-daddy",
+      "image2": "img/call-me-daddy-art.jpg",
       "sizes": [
         {
           "size": "XS",
+          "syncVariantId": 5564112141,
           "variantId": 9527,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "S",
+          "syncVariantId": 5564112139,
           "variantId": 4016,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "M",
+          "syncVariantId": 5564112138,
           "variantId": 4017,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "L",
+          "syncVariantId": 5564112137,
           "variantId": 4018,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "XL",
+          "syncVariantId": 5564112140,
           "variantId": 4019,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "2XL",
+          "syncVariantId": 5564112133,
           "variantId": 4020,
           "price": 31.9,
           "inStock": true
         },
         {
           "size": "3XL",
+          "syncVariantId": 5564112134,
           "variantId": 5295,
           "price": 33.9,
           "inStock": true
         },
         {
           "size": "4XL",
+          "syncVariantId": 5564112135,
           "variantId": 5310,
           "price": 35.9,
           "inStock": true
         },
         {
           "size": "5XL",
+          "syncVariantId": 5564112136,
           "variantId": 12871,
           "price": 37.9,
           "inStock": true
         }
       ],
       "image": "img/call-me-daddy.jpg",
+      "remoteImage": "https://files.cdn.printful.com/",
       "source": {
-        "type": "local",
-        "id": "call-me-daddy",
-        "design": "../design/frasi/call-me-daddy.png"
+        "type": "sync",
+        "id": 480105590
       },
       "available": true,
-      "onPrintful": false
+      "rank": 0
     },
     {
-      "id": "local:presti-un-bacio",
-      "slug": "presti-un-bacio",
+      "id": "sync:480105591",
       "name": "Mi presti un bacio? Te lo restituisco.",
       "opener": "Mi serve un favore.",
       "tagline": "Interessi da concordare.",
@@ -101,81 +111,92 @@
       "spice": 4,
       "price": 29.9,
       "color": "White",
-      "colorHex": "#f6f5f2",
+      "colorHex": "#ffffff",
       "blank": {
-        "id": 71,
-        "title": "Unisex Staple T-Shirt",
-        "brand": "Bella + Canvas",
-        "model": "3001"
+        "title": "Bella+Canvas 3001 unisex"
       },
+      "en": {
+        "traduzione": "Can I borrow a kiss? I'll give it back.",
+        "frase": "Interest to be agreed."
+      },
+      "slug": "presti-un-bacio",
+      "image2": "img/presti-un-bacio-art.jpg",
       "sizes": [
         {
           "size": "XS",
+          "syncVariantId": 5564112150,
           "variantId": 9526,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "S",
+          "syncVariantId": 5564112148,
           "variantId": 4011,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "M",
+          "syncVariantId": 5564112147,
           "variantId": 4012,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "L",
+          "syncVariantId": 5564112146,
           "variantId": 4013,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "XL",
+          "syncVariantId": 5564112149,
           "variantId": 4014,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "2XL",
+          "syncVariantId": 5564112142,
           "variantId": 4015,
           "price": 31.9,
           "inStock": true
         },
         {
           "size": "3XL",
+          "syncVariantId": 5564112143,
           "variantId": 5294,
           "price": 33.9,
           "inStock": true
         },
         {
           "size": "4XL",
+          "syncVariantId": 5564112144,
           "variantId": 5309,
           "price": 35.9,
           "inStock": true
         },
         {
           "size": "5XL",
+          "syncVariantId": 5564112145,
           "variantId": 12872,
           "price": 37.9,
           "inStock": true
         }
       ],
       "image": "img/presti-un-bacio.jpg",
+      "remoteImage": "https://files.cdn.printful.com/",
       "source": {
-        "type": "local",
-        "id": "presti-un-bacio",
-        "design": "../design/frasi/presti-un-bacio.png"
+        "type": "sync",
+        "id": 480105591
       },
       "available": true,
-      "onPrintful": false
+      "rank": 1
     },
     {
-      "id": "local:colpo-di-fulmine",
-      "slug": "colpo-di-fulmine",
+      "id": "sync:480105592",
       "name": "Credi al colpo di fulmine o devo ripassare?",
       "opener": "Domanda seria.",
       "tagline": "Ripasso volentieri.",
@@ -186,81 +207,92 @@
       "spice": 3,
       "price": 29.9,
       "color": "White",
-      "colorHex": "#f6f5f2",
+      "colorHex": "#ffffff",
       "blank": {
-        "id": 71,
-        "title": "Unisex Staple T-Shirt",
-        "brand": "Bella + Canvas",
-        "model": "3001"
+        "title": "Bella+Canvas 3001 unisex"
       },
+      "en": {
+        "traduzione": "Do you believe in love at first sight, or should I walk by again?",
+        "frase": "Happy to walk by again."
+      },
+      "slug": "colpo-di-fulmine",
+      "image2": "img/colpo-di-fulmine-art.jpg",
       "sizes": [
         {
           "size": "XS",
+          "syncVariantId": 5564112159,
           "variantId": 9526,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "S",
+          "syncVariantId": 5564112157,
           "variantId": 4011,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "M",
+          "syncVariantId": 5564112156,
           "variantId": 4012,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "L",
+          "syncVariantId": 5564112155,
           "variantId": 4013,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "XL",
+          "syncVariantId": 5564112158,
           "variantId": 4014,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "2XL",
+          "syncVariantId": 5564112151,
           "variantId": 4015,
           "price": 31.9,
           "inStock": true
         },
         {
           "size": "3XL",
+          "syncVariantId": 5564112152,
           "variantId": 5294,
           "price": 33.9,
           "inStock": true
         },
         {
           "size": "4XL",
+          "syncVariantId": 5564112153,
           "variantId": 5309,
           "price": 35.9,
           "inStock": true
         },
         {
           "size": "5XL",
+          "syncVariantId": 5564112154,
           "variantId": 12872,
           "price": 37.9,
           "inStock": true
         }
       ],
       "image": "img/colpo-di-fulmine.jpg",
+      "remoteImage": "https://files.cdn.printful.com/",
       "source": {
-        "type": "local",
-        "id": "colpo-di-fulmine",
-        "design": "../design/frasi/colpo-di-fulmine.png"
+        "type": "sync",
+        "id": 480105592
       },
       "available": true,
-      "onPrintful": false
+      "rank": 2
     },
     {
-      "id": "local:ci-vedo-bene",
-      "slug": "ci-vedo-bene",
+      "id": "sync:480105593",
       "name": "Non sono un fotografo, ma ci vedo bene insieme.",
       "opener": "Fermi tutti.",
       "tagline": "Sta registrando.",
@@ -271,81 +303,92 @@
       "spice": 3,
       "price": 29.9,
       "color": "Black",
-      "colorHex": "#1a1a1c",
+      "colorHex": "#111111",
       "blank": {
-        "id": 71,
-        "title": "Unisex Staple T-Shirt",
-        "brand": "Bella + Canvas",
-        "model": "3001"
+        "title": "Bella+Canvas 3001 unisex"
       },
+      "en": {
+        "traduzione": "I'm no photographer, but I can picture us together.",
+        "frase": "Now recording."
+      },
+      "slug": "ci-vedo-bene",
+      "image2": "img/ci-vedo-bene-art.jpg",
       "sizes": [
         {
           "size": "XS",
+          "syncVariantId": 5564112168,
           "variantId": 9527,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "S",
+          "syncVariantId": 5564112166,
           "variantId": 4016,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "M",
+          "syncVariantId": 5564112165,
           "variantId": 4017,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "L",
+          "syncVariantId": 5564112164,
           "variantId": 4018,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "XL",
+          "syncVariantId": 5564112167,
           "variantId": 4019,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "2XL",
+          "syncVariantId": 5564112160,
           "variantId": 4020,
           "price": 31.9,
           "inStock": true
         },
         {
           "size": "3XL",
+          "syncVariantId": 5564112161,
           "variantId": 5295,
           "price": 33.9,
           "inStock": true
         },
         {
           "size": "4XL",
+          "syncVariantId": 5564112162,
           "variantId": 5310,
           "price": 35.9,
           "inStock": true
         },
         {
           "size": "5XL",
+          "syncVariantId": 5564112163,
           "variantId": 12871,
           "price": 37.9,
           "inStock": true
         }
       ],
       "image": "img/ci-vedo-bene.jpg",
+      "remoteImage": "https://files.cdn.printful.com/",
       "source": {
-        "type": "local",
-        "id": "ci-vedo-bene",
-        "design": "../design/frasi/ci-vedo-bene.png"
+        "type": "sync",
+        "id": 480105593
       },
       "available": true,
-      "onPrintful": false
+      "rank": 3
     },
     {
-      "id": "local:giri-in-testa",
-      "slug": "giri-in-testa",
+      "id": "sync:480105594",
       "name": "Sei stanca? Mi giri in testa da tutta la sera.",
       "opener": "Sei sveglia?",
       "tagline": "Giro dopo giro.",
@@ -355,81 +398,92 @@
       "spice": 3,
       "price": 29.9,
       "color": "White",
-      "colorHex": "#f6f5f2",
+      "colorHex": "#ffffff",
       "blank": {
-        "id": 71,
-        "title": "Unisex Staple T-Shirt",
-        "brand": "Bella + Canvas",
-        "model": "3001"
+        "title": "Bella+Canvas 3001 unisex"
       },
+      "en": {
+        "traduzione": "Tired? You've been running through my mind all night.",
+        "frase": "Lap after lap."
+      },
+      "slug": "giri-in-testa",
+      "image2": "img/giri-in-testa-art.jpg",
       "sizes": [
         {
           "size": "XS",
+          "syncVariantId": 5564112177,
           "variantId": 9526,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "S",
+          "syncVariantId": 5564112175,
           "variantId": 4011,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "M",
+          "syncVariantId": 5564112174,
           "variantId": 4012,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "L",
+          "syncVariantId": 5564112173,
           "variantId": 4013,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "XL",
+          "syncVariantId": 5564112176,
           "variantId": 4014,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "2XL",
+          "syncVariantId": 5564112169,
           "variantId": 4015,
           "price": 31.9,
           "inStock": true
         },
         {
           "size": "3XL",
+          "syncVariantId": 5564112170,
           "variantId": 5294,
           "price": 33.9,
           "inStock": true
         },
         {
           "size": "4XL",
+          "syncVariantId": 5564112171,
           "variantId": 5309,
           "price": 35.9,
           "inStock": true
         },
         {
           "size": "5XL",
+          "syncVariantId": 5564112172,
           "variantId": 12872,
           "price": 37.9,
           "inStock": true
         }
       ],
       "image": "img/giri-in-testa.jpg",
+      "remoteImage": "https://files.cdn.printful.com/",
       "source": {
-        "type": "local",
-        "id": "giri-in-testa",
-        "design": "../design/frasi/giri-in-testa.png"
+        "type": "sync",
+        "id": 480105594
       },
       "available": true,
-      "onPrintful": false
+      "rank": 4
     },
     {
-      "id": "local:perso-nei-tuoi-occhi",
-      "slug": "perso-nei-tuoi-occhi",
+      "id": "sync:480105597",
       "name": "Hai una mappa? Mi sono perso nei tuoi occhi.",
       "opener": "Scusa...",
       "tagline": "Classico intramontabile.",
@@ -440,111 +494,89 @@
       "spice": 2,
       "price": 29.9,
       "color": "Black",
-      "colorHex": "#1a1a1c",
+      "colorHex": "#111111",
       "blank": {
-        "id": 71,
-        "title": "Unisex Staple T-Shirt",
-        "brand": "Bella + Canvas",
-        "model": "3001"
+        "title": "Bella+Canvas 3001 unisex"
       },
+      "en": {
+        "traduzione": "Got a map? I just got lost in your eyes.",
+        "frase": "A timeless classic."
+      },
+      "slug": "perso-nei-tuoi-occhi",
+      "image2": "img/perso-nei-tuoi-occhi-art.jpg",
       "sizes": [
         {
           "size": "XS",
+          "syncVariantId": 5564112221,
           "variantId": 9527,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "S",
+          "syncVariantId": 5564112219,
           "variantId": 4016,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "M",
+          "syncVariantId": 5564112218,
           "variantId": 4017,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "L",
+          "syncVariantId": 5564112217,
           "variantId": 4018,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "XL",
+          "syncVariantId": 5564112220,
           "variantId": 4019,
           "price": 29.9,
           "inStock": true
         },
         {
           "size": "2XL",
+          "syncVariantId": 5564112213,
           "variantId": 4020,
           "price": 31.9,
           "inStock": true
         },
         {
           "size": "3XL",
+          "syncVariantId": 5564112214,
           "variantId": 5295,
           "price": 33.9,
           "inStock": true
         },
         {
           "size": "4XL",
+          "syncVariantId": 5564112215,
           "variantId": 5310,
           "price": 35.9,
           "inStock": true
         },
         {
           "size": "5XL",
+          "syncVariantId": 5564112216,
           "variantId": 12871,
           "price": 37.9,
           "inStock": true
         }
       ],
       "image": "img/perso-nei-tuoi-occhi.jpg",
-      "source": {
-        "type": "local",
-        "id": "perso-nei-tuoi-occhi",
-        "design": "../design/frasi/perso-nei-tuoi-occhi.png"
-      },
-      "available": true,
-      "onPrintful": false
-    },
-    {
-      "id": "sync:371005574",
-      "slug": "who-s-your-daddy-tonight",
-      "name": "Who's Your Daddy Tonight?",
-      "opener": "Sono le 23:47.",
-      "tagline": "La domanda giusta, al momento giusto.",
-      "sections": [
-        "uomo",
-        "donna"
-      ],
-      "spice": 5,
-      "price": 30,
-      "color": "Black",
-      "colorHex": "#111111",
-      "blank": {
-        "title": "Printful Men's Premium Pima Cotton T-Shirt"
-      },
-      "sizes": [
-        {
-          "size": "L",
-          "syncVariantId": 4667655657,
-          "variantId": 14218,
-          "price": 30,
-          "inStock": false
-        }
-      ],
-      "image": "https://files.cdn.printful.com/files/97f/97fa9cf2ab3b22e55296bd6ee1862509_preview.png",
-      "remoteImage": "https://files.cdn.printful.com/files/97f/97fa9cf2ab3b22e55296bd6ee1862509_preview.png",
+      "remoteImage": "https://files.cdn.printful.com/",
       "source": {
         "type": "sync",
-        "id": 371005574
+        "id": 480105597
       },
-      "available": false
+      "available": true,
+      "rank": 5
     },
     {
       "id": "template:85429333",
@@ -933,6 +965,46 @@
       },
       "available": true,
       "unnamed": true
+    },
+    {
+      "id": "sync:371005574",
+      "name": "Who's Your Daddy Tonight?",
+      "opener": "Sono le 23:47.",
+      "tagline": "La domanda giusta, al momento giusto.",
+      "sections": [
+        "uomo",
+        "donna"
+      ],
+      "spice": 5,
+      "price": 30,
+      "color": "Black",
+      "colorHex": "#111111",
+      "blank": {
+        "title": "Printful Men's Premium Pima Cotton T-Shirt"
+      },
+      "en": {
+        "traduzione": "Who's your daddy tonight?",
+        "frase": "The right question at the right time."
+      },
+      "slug": "who-s-your-daddy-tonight",
+      "image2": null,
+      "sizes": [
+        {
+          "size": "L",
+          "syncVariantId": 4667655657,
+          "variantId": 14218,
+          "price": 30,
+          "inStock": false
+        }
+      ],
+      "image": "https://files.cdn.printful.com/files/97f/97fa9cf2ab3b22e55296bd6ee1862509_preview.png",
+      "remoteImage": "https://files.cdn.printful.com/files/97f/97fa9cf2ab3b22e55296bd6ee1862509_preview.png",
+      "source": {
+        "type": "sync",
+        "id": 371005574
+      },
+      "available": false,
+      "rank": 6
     }
   ]
 }

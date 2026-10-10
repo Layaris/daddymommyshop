@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git log:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Edit(public/**)",
+      "Edit(data/**)",
+      "Edit(scripts/**)",
+      "Edit(design/**)",
+      "Write(public/**)",
+      "Write(data/**)",
+      "Write(scripts/**)",
+      "Write(design/**)"
+    ]
+  }
+}

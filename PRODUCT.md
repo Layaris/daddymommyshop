@@ -30,7 +30,7 @@ Phone-first browsing from Instagram/TikTok links, often in the evening. Fulfilme
 
 - Only designs actually present in Daniele's Printful store/templates are sold.
 - Prices come from Printful data plus Daniele's overrides (data/catalog-overrides.json); default 29,90 EUR, larger sizes cost more.
-- Language: Italian site copy; the lines themselves may be English or Italian.
+- Languages: Italian and English (IT/EN switch, remembered per visitor). Product lines have an English translation in catalog-overrides (en.traduzione, en.frase).
 - Cheekiness level 1-5 ("sfacciataggine") is a site concept per design.
 - Undecided: final domain, payment provider, shipping prices.
 
@@ -38,11 +38,12 @@ Phone-first browsing from Instagram/TikTok links, often in the evening. Fulfilme
 
 - Name: Your Favorite Daddy Shop.
 - Voice: ironic, flirtatious, self-aware, never vulgar or demeaning. Footer note that consent is not a joke stays.
-- Daniele approved the current copy and lines (10 Oct 2026); he rejected the first visual style (blush pink + wine, Shrikhand) as weak.
+- The copy of the first site (v1, 10 Oct 2026) is binding: keep it verbatim in Italian; English is its translation.
+- Daniele rejected the blush pink + wine look (Shrikhand) and then the "chat DM" redesign. He wants a classic, clear e-commerce that sells: big lines, real mockups, price and size visible, few steps to buy.
 
 ## Evidence on Hand
 
-- Printful store: 1 published product ("Who's Your Daddy Tonight?", base discontinued), 8 saved templates, mockups on files.cdn.printful.com.
+- Printful store: 6 sync products made from our phrase designs (ids 480105590-480105597, Bella+Canvas 3001, 29,90 EUR), the old "Who's Your Daddy Tonight?" (base discontinued), unnamed saved templates (hidden in the UI). Site uses our own mockups in public/img because the Printful CDN is blocked from the cloud.
 - No reviews, testimonials, press or sales numbers exist: never invent them.
 
 ## Product Principles

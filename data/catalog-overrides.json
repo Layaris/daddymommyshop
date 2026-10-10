@@ -1,5 +1,5 @@
 {
-  "_leggimi": "Qui decidi come appare ogni design sul sito. La chiave è la fonte Printful (template:ID o sync:ID). nome/frase/sezioni/prezzo/sfacciataggine (1-5) sono tuoi; nascondi=true lo toglie dal sito. Dopo una modifica: node scripts/sync-printful.mjs Le voci local:NOME sono design nostri non ancora su Printful: si vendono lo stesso (l'ordine arriva in /admin) e spariscono da sole quando aggiungi lo stesso nome come prodotto Printful.",
+  "_leggimi": "Qui decidi come appare ogni design sul sito. Chiavi: sync:ID (prodotto Printful), template:ID (modello Printful), local:NOME (design nostro). Un prodotto Printful con lo stesso nome di un local: prende da lì immagine, frase, sezioni, sfacciataggine e testi inglesi. nascondi=true lo toglie dal sito. Dopo una modifica: npm run sync",
   "prezzoBaseDefault": 29.9,
   "prodotti": {
     "local:call-me-daddy": {
@@ -15,7 +15,12 @@
       "base": 71,
       "colore": "Black",
       "immagine": "img/call-me-daddy.jpg",
-      "design": "../design/frasi/call-me-daddy.png"
+      "design": "../design/frasi/call-me-daddy.png",
+      "en": {
+        "traduzione": "Call me daddy.",
+        "frase": "If you dare."
+      },
+      "maglietta": "Bella+Canvas 3001 unisex"
     },
     "local:presti-un-bacio": {
       "nome": "Mi presti un bacio? Te lo restituisco.",
@@ -30,7 +35,12 @@
       "base": 71,
       "colore": "White",
       "immagine": "img/presti-un-bacio.jpg",
-      "design": "../design/frasi/presti-un-bacio.png"
+      "design": "../design/frasi/presti-un-bacio.png",
+      "en": {
+        "traduzione": "Can I borrow a kiss? I'll give it back.",
+        "frase": "Interest to be agreed."
+      },
+      "maglietta": "Bella+Canvas 3001 unisex"
     },
     "local:colpo-di-fulmine": {
       "nome": "Credi al colpo di fulmine o devo ripassare?",
@@ -45,7 +55,12 @@
       "base": 71,
       "colore": "White",
       "immagine": "img/colpo-di-fulmine.jpg",
-      "design": "../design/frasi/colpo-di-fulmine.png"
+      "design": "../design/frasi/colpo-di-fulmine.png",
+      "en": {
+        "traduzione": "Do you believe in love at first sight, or should I walk by again?",
+        "frase": "Happy to walk by again."
+      },
+      "maglietta": "Bella+Canvas 3001 unisex"
     },
     "local:ci-vedo-bene": {
       "nome": "Non sono un fotografo, ma ci vedo bene insieme.",
@@ -60,7 +75,12 @@
       "base": 71,
       "colore": "Black",
       "immagine": "img/ci-vedo-bene.jpg",
-      "design": "../design/frasi/ci-vedo-bene.png"
+      "design": "../design/frasi/ci-vedo-bene.png",
+      "en": {
+        "traduzione": "I'm no photographer, but I can picture us together.",
+        "frase": "Now recording."
+      },
+      "maglietta": "Bella+Canvas 3001 unisex"
     },
     "local:giri-in-testa": {
       "nome": "Sei stanca? Mi giri in testa da tutta la sera.",
@@ -74,7 +94,12 @@
       "base": 71,
       "colore": "White",
       "immagine": "img/giri-in-testa.jpg",
-      "design": "../design/frasi/giri-in-testa.png"
+      "design": "../design/frasi/giri-in-testa.png",
+      "en": {
+        "traduzione": "Tired? You've been running through my mind all night.",
+        "frase": "Lap after lap."
+      },
+      "maglietta": "Bella+Canvas 3001 unisex"
     },
     "local:perso-nei-tuoi-occhi": {
       "nome": "Hai una mappa? Mi sono perso nei tuoi occhi.",
@@ -89,7 +114,12 @@
       "base": 71,
       "colore": "Black",
       "immagine": "img/perso-nei-tuoi-occhi.jpg",
-      "design": "../design/frasi/perso-nei-tuoi-occhi.png"
+      "design": "../design/frasi/perso-nei-tuoi-occhi.png",
+      "en": {
+        "traduzione": "Got a map? I just got lost in your eyes.",
+        "frase": "A timeless classic."
+      },
+      "maglietta": "Bella+Canvas 3001 unisex"
     },
     "sync:371005574": {
       "nome": "Who's Your Daddy Tonight?",
@@ -100,7 +130,11 @@
       ],
       "prezzo": 30,
       "sfacciataggine": 5,
-      "apertura": "Sono le 23:47."
+      "apertura": "Sono le 23:47.",
+      "en": {
+        "traduzione": "Who's your daddy tonight?",
+        "frase": "The right question at the right time."
+      }
     },
     "template:85429333": {
       "nome": "",
