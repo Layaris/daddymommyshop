@@ -95,6 +95,40 @@ const designs = {
       <div style="font:400 64px/1.2 'Archivo Black'">WRITTEN ALL OVER YOU</div>
       <div style="margin-top:auto;align-self:flex-end;font:400 130px/1 'Mr Dafoe';transform:rotate(-6deg)">pay up, gorgeous</div>
     </div>`,
+  // --- Donna ---
+  // Maglietta nera
+  'call-me-mommy': `
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <div style="font:400 560px/0.86 Anton;color:${CREAM};letter-spacing:-6px;text-align:center">CALL<br>ME</div>
+      <div style="font:400 390px/1 'Mr Dafoe';color:${PINK};margin-top:-160px;padding-right:40px;transform:rotate(-8deg)">Mommy</div>
+      <div style="font:400 64px Anton;color:${CREAM};letter-spacing:22px;margin-top:90px">· IF YOU CAN KEEP UP ·</div>
+    </div>`,
+  // Maglietta bianca: cocktail
+  'buy-me-a-drink-first': `
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px">
+      <svg width="520" height="560" viewBox="0 0 104 112"><path d="M8 8 H96 L56 56 V98 H76 V104 H28 V98 H48 V56 Z" fill="none" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M20 20 H84 L52 52 Z" fill="${PINK}"/><circle cx="74" cy="14" r="9" fill="${RED}" stroke="${INK}" stroke-width="3"/><line x1="70" y1="2" x2="80" y2="-8" stroke="${INK}" stroke-width="3"/></svg>
+      <div style="font:400 210px/0.95 'Bowlby One';color:${INK};text-align:center">BUY ME<br>A DRINK</div>
+      <div style="font:400 280px/0.9 'Mr Dafoe';color:${RED};transform:rotate(-6deg);margin:-40px 0 60px">first.</div>
+      <div style="font:400 70px 'Archivo Black';color:${INK};letter-spacing:18px">THEN WE'LL TALK</div>
+    </div>`,
+  // Maglietta nera: tabellone
+  'out-of-your-league': `
+    <div style="position:absolute;left:170px;right:170px;top:330px;bottom:330px;border:16px solid ${YEL};border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;color:${CREAM}">
+      <div style="display:flex;gap:40px;font:400 70px Bungee;color:${YEL}"><span>HOME 10</span><span>·</span><span>YOU 0</span></div>
+      <div style="font:400 250px/0.9 Bungee;text-align:center">OUT OF<br>YOUR<br>LEAGUE</div>
+      <div style="font:400 260px/0.9 'Mr Dafoe';color:${PINK};transform:rotate(-6deg)">try anyway</div>
+    </div>`,
+  // Maglietta bianca: fumetto
+  'talk-flirty-to-me': `
+    <svg style="position:absolute;inset:0" viewBox="0 0 1500 1800">
+      <path d="M170 250 H1330 Q1390 250 1390 310 V1150 Q1390 1210 1330 1210 H640 L420 1430 L470 1210 H170 Q110 1210 110 1150 V310 Q110 250 170 250 Z" fill="none" stroke="${INK}" stroke-width="22" stroke-linejoin="round"/>
+      <path d="M1180 1430 c-60-60-150-30-150 45 c0 80 150 150 150 150 s150-70 150-150 c0-75-90-105-150-45z" fill="${RED}"/>
+    </svg>
+    <div style="position:absolute;left:190px;right:190px;top:330px;height:800px;display:flex;flex-direction:column;justify-content:center;gap:20px;color:${INK}">
+      <div style="font:400 205px/0.95 'Dela Gothic One'">TALK<br>FLIRTY</div>
+      <div style="font:400 250px/0.9 'Mr Dafoe';color:${PINK};transform:rotate(-5deg);align-self:flex-end;margin-right:40px">to me</div>
+    </div>`,
 };
 
 (async () => {

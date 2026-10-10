@@ -1,8 +1,5 @@
 {
   "_leggimi": "Elenco dei design in vendita. Ogni voce diventa un prodotto Printful (Bella+Canvas 3001) con scripts/printful-setup.mjs, poi npm run sync aggiorna data/catalog.json. Le frasi sulle magliette sono in inglese; it.traduzione e it.frase servono solo al sito in italiano.",
-  "base": 71,
-  "maglietta": "Bella+Canvas 3001 unisex",
-  "prezzo": 29.9,
   "prezzoRetro": 6,
   "nascondi": [
     371005574
@@ -26,31 +23,65 @@
         "frase": "Se hai il coraggio."
       },
       "autore": "yfd",
-      "printful": 480105590,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480105590,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy/men-s-lifestyle-front.jpg"
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
+      "slug": "call-me-mommy",
+      "nome": "Call me mommy.",
+      "colore": "Black",
+      "fronte": "design/frasi/call-me-mommy.png",
+      "sezioni": [
+        "donna"
+      ],
+      "sfacciataggine": 5,
+      "en": {
+        "frase": "If you can keep up."
+      },
+      "it": {
+        "traduzione": "Chiamami mammina.",
+        "frase": "Se riesci a starmi dietro."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "donna"
         },
         {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy/flat-front.jpg"
+          "tipo": "unisex"
         }
       ]
     },
@@ -73,49 +104,57 @@
         "frase": "Davanti la domanda. Dietro la risposta."
       },
       "autore": "daniele",
-      "printful": 480120480,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy-tonight/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480120480,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/flat-front.jpg"
+            },
+            {
+              "tipo": "couple-back",
+              "gruppo": "Couple",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy-tonight/couple-back.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-back",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy-tonight/women-s-lifestyle-back.jpg"
+            },
+            {
+              "tipo": "flat-back",
+              "gruppo": "Flat",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy-tonight/flat-back.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy-tonight/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy-tonight/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy-tonight/flat-front.jpg"
-        },
-        {
-          "tipo": "couple-back",
-          "gruppo": "Couple",
-          "vista": "Back",
-          "src": "img/pf/whos-your-daddy-tonight/couple-back.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-back",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Back",
-          "src": "img/pf/whos-your-daddy-tonight/women-s-lifestyle-back.jpg"
-        },
-        {
-          "tipo": "flat-back",
-          "gruppo": "Flat",
-          "vista": "Back",
-          "src": "img/pf/whos-your-daddy-tonight/flat-back.jpg"
+          "tipo": "donna"
         }
       ]
     },
@@ -137,31 +176,65 @@
         "frase": "Interessi da concordare."
       },
       "autore": "yfd",
-      "printful": 480105591,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/borrow-a-kiss/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480105591,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/borrow-a-kiss/men-s-lifestyle-front.jpg"
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
+      "slug": "buy-me-a-drink-first",
+      "nome": "Buy me a drink first. Then we'll talk.",
+      "colore": "White",
+      "fronte": "design/frasi/buy-me-a-drink-first.png",
+      "sezioni": [
+        "donna"
+      ],
+      "sfacciataggine": 3,
+      "en": {
+        "frase": "Then we'll talk."
+      },
+      "it": {
+        "traduzione": "Prima offrimi da bere. Poi parliamo.",
+        "frase": "Poi parliamo."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "donna"
         },
         {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/borrow-a-kiss/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/borrow-a-kiss/flat-front.jpg"
+          "tipo": "unisex"
         }
       ]
     },
@@ -183,31 +256,39 @@
         "frase": "Solo energia positiva. Quasi."
       },
       "autore": "daniele",
-      "printful": 480120481,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/happy-vibe/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480120481,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/happy-vibe/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/happy-vibe/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/happy-vibe/flat-front.jpg"
+          "tipo": "donna"
         }
       ]
     },
@@ -229,31 +310,65 @@
         "frase": "Ripasso volentieri."
       },
       "autore": "yfd",
-      "printful": 480105592,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/love-at-first-sight/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480105592,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/love-at-first-sight/men-s-lifestyle-front.jpg"
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
+      "slug": "out-of-your-league",
+      "nome": "Out of your league. Try anyway.",
+      "colore": "Black",
+      "fronte": "design/frasi/out-of-your-league.png",
+      "sezioni": [
+        "donna"
+      ],
+      "sfacciataggine": 4,
+      "en": {
+        "frase": "Home 10, you 0."
+      },
+      "it": {
+        "traduzione": "Fuori dalla tua portata. Provaci lo stesso.",
+        "frase": "Casa 10, tu 0."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "donna"
         },
         {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/love-at-first-sight/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/love-at-first-sight/flat-front.jpg"
+          "tipo": "unisex"
         }
       ]
     },
@@ -275,49 +390,54 @@
         "frase": "Chiedi gentilmente. O paghi il prezzo."
       },
       "autore": "daniele",
-      "printful": 480120483,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy/couple-front.jpg"
-        },
-        {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/whos-your-daddy/flat-front.jpg"
-        },
-        {
-          "tipo": "couple-back",
-          "gruppo": "Couple",
-          "vista": "Back",
-          "src": "img/pf/whos-your-daddy/couple-back.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-back",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Back",
-          "src": "img/pf/whos-your-daddy/women-s-lifestyle-back.jpg"
-        },
-        {
-          "tipo": "flat-back",
-          "gruppo": "Flat",
-          "vista": "Back",
-          "src": "img/pf/whos-your-daddy/flat-back.jpg"
+          "tipo": "unisex",
+          "printful": 480120483,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/flat-front.jpg"
+            },
+            {
+              "tipo": "couple-back",
+              "gruppo": "Couple",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy/couple-back.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-back",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy/women-s-lifestyle-back.jpg"
+            },
+            {
+              "tipo": "flat-back",
+              "gruppo": "Flat",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy/flat-back.jpg"
+            }
+          ]
         }
       ]
     },
@@ -339,31 +459,65 @@
         "frase": "Sta registrando."
       },
       "autore": "yfd",
-      "printful": 480105593,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/picture-us-together/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480105593,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/picture-us-together/men-s-lifestyle-front.jpg"
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
+      "slug": "talk-flirty-to-me",
+      "nome": "Talk flirty to me.",
+      "colore": "White",
+      "fronte": "design/frasi/talk-flirty-to-me.png",
+      "sezioni": [
+        "donna"
+      ],
+      "sfacciataggine": 3,
+      "en": {
+        "frase": "Go on, I'm listening."
+      },
+      "it": {
+        "traduzione": "Parlami in modo civettuolo.",
+        "frase": "Dai, ti ascolto."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "donna"
         },
         {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/picture-us-together/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/picture-us-together/flat-front.jpg"
+          "tipo": "unisex"
         }
       ]
     },
@@ -385,31 +539,39 @@
         "frase": "Paga, bellezza."
       },
       "autore": "yfd",
-      "printful": 480120489,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/parking-ticket/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480120489,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/parking-ticket/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/parking-ticket/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/parking-ticket/flat-front.jpg"
+          "tipo": "donna"
         }
       ]
     },
@@ -431,31 +593,39 @@
         "frase": "Giro dopo giro."
       },
       "autore": "yfd",
-      "printful": 480105594,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/running-through-my-mind/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480105594,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/running-through-my-mind/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/running-through-my-mind/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/running-through-my-mind/flat-front.jpg"
+          "tipo": "donna"
         }
       ]
     },
@@ -476,31 +646,36 @@
         "frase": "L'originale. Senza spiegazioni."
       },
       "autore": "daniele",
-      "printful": 480120495,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy-classic/couple-front.jpg"
-        },
-        {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy-classic/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy-classic/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/call-me-daddy-classic/flat-front.jpg"
+          "tipo": "unisex",
+          "printful": 480120495,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/flat-front.jpg"
+            }
+          ]
         }
       ]
     },
@@ -522,31 +697,39 @@
         "frase": "Colpo grosso."
       },
       "autore": "yfd",
-      "printful": 480120829,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/stole-the-stars/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480120829,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/stole-the-stars/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/stole-the-stars/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/stole-the-stars/flat-front.jpg"
+          "tipo": "donna"
         }
       ]
     },
@@ -568,31 +751,39 @@
         "frase": "Classico intramontabile."
       },
       "autore": "yfd",
-      "printful": 480105597,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/lost-in-your-eyes/couple-front.jpg"
+          "tipo": "unisex",
+          "printful": 480105597,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/lost-in-your-eyes/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/lost-in-your-eyes/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/lost-in-your-eyes/flat-front.jpg"
+          "tipo": "donna"
         }
       ]
     },
@@ -613,33 +804,50 @@
         "frase": "Causa persa, e ne vado fiero."
       },
       "autore": "daniele",
-      "printful": 480120833,
-      "mockup": [
+      "modelli": [
         {
-          "tipo": "couple-front",
-          "gruppo": "Couple",
-          "vista": "Front",
-          "src": "img/pf/filipina-girls/couple-front.jpg"
-        },
-        {
-          "tipo": "men-s-lifestyle-front",
-          "gruppo": "Men's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/filipina-girls/men-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "women-s-lifestyle-front",
-          "gruppo": "Women's Lifestyle",
-          "vista": "Front",
-          "src": "img/pf/filipina-girls/women-s-lifestyle-front.jpg"
-        },
-        {
-          "tipo": "flat-front",
-          "gruppo": "Flat",
-          "vista": "Front",
-          "src": "img/pf/filipina-girls/flat-front.jpg"
+          "tipo": "unisex",
+          "printful": 480120833,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/flat-front.jpg"
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "modelli": {
+    "unisex": {
+      "base": 71,
+      "maglietta": "Bella+Canvas 3001 unisex",
+      "prezzo": 29.9
+    },
+    "donna": {
+      "base": 360,
+      "maglietta": "Bella+Canvas 6400 donna, vestibilità morbida",
+      "prezzo": 31.9
+    }
+  }
 }
