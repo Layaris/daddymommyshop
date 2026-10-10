@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Favorite Daddy Shop</title>
+<meta name="description" content="Magliette con frasi da rimorchio. Stampate su richiesta, spedite a casa tua.">
+<meta name="theme-color" content="#2a2de0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Rubik:wght@400;500;700;800;900&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--APP-->
+<a class="skip" href="#main">Vai alla conversazione</a>
+<header class="head">
+  <a class="back" id="back" href="#/" aria-label="Torna alle conversazioni" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </a>
+  <a class="who" href="#/" aria-label="Your Favorite Daddy Shop, home">
+    <span class="avatar"><span>Daddy</span></span>
+    <span class="who-text">
+      <span class="who-name">Your Favorite Daddy Shop</span>
+      <span class="who-status"><i></i>online · risponde con frasi da rimorchio</span>
+    </span>
+  </a>
+  <button class="bag" id="cart-btn" type="button" aria-label="Apri il carrello">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+    <span class="badge" id="cart-count">0</span>
+  </button>
+</header>
+
+<div class="app" id="app">
+  <aside class="inbox" id="inbox" aria-label="Le frasi"></aside>
+  <main class="thread" id="main" tabindex="-1"></main>
+</div>
+
+<aside class="sheet" id="drawer" aria-label="Carrello" hidden>
+  <div class="sheet-scrim" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-grip" aria-hidden="true"></div>
+    <div class="sheet-head">
+      <h2 id="sheet-title">Carrello</h2>
+      <button class="round" type="button" data-close aria-label="Chiudi il carrello">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div id="drawer-body"></div>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!--/APP-->
+<script src="app.js" type="module"></script>
+</body>
+</html>

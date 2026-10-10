@@ -1,0 +1,11 @@
+{
+  "name": "your-favorite-daddy-shop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "sync": "node scripts/sync-printful.mjs",
+    "preview": "node scripts/build-preview.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

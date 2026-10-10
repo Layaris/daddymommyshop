@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Daddy Shop · Ordini</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .admin { max-width: var(--max); margin: 0 auto; padding: 32px var(--gutter) 72px; display: grid; gap: 32px; }
+  .admin h1 { font-family: var(--f-display); font-weight: 400; font-size: var(--step-4); }
+  .admin h2 { font-family: var(--f-display); font-weight: 400; font-size: var(--step-2); margin-bottom: 12px; }
+  .kpis { display: flex; gap: 12px; flex-wrap: wrap; }
+  .kpis div { background: var(--surface); border-radius: var(--radius); padding: 14px 18px; display: grid; }
+  .kpis b { font: 500 var(--step-2) var(--f-mono); font-variant-numeric: tabular-nums; }
+  .kpis span { color: var(--muted); font-size: .85rem; }
+  .table-wrap { overflow-x: auto; background: var(--surface); border-radius: var(--radius); }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font: 500 .74rem var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  select { font: inherit; padding: 6px 8px; border-radius: 8px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); }
+  .login { display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+  .login input { font: inherit; padding: 11px 12px; border-radius: 10px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="admin">
+  <h1>Ordini e clienti</h1>
+  <form class="login" id="login">
+    <div class="f"><label for="pw">Password admin</label><input id="pw" type="password" autocomplete="current-password"></div>
+    <button class="btn" type="submit">Entra</button>
+    <p class="errors" id="err" role="alert"></p>
+  </form>
+  <div id="out" hidden></div>
+</div>
+<script type="module">
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const eur = (n) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(n);
+const dt = (s) => new Date(s).toLocaleString('it-IT', { dateStyle: 'short', timeStyle: 'short' });
+let pw = sessionStorage.getItem('yfd-admin') || '';
+const call = (path, opts = {}) => fetch(path, { ...opts, headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + pw } });
+
+async function load() {
+  const res = await call('/api/admin/orders');
+  if (res.status === 401) { $('#err').textContent = pw ? 'Password errata.' : ''; return; }
+  sessionStorage.setItem('yfd-admin', pw);
+  const { orders, customers, statuses } = await res.json();
+  $('#login').hidden = true; $('#out').hidden = false;
+  const open = orders.filter((o) => !['spedito', 'annullato'].includes(o.status)).length;
+  const revenue = orders.filter((o) => o.status !== 'annullato').reduce((t, o) => t + o.total, 0);
+  $('#out').innerHTML = `
+  <div class="kpis"><div><b>${orders.length}</b><span>ordini</span></div><div><b>${open}</b><span>da evadere</span></div>
+    <div><b>${eur(revenue)}</b><span>incasso (esclusi annullati)</span></div><div><b>${customers.length}</b><span>clienti</span></div></div>
+  <section><h2>Ordini</h2><div class="table-wrap"><table>
+    <thead><tr><th>Ordine</th><th>Data</th><th>Cliente</th><th>Articoli</th><th>Totale</th><th>Stato</th></tr></thead>
+    <tbody>${orders.map((o) => `<tr>
+      <td class="num">${esc(o.id)}${o.printfulOrderId ? `<br><span class="note">Printful #${esc(o.printfulOrderId)}</span>` : ''}</td>
+      <td class="num">${dt(o.createdAt)}</td>
+      <td>${esc(o.customer.name)}<br><span class="note">${esc(o.customer.email)}<br>${esc(o.customer.address)}, ${esc(o.customer.zip)} ${esc(o.customer.city)} ${esc(o.customer.country)}</span></td>
+      <td>${o.items.map((i) => `${i.qty}× ${esc(i.name)} (${esc(i.size)})`).join('<br>')}</td>
+      <td class="num">${eur(o.total)}</td>
+      <td><select data-id="${esc(o.id)}" aria-label="Stato ordine ${esc(o.id)}">${statuses.map((s) => `<option ${s === o.status ? 'selected' : ''}>${s}</option>`).join('')}</select></td>
+    </tr>`).join('') || '<tr><td colspan="6">Nessun ordine ancora.</td></tr>'}</tbody></table></div></section>
+  <section><h2>Clienti</h2><div class="table-wrap"><table>
+    <thead><tr><th>Nome</th><th>Email</th><th>Telefono</th><th>Città</th><th>Ordini</th><th>Speso</th><th>Ultimo</th></tr></thead>
+    <tbody>${customers.map((c) => `<tr><td>${esc(c.name)}</td><td>${esc(c.email)}</td><td>${esc(c.phone)}</td><td>${esc(c.city)}</td>
+      <td class="num">${c.orders}</td><td class="num">${eur(c.spent)}</td><td class="num">${dt(c.last)}</td></tr>`).join('') || '<tr><td colspan="7">Nessun cliente ancora.</td></tr>'}</tbody></table></div></section>`;
+}
+$('#login').addEventListener('submit', (e) => { e.preventDefault(); pw = $('#pw').value; load(); });
+$('#out').addEventListener('change', async (e) => {
+  const sel = e.target.closest('select[data-id]'); if (!sel) return;
+  const res = await call('/api/admin/orders/' + encodeURIComponent(sel.dataset.id), { method: 'PATCH', body: JSON.stringify({ status: sel.value }) });
+  if (res.ok) load(); else alert('Stato non aggiornato');
+});
+if (pw) load();
+</script>
+</body>
+</html>
