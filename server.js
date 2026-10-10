@@ -5,8 +5,10 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { createOrder, shippingRate } from './lib/printful.js';
+import { createOrder, shippingRate, findItem } from './lib/printful.js';
 import { stripeEnabled, createCheckoutSession, getCheckoutSession, verifyWebhook } from './lib/stripe.js';
+import { paypalEnabled, createPaypalOrder, capturePaypalOrder } from './lib/paypal.js';
+import { sizeAvailable } from './public/regions.js';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(root, 'public');
@@ -16,7 +18,7 @@ const PORT = +process.env.PORT || 3000;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'daddy';
 const PRINTFUL_DRAFTS = process.env.PRINTFUL_DRAFTS === '1';
 const PRINTFUL_CONFIRM = process.env.PRINTFUL_CONFIRM === '1';
-const PUBLIC_URL = process.env.PUBLIC_URL; // es. https://daddymommyshop.com (per i link di ritorno da Stripe)
+const PUBLIC_URL = process.env.PUBLIC_URL; // es. https://daddymommyshop.com (per i link di ritorno da PayPal e Stripe)
 const STATUSES = ['in attesa di pagamento', 'ricevuto', 'pagato', 'in produzione', 'spedito', 'annullato'];
 const FALLBACK_SHIPPING = { rate: 4.49, name: 'Spedizione standard', minDays: 3, maxDays: 7 };
 
@@ -53,16 +55,19 @@ function validateOrder(input, catalog) {
     if (!String(c[k] || '').trim()) errors.push(`Manca ${label}`);
   }
   if (c.email && !/^\S+@\S+\.\S+$/.test(c.email)) errors.push('Email non valida');
+  const country = String(c.country || 'IT').slice(0, 2).toUpperCase();
   const items = (input.items || []).map((it) => {
-    const p = catalog.products.find((x) => x.id === it.productId);
-    const s = p?.sizes.find((x) => x.size === it.size);
+    const { product: p, model: m, size: s } = findItem(catalog, it.productId, it.size);
     const qty = Math.max(1, Math.min(20, parseInt(it.qty, 10) || 1));
     if (!p || !s) { errors.push(`Prodotto non trovato: ${it.productId} ${it.size}`); return null; }
-    return { productId: p.id, name: p.name, size: s.size, qty, price: s.price };
+    if (!sizeAvailable(s, country)) errors.push(`${p.name} ${s.size} non si spedisce in ${country}`);
+    const name = m.type === 'unisex' ? p.name : `${p.name} (${m.label.en})`;
+    return { productId: m.id, slug: p.slug, model: m.type, name, size: s.size, qty, price: s.price };
   }).filter(Boolean);
   if (!items.length) errors.push('Il carrello è vuoto');
   return { errors, items, customer: Object.fromEntries(
-    ['name', 'email', 'phone', 'address', 'city', 'zip', 'province', 'country', 'note'].map((k) => [k, String(c[k] || '').trim().slice(0, 300)])) };
+    ['name', 'email', 'phone', 'address', 'city', 'zip', 'province', 'country', 'note'].map((k) => [k, String(c[k] || '').trim().slice(0, 300)])
+      .concat([['country', country]])) };
 }
 
 async function quoteShipping(items, catalog, country) {
@@ -95,31 +100,41 @@ async function api(req, res, url) {
 
   if (req.method === 'POST' && url.pathname === '/api/shipping') {
     const input = await body(req);
-    const { items } = validateOrder({ ...input, customer: { name: 1, email: 'a@b.c', address: 1, city: 1, zip: 1 } }, catalog);
+    const country = String(input.country || 'IT').slice(0, 2).toUpperCase();
+    const { items } = validateOrder({ ...input, customer: { name: 1, email: 'a@b.c', address: 1, city: 1, zip: 1, country } }, catalog);
     if (!items.length) return send(res, 400, { error: 'Carrello vuoto' });
-    return send(res, 200, await quoteShipping(items, catalog, String(input.country || 'IT').slice(0, 2)));
+    return send(res, 200, await quoteShipping(items, catalog, country));
   }
 
-  if (req.method === 'GET' && url.pathname === '/api/config') return send(res, 200, { payments: stripeEnabled() });
+  if (req.method === 'GET' && url.pathname === '/api/config') return send(res, 200, { paypal: paypalEnabled(), stripe: stripeEnabled() });
 
   if (req.method === 'POST' && url.pathname === '/api/orders') {
     const input = await body(req);
     const { errors, items, customer } = validateOrder(input, catalog);
     if (errors.length) return send(res, 400, { errors });
-    const shipping = await quoteShipping(items, catalog, customer.country || 'IT');
+    const shipping = await quoteShipping(items, catalog, customer.country);
     const subtotal = Math.round(items.reduce((t, i) => t + i.price * i.qty, 0) * 100) / 100;
+    // PayPal o carta (Stripe): si usa quello scelto dal cliente, se è attivo.
+    const provider = input.provider === 'stripe' && stripeEnabled() ? 'stripe'
+      : paypalEnabled() ? 'paypal' : stripeEnabled() ? 'stripe' : null;
     const order = {
       id: 'YFD-' + Date.now().toString(36).toUpperCase(),
-      createdAt: new Date().toISOString(), status: stripeEnabled() ? 'in attesa di pagamento' : 'ricevuto',
+      createdAt: new Date().toISOString(), status: provider ? 'in attesa di pagamento' : 'ricevuto',
       lang: input.lang === 'en' ? 'en' : 'it', customer, items, subtotal, shipping,
       total: Math.round((subtotal + shipping.rate) * 100) / 100,
     };
-    if (stripeEnabled()) {
+    if (provider) {
       try {
-        const session = await createCheckoutSession(order, baseUrl(req));
-        order.stripeSessionId = session.id;
+        let payUrl;
+        if (provider === 'paypal') {
+          const pp = await createPaypalOrder(order, baseUrl(req));
+          order.paypalOrderId = pp.id; payUrl = pp.url;
+        } else {
+          const session = await createCheckoutSession(order, baseUrl(req));
+          order.stripeSessionId = session.id; payUrl = session.url;
+        }
         await withOrders((orders) => orders.push(order));
-        return send(res, 201, { id: order.id, total: order.total, payUrl: session.url });
+        return send(res, 201, { id: order.id, total: order.total, payUrl });
       } catch (e) {
         console.error(e);
         return send(res, 502, { error: 'Il pagamento non si apre. Riprova tra poco.' });
@@ -147,6 +162,20 @@ async function api(req, res, url) {
       }
     }
     return send(res, 200, { status: o.status, total: o.total });
+  }
+
+  // Ritorno da PayPal: il cliente ha approvato, incasso e mando l'ordine a Printful.
+  if (req.method === 'GET' && url.pathname === '/api/paypal/return') {
+    const id = url.searchParams.get('order') || '';
+    const o = (await readJson(ORDERS, [])).find((x) => x.id === id);
+    if (!o) return send(res, 404, { error: 'Ordine non trovato' });
+    let ok = !!o.paidAt;
+    if (!ok && o.paypalOrderId && url.searchParams.get('token') === o.paypalOrderId) {
+      const cap = await capturePaypalOrder(o.paypalOrderId).catch((e) => { console.error(e); return null; });
+      if (cap) { await markPaid(o.id, catalog, { provider: 'paypal', order: o.paypalOrderId, capture: cap.id, amount: cap.amount }); ok = true; }
+    }
+    res.writeHead(302, { Location: ok ? `/#/grazie/${o.id}?paid=1` : '/#/checkout?pay=failed' });
+    return res.end();
   }
 
   if (req.method === 'POST' && url.pathname === '/api/stripe/webhook') {

@@ -1,5 +1,7 @@
-// Your Favorite Daddy Shop: vetrina, prodotto, carrello, cassa con pagamento Stripe, in italiano e in inglese.
+// Your Favorite Daddy Shop: vetrina, prodotto, carrello, cassa con PayPal (o carta via Stripe), in italiano e in inglese.
 // Funziona con il server (API /api/...) oppure in anteprima statica con window.__CATALOG__ e window.__PREVIEW__ = true.
+
+import { sizeAvailable, regionOf } from './regions.js';
 
 const PREVIEW = !!window.__PREVIEW__;
 const $ = (s, el = document) => el.querySelector(s);
@@ -37,7 +39,6 @@ const TEXT = {
     heroA: 'La frase giusta,', heroB: 'addosso.',
     heroSub: 'Se non hai il coraggio di dirla, indossala. Magliette ironiche per chi rimorchia con stile, o almeno ci prova.',
     shopUomo: 'Shop Uomo', shopDonna: 'Shop Donna',
-    napkin: 'Scritta sul tovagliolo', another: "Un'altra", lineN: (n, t) => `Frase n° ${n} di ${t}`,
     drag: 'Trascinala per girarla', buyIt: 'Comprala', pick: (n) => `Mostra ${n} in 3D`,
     designs: (n) => `${n} design`, discover: 'Guarda la sezione',
     couplesTitle: 'Coppie che ci provano', couplesSub: 'Lui la dice, lei risponde. O viceversa. Le frasi della casa addosso a chi ci prova davvero.',
@@ -51,21 +52,26 @@ const TEXT = {
     soon: 'Nuove frasi in arrivo.',
     soldOut: 'Esaurita', hot: 'Piccante', backPrint: 'Fronte e retro', spice: 'Sfacciataggine', spiceOf: (n) => `Sfacciataggine ${n} su 5`,
     tee: 'maglietta', colors: { White: 'bianca', Black: 'nera' },
-    size: 'Taglia', fit: 'vestibilità unisex',
+    size: 'Taglia', model: 'Modello', shipTo: 'Spedisci in',
+    sizeZone: (c) => `Le taglie barrate non si producono per ${c}.`,
     addToBill: 'Aggiungi al conto', chooseSize: 'Scegli una taglia',
     added: (size) => `Aggiunta al conto (taglia ${size})`,
     specs: { tee: 'Maglietta', color: 'Colore', print: 'Stampa', ship: 'Spedizione' },
     printVal: 'Diretta su tessuto (DTG)', printBoth: 'Davanti e dietro (DTG)', shipVal: '3–7 giorni lavorativi',
     returns: 'Stampata su richiesta: per questo non accettiamo resi per cambio idea, ma se arriva difettosa la ristampiamo gratis.',
     pairWith: 'Abbinala con', meaning: 'Tradotto:',
-    views: { 'flat-front': 'Davanti', 'couple-front': 'In coppia', 'men-s-lifestyle-front': 'Su di lui', 'women-s-lifestyle-front': 'Su di lei', 'flat-back': 'Dietro', 'couple-back': 'Dietro, in coppia', 'women-s-lifestyle-back': 'Dietro, su di lei' },
+    views: { 'flat-front': 'Davanti', 'couple-front': 'In coppia', 'men-s-lifestyle-front': 'Su di lui', 'women-s-lifestyle-front': 'Su di lei', 'women-s-front': 'Indossata', 'flat-back': 'Dietro', 'couple-back': 'Dietro, in coppia', 'women-s-lifestyle-back': 'Dietro, su di lei', 'women-s-back': 'Dietro, indossata' },
     view3d: 'Girala in 3D',
     emptyBillTitle: 'Il conto è vuoto.', emptyBillSub: 'Scegli prima una frase.', backToShop: 'Torna al negozio',
     who: 'Chi la indossa', where: 'Dove spediamo',
     f: { name: 'Nome e cognome', email: 'Email', phone: 'Telefono (per il corriere)', address: 'Indirizzo', city: 'Città', zip: 'CAP', province: 'Provincia', country: 'Paese', note: 'Note (facoltative)' },
-    countries: { IT: 'Italia', SM: 'San Marino', CH: 'Svizzera', FR: 'Francia', DE: 'Germania', ES: 'Spagna', AT: 'Austria', BE: 'Belgio', NL: 'Paesi Bassi', PT: 'Portogallo', IE: 'Irlanda', GB: 'Regno Unito' },
-    pay: (t) => `Paga in sicurezza · ${t}`, send: (t) => `Invia l'ordine · ${t}`, sending: 'Un attimo…',
-    payNote: 'Paghi con carta, Apple Pay o Google Pay sulla pagina sicura di Stripe. La maglietta va in stampa appena il pagamento è confermato.',
+    countries: { IT: 'Italia', SM: 'San Marino', CH: 'Svizzera', FR: 'Francia', DE: 'Germania', ES: 'Spagna', AT: 'Austria', BE: 'Belgio', NL: 'Paesi Bassi', LU: 'Lussemburgo', PT: 'Portogallo', IE: 'Irlanda', DK: 'Danimarca', SE: 'Svezia', FI: 'Finlandia', NO: 'Norvegia', PL: 'Polonia', CZ: 'Repubblica Ceca', GR: 'Grecia', GB: 'Regno Unito', US: 'Stati Uniti', CA: 'Canada', AU: 'Australia', AE: 'Emirati Arabi Uniti' },
+    pay: (t) => `Paga con carta · ${t}`, payPaypal: (t) => `Paga con PayPal · ${t}`, send: (t) => `Invia l'ordine · ${t}`, sending: 'Un attimo…',
+    payNote: 'Paghi sulla pagina sicura di PayPal, anche con carta senza aprire un conto. La maglietta va in stampa appena il pagamento è confermato.',
+    payNoteCard: 'Oppure paghi con carta, Apple Pay o Google Pay sulla pagina sicura di Stripe.',
+    payNoteStripe: 'Paghi con carta, Apple Pay o Google Pay sulla pagina sicura di Stripe. La maglietta va in stampa appena il pagamento è confermato.',
+    payFailed: 'Il pagamento non è andato a buon fine. Riprova quando vuoi: il conto è ancora qui.',
+    cartZone: (c) => `Alcune taglie nel conto non si producono per ${c}: toglile o cambia paese.`,
     noPayNote: 'Il pagamento online arriva a breve. Per ora ricevi una conferma e ti scriviamo noi per pagare prima della stampa.',
     previewNote: 'Anteprima: il pagamento è simulato, nessun addebito.',
     fixFields: 'Compila i campi evidenziati.', fixEmail: "Controlla l'email: manca qualcosa.",
@@ -79,7 +85,7 @@ const TEXT = {
     nothingYet: 'Ancora niente.', fillsUp: 'Il conto si riempie quando scegli una frase.', seeTees: 'Guarda le magliette',
     table: (d) => `Tavolo 69 · ${d}`, sizeColor: (s, c) => `Taglia ${s} · ${c}`,
     removeOne: 'Togli uno', addOne: 'Aggiungi uno', remove: 'Togli',
-    tees: 'Magliette', shipping: 'Spedizione', shipEst: 'da 4,49 € (alla cassa)', shipDays: (a, b) => `consegna in ${a}–${b} giorni`,
+    tees: 'Magliette', shipping: 'Spedizione', shipEst: 'da 4,49 € (alla cassa)', inCountry: (c) => `in ${c}`, shipDays: (a, b) => `consegna in ${a}–${b} giorni`,
     total: 'Totale', checkout: 'Vai alla cassa', previewId: 'ANTEPRIMA',
   },
   en: {
@@ -107,7 +113,6 @@ const TEXT = {
     heroA: 'The right line,', heroB: 'worn.',
     heroSub: "If you don't dare say it, wear it. Cheeky tees for people who flirt with style, or at least give it a shot.",
     shopUomo: 'Shop Men', shopDonna: 'Shop Women',
-    napkin: 'Written on a napkin', another: 'Another one', lineN: (n, t) => `Line ${n} of ${t}`,
     drag: 'Drag to spin it', buyIt: 'Get it', pick: (n) => `Show ${n} in 3D`,
     designs: (n) => `${n} design${n === 1 ? '' : 's'}`, discover: 'See the section',
     couplesTitle: 'Couples who go for it', couplesSub: 'One says the line, the other answers. The house lines, worn by people who actually try.',
@@ -121,21 +126,26 @@ const TEXT = {
     soon: 'New lines coming soon.',
     soldOut: 'Sold out', hot: 'Spicy', backPrint: 'Front and back', spice: 'Boldness', spiceOf: (n) => `Boldness ${n} of 5`,
     tee: 'tee', colors: { White: 'white', Black: 'black' },
-    size: 'Size', fit: 'unisex fit',
+    size: 'Size', model: 'Fit', shipTo: 'Ship to',
+    sizeZone: (c) => `Crossed-out sizes aren't made for ${c}.`,
     addToBill: 'Add to bill', chooseSize: 'Pick a size',
     added: (size) => `Added to your bill (size ${size})`,
     specs: { tee: 'Tee', color: 'Color', print: 'Print', ship: 'Shipping' },
     printVal: 'Direct to garment (DTG)', printBoth: 'Front and back (DTG)', shipVal: '3–7 business days',
     returns: "Printed on demand, so we don't take returns for a change of heart, but if it arrives faulty we reprint it for free.",
     pairWith: 'Pair it with', meaning: '',
-    views: { 'flat-front': 'Front', 'couple-front': 'As a couple', 'men-s-lifestyle-front': 'On him', 'women-s-lifestyle-front': 'On her', 'flat-back': 'Back', 'couple-back': 'Back, as a couple', 'women-s-lifestyle-back': 'Back, on her' },
+    views: { 'flat-front': 'Front', 'couple-front': 'As a couple', 'men-s-lifestyle-front': 'On him', 'women-s-lifestyle-front': 'On her', 'women-s-front': 'Worn', 'flat-back': 'Back', 'couple-back': 'Back, as a couple', 'women-s-lifestyle-back': 'Back, on her', 'women-s-back': 'Back, worn' },
     view3d: 'Spin it in 3D',
     emptyBillTitle: 'Your bill is empty.', emptyBillSub: 'Pick a line first.', backToShop: 'Back to the shop',
     who: "Who's wearing it", where: 'Where we ship',
     f: { name: 'Full name', email: 'Email', phone: 'Phone (for the courier)', address: 'Address', city: 'City', zip: 'Postcode', province: 'Province / State', country: 'Country', note: 'Notes (optional)' },
-    countries: { IT: 'Italy', SM: 'San Marino', CH: 'Switzerland', FR: 'France', DE: 'Germany', ES: 'Spain', AT: 'Austria', BE: 'Belgium', NL: 'Netherlands', PT: 'Portugal', IE: 'Ireland', GB: 'United Kingdom' },
-    pay: (t) => `Pay securely · ${t}`, send: (t) => `Place order · ${t}`, sending: 'One moment…',
-    payNote: 'Pay by card, Apple Pay or Google Pay on the secure Stripe page. Your tee goes to print as soon as payment is confirmed.',
+    countries: { IT: 'Italy', SM: 'San Marino', CH: 'Switzerland', FR: 'France', DE: 'Germany', ES: 'Spain', AT: 'Austria', BE: 'Belgium', NL: 'Netherlands', LU: 'Luxembourg', PT: 'Portugal', IE: 'Ireland', DK: 'Denmark', SE: 'Sweden', FI: 'Finland', NO: 'Norway', PL: 'Poland', CZ: 'Czechia', GR: 'Greece', GB: 'United Kingdom', US: 'United States', CA: 'Canada', AU: 'Australia', AE: 'United Arab Emirates' },
+    pay: (t) => `Pay by card · ${t}`, payPaypal: (t) => `Pay with PayPal · ${t}`, send: (t) => `Place order · ${t}`, sending: 'One moment…',
+    payNote: 'Pay on the secure PayPal page, by card too, no PayPal account needed. Your tee goes to print as soon as payment is confirmed.',
+    payNoteCard: 'Or pay by card, Apple Pay or Google Pay on the secure Stripe page.',
+    payNoteStripe: 'Pay by card, Apple Pay or Google Pay on the secure Stripe page. Your tee goes to print as soon as payment is confirmed.',
+    payFailed: "The payment didn't go through. Try again whenever you like: your bill is still here.",
+    cartZone: (c) => `Some sizes in your bill aren't made for ${c}: remove them or change country.`,
     noPayNote: "Online payment is coming soon. For now you get a confirmation and we'll message you to pay before printing.",
     previewNote: 'Preview: payment is simulated, nothing is charged.',
     fixFields: 'Fill in the highlighted fields.', fixEmail: 'Check your email: something is missing.',
@@ -149,7 +159,7 @@ const TEXT = {
     nothingYet: 'Nothing yet.', fillsUp: 'Your bill fills up when you pick a line.', seeTees: 'See the tees',
     table: (d) => `Table 69 · ${d}`, sizeColor: (s, c) => `Size ${s} · ${c}`,
     removeOne: 'Remove one', addOne: 'Add one', remove: 'Remove',
-    tees: 'Tees', shipping: 'Shipping', shipEst: 'from €4.49 (at checkout)', shipDays: (a, b) => `delivery in ${a}–${b} days`,
+    tees: 'Tees', shipping: 'Shipping', shipEst: 'from €4.49 (at checkout)', inCountry: (c) => `to ${c}`, shipDays: (a, b) => `delivery in ${a}–${b} days`,
     total: 'Total', checkout: 'Checkout', previewId: 'PREVIEW',
   },
 };
@@ -161,20 +171,31 @@ const T = () => TEXT[lang];
 const eur = (n) => new Intl.NumberFormat(LOCALE[lang], { style: 'currency', currency: 'EUR' }).format(n);
 
 let catalog = { products: [] };
-let config = { payments: false };
+let config = PREVIEW ? { paypal: true, stripe: false } : { paypal: false, stripe: false };
 let cart = store.get('yfd-cart', []);
 let tee3d = null; // maglietta 3D attiva (una alla volta)
 
+let ctxSec = ''; // sezione da cui arriva il cliente: in Donna si mostra il modello da donna
 const shown = () => catalog.products;
-const byId = (id) => catalog.products.find((p) => p.id === id);
 const bySlug = (slug) => catalog.products.find((p) => p.slug === slug);
 const inSection = (s) => shown().filter((p) => s === 'tutte' || p.sections.includes(s));
-const sizeOf = (p, size) => p?.sizes.find((s) => s.size === size);
+// Ogni design ha uno o più modelli (unisex, donna): foto, taglie e prezzi stanno nel modello.
+const modelOf = (p, type) => p.models.find((m) => m.type === (type || (ctxSec === 'donna' ? 'donna' : 'unisex'))) || p.models[0];
+// Riga del carrello: productId è l'id del modello.
+function lookup(id, size) {
+  for (const p of catalog.products) {
+    const m = p.models.find((x) => x.id === id);
+    if (m) return { p, m, s: m.sizes.find((x) => x.size === size) };
+  }
+  return {};
+}
+const country = () => store.get('yfd-customer', {}).country || 'IT';
+const countryName = (c) => T().countries[c] || c;
 const lineOf = (p) => (lang === 'en' ? p.en?.frase : p.it?.frase) || '';
 const itOf = (p) => (lang === 'it' ? p.it?.traduzione : '') || '';
 const colorOf = (p) => T().colors[p.color] || p.color;
 const altOf = (p) => `${p.name} (${T().tee} ${colorOf(p)})`;
-const shot = (p, tipo) => p.gallery?.find((src) => src.includes(`/${tipo}.`)) || null;
+const shot = (m, tipo) => m.gallery?.find((src) => src.includes(`/${tipo}.`)) || null;
 const firstLine = (s) => (s.match(/^.*?[?.!](?=\s|$)/) || [s])[0];
 
 /* ---------- Pezzi comuni ---------- */
@@ -185,15 +206,15 @@ function badge(p) {
 const spice = (n) => `<span class="spice" title="${esc(T().spiceOf(n))}">${T().spice}
   <span class="spice-pips" aria-hidden="true">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span><span class="sr">${esc(T().spiceOf(n))}</span></span>`;
 
-const card = (p) => `<a class="card" href="#/p/${esc(p.slug)}">
+const card = (p, m = modelOf(p)) => `<a class="card" href="#/p/${esc(p.slug)}">
   <div class="card-media">
     ${badge(p)}
-    <img src="${esc(p.image)}" alt="${esc(altOf(p))}" loading="lazy">
-    ${p.couple ? `<img class="img-b" src="${esc(p.couple)}" alt="" loading="lazy">` : ''}
+    <img src="${esc(m.image)}" alt="${esc(altOf(p))}" loading="lazy">
+    ${m.couple ? `<img class="img-b" src="${esc(m.couple)}" alt="" loading="lazy">` : ''}
   </div>
   <div class="card-body">
     <span class="card-name">${esc(p.name)}</span>
-    <span class="price">${eur(p.price)}</span>
+    <span class="price">${eur(m.price)}</span>
     ${itOf(p) ? `<span class="card-it">${esc(itOf(p))}</span>` : ''}
     ${lineOf(p) ? `<span class="card-line">${esc(lineOf(p))}</span>` : ''}
     <span class="card-line">${spice(p.spice)}</span>
@@ -203,17 +224,18 @@ const card = (p) => `<a class="card" href="#/p/${esc(p.slug)}">
 /* ---------- Pagine ---------- */
 function home() {
   const t = T();
-  const picks = shown().filter((p) => p.available && p.art).slice(0, 9);
+  const picks = shown().filter((p) => p.available && modelOf(p).flat).slice(0, 9);
   const star = picks[0];
   const tile = (s) => {
-    const photo = inSection(s).map((p) => shot(p, s === 'uomo' ? 'men-s-lifestyle-front' : 'women-s-lifestyle-front')).find(Boolean);
+    const photo = inSection(s).map((p) => shot(modelOf(p, s === 'donna' ? 'donna' : 'unisex'), s === 'uomo' ? 'men-s-lifestyle-front' : 'women-s-lifestyle-front')).find(Boolean);
     return `<a href="#/${s}" class="${s}">
       ${photo ? `<img class="split-photo on-dark" src="${esc(photo)}" alt="" loading="lazy">` : ''}
       <span class="count">${t.designs(inSection(s).length)}</span>
       <span class="split-text"><span class="big">${t.sec[s].title}</span><span class="sub">${t.sec[s].sub}</span><span class="cta-line">${t.discover} →</span></span>
     </a>`;
   };
-  const couples = shown().filter((p) => p.couple && p.available);
+  const couples = shown().filter((p) => p.available && shot(modelOf(p, 'unisex'), 'couple-front'));
+  const sm = star && modelOf(star);
   return `
   <section class="hero">
     <div>
@@ -227,16 +249,14 @@ function home() {
     </div>
     ${star ? `<div class="hero-visual">
       <div class="stage" id="stage">
-        <img class="stage-fallback" src="${esc(star.image)}" alt="${esc(altOf(star))}">
-        <div class="stage-price"><span id="stage-name">${esc(star.name)}</span><a id="stage-link" href="#/p/${esc(star.slug)}">${eur(star.price)} · ${t.buyIt} →</a></div>
+        <img class="stage-fallback" src="${esc(sm.flat)}" alt="${esc(altOf(star))}">
         <span class="stage-hint">↔ ${t.drag}</span>
       </div>
-      <div class="picks" role="group">${picks.map((p, i) => `<button type="button" data-pick="${esc(p.slug)}" aria-pressed="${i === 0}" aria-label="${esc(t.pick(p.name))}"><img src="${esc(p.image)}" alt=""></button>`).join('')}</div>
-      <div class="napkin" aria-live="polite">
-        <p class="eyebrow">${t.napkin}</p>
-        <p class="napkin-line" id="napkin-line">${esc(t.lines[0])}</p>
-        <div class="napkin-foot"><span id="napkin-n">${t.lineN(1, t.lines.length)}</span><button type="button" id="napkin-next">${t.another}</button></div>
+      <div class="stage-bar">
+        <span class="stage-name"><span id="stage-name">${esc(star.name)}</span><strong id="stage-price">${eur(sm.price)}</strong></span>
+        <a class="btn hot" id="stage-link" href="#/p/${esc(star.slug)}">${t.buyIt} →</a>
       </div>
+      <div class="picks" role="group">${picks.map((p, i) => `<button type="button" data-pick="${esc(p.slug)}" aria-pressed="${i === 0}" aria-label="${esc(t.pick(p.name))}"><img src="${esc(modelOf(p).image)}" alt=""></button>`).join('')}</div>
     </div>` : ''}
   </section>
 
@@ -244,17 +264,17 @@ function home() {
 
   ${couples.length ? `<section aria-labelledby="couples-title">
     <div class="couples-head"><h2 id="couples-title">${t.couplesTitle}</h2><p>${t.couplesSub}</p></div>
-    <div class="couples">${couples.map((p) => `<a class="couple" href="#/p/${esc(p.slug)}">
-      <img src="${esc(p.couple)}" alt="${esc(altOf(p))}" loading="lazy">
+    <div class="couples">${couples.map((p) => { const m = modelOf(p, 'unisex'); return `<a class="couple" href="#/p/${esc(p.slug)}">
+      <img src="${esc(shot(m, 'couple-front'))}" alt="${esc(altOf(p))}" loading="lazy">
       <span class="bubble">${esc(firstLine(p.name))}</span>
       ${lineOf(p) ? `<span class="bubble reply">${esc(lineOf(p))}</span>` : ''}
-      <span class="couple-foot"><strong>${eur(p.price)}</strong><span class="cta-line">${t.buyIt} →</span></span>
-    </a>`).join('')}</div>
+      <span class="couple-foot"><strong>${eur(m.price)}</strong><span class="cta-line">${t.buyIt} →</span></span>
+    </a>`; }).join('')}</div>
   </section>` : ''}
 
   <section>
     <div class="sec-head"><h2>${t.houseTitle}</h2><p>${t.houseSub}</p></div>
-    <div class="grid">${shown().map(card).join('')}</div>
+    <div class="grid">${shown().map((p) => card(p)).join('')}</div>
   </section>
 
   <section class="how" aria-label="${esc(t.howTitle)}">
@@ -270,24 +290,30 @@ function section(s) {
     <h1>${t.sec[s].title}</h1>
     <p>${t.sec[s].sub}</p>
   </section>
-  <section>${list.length ? `<div class="grid">${list.map(card).join('')}</div>` : `<p class="note">${t.soon}</p>`}</section>`;
+  <section>${list.length ? `<div class="grid">${list.map((p) => card(p)).join('')}</div>` : `<p class="note">${t.soon}</p>`}</section>`;
 }
 
-function product(slug) {
+function product(slug, type) {
   const t = T(); const p = bySlug(slug);
   if (!p) return notFound();
   const sec = p.sections.includes(store.get('yfd-sec', '')) ? store.get('yfd-sec', '') : p.sections[0];
-  const first = p.sizes.findIndex((x) => x.inStock !== false);
-  const sizes = p.sizes.map((s, i) => `<label><input type="radio" name="size" value="${esc(s.size)}" ${s.inStock === false ? 'disabled' : ''} ${i === first ? 'checked' : ''}><span>${esc(s.size)}</span></label>`).join('');
-  const others = shown().filter((x) => x.id !== p.id && x.available && x.sections.some((s) => p.sections.includes(s))).slice(0, 4);
-  const views = (p.gallery || []).map((src) => [src, t.views[src.split('/').pop().replace('.jpg', '')] || '']);
+  const m = modelOf(p, type);
+  const c = country();
+  const ok = m.sizes.map((s) => sizeAvailable(s, c));
+  const first = ok.indexOf(true);
+  const sizes = m.sizes.map((s, i) => `<label><input type="radio" name="size" value="${esc(s.size)}" ${ok[i] ? '' : 'disabled'} ${i === first ? 'checked' : ''}><span>${esc(s.size)}</span></label>`).join('');
+  const zoneNote = m.sizes.some((s, i) => s.inStock && !ok[i]);
+  const others = shown().filter((x) => x.slug !== p.slug && x.available && x.sections.some((s) => p.sections.includes(s))).slice(0, 4);
+  const views = (m.gallery || []).map((src) => [src, t.views[src.split('/').pop().replace('.jpg', '')] || '']);
+  const models = p.models.length > 1 ? `<div class="field-label">${t.model}</div>
+        <fieldset class="models"><legend class="sr">${t.model}</legend>${p.models.map((x) => `<label><input type="radio" name="model" value="${esc(x.type)}" ${x === m ? 'checked' : ''}><span><strong>${esc(x.label[lang])}</strong><small>${esc(x.blank)} · ${eur(x.price)}</small></span></label>`).join('')}</fieldset>` : '';
   return `
   <section class="product">
     <div class="gallery">
-      <div class="gallery-main" id="gallery-main">${badge(p)}<img src="${esc(views[0]?.[0] || p.image)}" alt="${esc(altOf(p))}"></div>
+      <div class="gallery-main" id="gallery-main">${badge(p)}<img src="${esc(views[0]?.[0] || m.image)}" alt="${esc(altOf(p))}"></div>
       <div class="thumbs" role="group">
         ${views.map(([src, label], i) => `<button type="button" data-shot="${esc(src)}" aria-label="${esc(label)}" aria-pressed="${i === 0}"><img src="${esc(src)}" alt=""></button>`).join('')}
-        ${p.art ? `<button type="button" class="t3d" data-3d aria-label="${esc(t.view3d)}" aria-pressed="false">3D</button>` : ''}
+        ${m.flat ? `<button type="button" class="t3d" data-3d aria-label="${esc(t.view3d)}" aria-pressed="false">3D</button>` : ''}
       </div>
     </div>
     <div class="product-info">
@@ -296,15 +322,19 @@ function product(slug) {
       ${itOf(p) ? `<p class="it-line">${t.meaning} ${esc(itOf(p))}</p>` : ''}
       ${lineOf(p) ? `<p class="tagline">${esc(lineOf(p))}</p>` : ''}
       <div>${spice(p.spice)}</div>
-      <p class="price" id="pdp-price">${eur(p.sizes[first]?.price ?? p.price)}</p>
-      ${p.available ? `
+      <p class="price" id="pdp-price">${eur(m.sizes[first]?.price ?? m.price)}</p>
+      ${m.available ? `
       <form id="add-form">
-        <div class="field-label">${t.size} <span>${t.fit}</span></div>
+        ${models}
+        <div class="field-label">${t.size}
+          <label class="ship-to">${t.shipTo} <select id="ship-to">${Object.entries(t.countries).map(([k, n]) => `<option value="${k}" ${c === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+        </div>
         <fieldset class="sizes"><legend class="sr">${t.size}</legend>${sizes}</fieldset>
-        <div class="hero-cta"><button class="btn hot" type="submit">${t.addToBill}</button></div>
+        ${zoneNote ? `<p class="note">${t.sizeZone(countryName(c))}</p>` : ''}
+        <div class="hero-cta"><button class="btn hot" type="submit" ${first < 0 ? 'disabled' : ''}>${t.addToBill}</button></div>
       </form>` : `<p class="notice">${t.soon}</p>`}
       <dl class="specs">
-        <div><dt>${t.specs.tee}</dt><dd>${esc(p.blank?.title || '')}</dd></div>
+        <div><dt>${t.specs.tee}</dt><dd>${esc(m.blank)}</dd></div>
         <div><dt>${t.specs.color}</dt><dd>${esc(colorOf(p))}</dd></div>
         <div><dt>${t.specs.print}</dt><dd>${p.back ? t.printBoth : t.printVal}</dd></div>
         <div><dt>${t.specs.ship}</dt><dd>${t.shipVal}</dd></div>
@@ -312,16 +342,17 @@ function product(slug) {
       <p class="note">${t.returns}</p>
     </div>
   </section>
-  ${others.length ? `<section><div class="sec-head"><h2>${t.pairWith}</h2></div><div class="grid">${others.map(card).join('')}</div></section>` : ''}`;
+  ${others.length ? `<section><div class="sec-head"><h2>${t.pairWith}</h2></div><div class="grid">${others.map((x) => card(x)).join('')}</div></section>` : ''}`;
 }
 
-function checkout() {
+function checkout(params) {
   const t = T();
   if (!cart.length) return `<section class="thanks"><h1>${t.emptyBillTitle}</h1><p>${t.emptyBillSub}</p><a class="btn hot" href="#/">${t.backToShop}</a></section>`;
   const c = store.get('yfd-customer', {});
   const v = (k) => esc(c[k] || '');
   const f = (id, label, attrs, cls = '') => `<div class="f ${cls}"><label for="c-${id}">${label}</label><input id="c-${id}" name="${id}" ${attrs} value="${v(id)}"></div>`;
-  const pay = PREVIEW || config.payments;
+  const pay = config.paypal || config.stripe;
+  const due = eur(total() + (shipQuote?.rate || 0));
   return `
   <section class="checkout">
     <form class="form" id="checkout-form" novalidate>
@@ -339,21 +370,27 @@ function checkout() {
           ${Object.entries(t.countries).map(([k, n]) => `<option value="${k}" ${(c.country || 'IT') === k ? 'selected' : ''}>${n}</option>`).join('')}
         </select></div>
       <div class="f"><label for="c-note">${t.f.note}</label><textarea id="c-note" name="note" rows="2">${v('note')}</textarea></div>
-      <p class="errors" id="errors" role="alert"></p>
-      <p class="notice">${pay ? t.payNote : t.noPayNote}${PREVIEW ? ` ${t.previewNote}` : ''}</p>
-      ${pay ? '<div class="pay-badges" aria-hidden="true"><span>VISA</span><span>Mastercard</span><span>Apple Pay</span><span>Google Pay</span><span>Stripe</span></div>' : ''}
-      <button class="btn hot" type="submit" id="pay-btn">${(pay ? t.pay : t.send)(eur(total() + (shipQuote?.rate || 0)))}</button>
+      <p class="errors" id="errors" role="alert">${params?.get('pay') === 'failed' ? t.payFailed : ''}</p>
+      <p class="notice">${config.paypal ? t.payNote : config.stripe ? t.payNoteStripe : t.noPayNote}${config.paypal && config.stripe ? ` ${t.payNoteCard}` : ''}${PREVIEW ? ` ${t.previewNote}` : ''}</p>
+      ${pay ? `<div class="pay-badges" aria-hidden="true">${config.paypal ? '<span>PayPal</span>' : ''}<span>VISA</span><span>Mastercard</span><span>Amex</span>${config.stripe ? '<span>Apple Pay</span><span>Google Pay</span>' : ''}</div>` : ''}
+      <div class="pay-btns">
+        ${config.paypal ? `<button class="btn paypal" type="submit" value="paypal" data-pay="payPaypal">${t.payPaypal(due)}</button>` : ''}
+        ${config.stripe ? `<button class="btn ${config.paypal ? 'alt' : 'hot'}" type="submit" value="stripe" data-pay="pay">${t.pay(due)}</button>` : ''}
+        ${pay ? '' : `<button class="btn hot" type="submit" value="" data-pay="send">${t.send(due)}</button>`}
+      </div>
     </form>
     <div id="checkout-receipt">${receipt(false)}</div>
   </section>`;
 }
 
-function thanks(id, sessionId) {
+function thanks(id, params) {
   const t = T();
+  const paid = params.get('paid') === '1' || PREVIEW;
+  const checking = params.get('session_id');
   return `<section class="thanks">
-    <p class="eyebrow" id="thanks-label">${sessionId ? t.checking : t.received}</p>
+    <p class="eyebrow" id="thanks-label">${paid ? t.paidLabel : checking ? t.checking : t.received}</p>
     <h1>${t.thanksTitle}</h1>
-    <p id="thanks-sub">${sessionId || PREVIEW ? t.thanksPaid : t.thanksSub}</p>
+    <p id="thanks-sub">${paid || checking ? t.thanksPaid : t.thanksSub}</p>
     <p class="order-id">${esc(id)}</p>
     <a class="btn alt" href="#/">${t.backToShop}</a>
   </section>`;
@@ -361,20 +398,26 @@ function thanks(id, sessionId) {
 const notFound = () => `<section class="thanks"><h1>${T().lostTitle}</h1><p>${T().lostSub}</p><a class="btn hot" href="#/">${T().backToShop}</a></section>`;
 
 /* ---------- Carrello e spedizione ---------- */
-const total = () => cart.reduce((n, i) => n + (sizeOf(byId(i.productId), i.size)?.price ?? 0) * i.qty, 0);
+const total = () => cart.reduce((n, i) => n + (lookup(i.productId, i.size).s?.price ?? 0) * i.qty, 0);
+const cartBlocked = (c) => cart.some((i) => { const { s } = lookup(i.productId, i.size); return s && !sizeAvailable(s, c); });
 const count = () => cart.reduce((n, i) => n + i.qty, 0);
 let shipQuote = null;
 // Spedizione: dal server (tariffe Printful). In anteprima uso la tariffa standard Printful per l'Italia.
 async function quoteShipping(country = 'IT') {
   if (!cart.length) { shipQuote = null; return; }
-  if (PREVIEW) { shipQuote = { rate: Math.round((4.49 + 1.25 * (count() - 1)) * 100) / 100, minDays: 3, maxDays: 6 }; return; }
+  if (PREVIEW) {
+    // anteprima: tariffe standard Printful indicative (Europa / resto del mondo)
+    const eu = regionOf(country) === 'EU', [a, b] = eu ? [4.49, 1.25] : [9.99, 2.5];
+    shipQuote = { rate: Math.round((a + b * (count() - 1)) * 100) / 100, minDays: eu ? 3 : 5, maxDays: eu ? 6 : 12 };
+    return;
+  }
   try {
     const res = await fetch('/api/shipping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ country, items: cart }) });
     shipQuote = res.ok ? await res.json() : null;
   } catch { shipQuote = null; }
 }
 function saveCart(bump = true) {
-  cart = cart.filter((i) => byId(i.productId) && i.qty > 0);
+  cart = cart.filter((i) => lookup(i.productId, i.size).s && i.qty > 0);
   store.set('yfd-cart', cart);
   const el = $('#cart-count');
   el.textContent = count();
@@ -384,10 +427,10 @@ function receipt(editable) {
   const t = T();
   if (!cart.length) return `<div class="empty"><p>${t.nothingYet}</p><p class="note">${t.fillsUp}</p><a class="btn hot" href="#/tutte" data-close>${t.seeTees}</a></div>`;
   const lines = cart.map((i, idx) => {
-    const p = byId(i.productId); const s = sizeOf(p, i.size);
+    const { p, m, s } = lookup(i.productId, i.size);
     return `<div class="line">
       <span class="line-name">${esc(p.name)}</span><span>${eur(s.price * i.qty)}</span>
-      <span class="line-meta">${t.sizeColor(esc(i.size), esc(colorOf(p)))}${editable ? '' : ` · ×${i.qty}`}</span>
+      <span class="line-meta">${p.models.length > 1 ? `${esc(m.label[lang])} · ` : ''}${t.sizeColor(esc(i.size), esc(colorOf(p)))}${editable ? '' : ` · ×${i.qty}`}</span>
       ${editable ? `<span class="qty"><button type="button" data-qty="${idx}" data-d="-1" aria-label="${t.removeOne}">−</button><output>${i.qty}</output><button type="button" data-qty="${idx}" data-d="1" aria-label="${t.addOne}">+</button></span>
       <button class="remove" type="button" data-remove="${idx}">${t.remove}</button>` : ''}
     </div>`;
@@ -424,19 +467,20 @@ function toast(msg) {
 }
 
 /* ---------- Maglietta 3D ---------- */
-async function mount3d(el, p) {
+async function mount3d(el, p, m = p && modelOf(p)) {
   tee3d?.destroy(); tee3d = null;
-  if (!el || !p?.art) return;
+  if (!el || !m?.flat) return;
   try {
     // in anteprima il modulo 3D arriva da un altro script (window.__tee3dReady)
     const { mountTee } = window.__tee3dReady ? await window.__tee3dReady : await import('./tee3d.js');
-    const accent = getComputedStyle(document.body).getPropertyValue('--accent').trim() || '#d6124a';
-    tee3d = mountTee(el, { accent, onReady: () => el.classList.add('ready') });
-    await tee3d?.show(p);
+    tee3d = mountTee(el, { onReady: () => el.classList.add('ready') });
+    await tee3d?.show(teeOf(p, m));
   } catch (e) {
     console.warn('3D non disponibile', e);
   }
 }
+
+const teeOf = (p, m) => ({ front: m.flat, back: m.flatBack, colorHex: p.colorHex });
 
 /* ---------- Lingua e tema ---------- */
 function applyLang() {
@@ -453,6 +497,7 @@ function applyTheme(route, arg) {
   if (route === 'uomo' || route === 'donna') { sec = route; store.set('yfd-sec', route); }
   else if (route === 'p') { const p = bySlug(arg); const last = store.get('yfd-sec', ''); sec = p?.sections.includes(last) ? last : (p?.sections.length === 1 ? p.sections[0] : ''); }
   else if (route === 'tutte' || !route) store.set('yfd-sec', '');
+  ctxSec = sec;
   document.body.dataset.sec = sec === 'uomo' ? 'uomo' : '';
   $('meta[name="theme-color"]')?.setAttribute('content', sec === 'uomo' ? '#dbe4f6' : '#f9e0e3');
 }
@@ -470,9 +515,9 @@ function render() {
   let html;
   if (!route) html = home();
   else if (T().sec[route]) html = section(route);
-  else if (route === 'p') html = product(arg);
-  else if (route === 'checkout') html = checkout();
-  else if (route === 'grazie') html = thanks(arg, params.get('session_id'));
+  else if (route === 'p') html = product(arg, params.get('m'));
+  else if (route === 'checkout') html = checkout(params);
+  else if (route === 'grazie') html = thanks(arg, params);
   else html = notFound();
   $('#main').innerHTML = html;
   const current = route === 'p' ? (document.body.dataset.sec || bySlug(arg)?.sections[0]) : route;
@@ -483,23 +528,17 @@ function render() {
 function bindPage(route, arg, params) {
   const t = T();
   if (!route) {
-    let n = 0;
-    $('#napkin-next')?.addEventListener('click', () => {
-      n = (n + 1) % t.lines.length;
-      $('#napkin-line').textContent = t.lines[n];
-      $('#napkin-n').textContent = t.lineN(n + 1, t.lines.length);
-    });
     const stage = $('#stage');
     const first = bySlug($('[data-pick]')?.dataset.pick);
     if (stage && first) mount3d(stage, first);
     $$('[data-pick]').forEach((b) => b.addEventListener('click', () => {
-      const p = bySlug(b.dataset.pick);
+      const p = bySlug(b.dataset.pick); const m = modelOf(p);
       $$('[data-pick]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
       $('#stage-name').textContent = p.name;
+      $('#stage-price').textContent = eur(m.price);
       $('#stage-link').href = `#/p/${p.slug}`;
-      $('#stage-link').textContent = `${eur(p.price)} · ${t.buyIt} →`;
-      $('.stage-fallback').src = p.image;
-      if (tee3d) tee3d.show(p); else mount3d(stage, p);
+      $('.stage-fallback').src = m.flat;
+      if (tee3d) tee3d.show(teeOf(p, m)); else mount3d(stage, p, m);
     }));
     // Inclinazione 3D delle foto di coppia
     $$('.couple').forEach((c) => {
@@ -513,6 +552,8 @@ function bindPage(route, arg, params) {
   }
   if (route === 'p') {
     const p = bySlug(arg);
+    if (!p) return;
+    const m = modelOf(p, params.get('m'));
     const main = $('#gallery-main');
     const press = (b) => $$('.thumbs button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
     $$('[data-shot]').forEach((b) => b.addEventListener('click', () => {
@@ -528,38 +569,60 @@ function bindPage(route, arg, params) {
       stage.className = 'stage';
       stage.innerHTML = `<span class="stage-hint">↔ ${t.drag}</span>`;
       main.appendChild(stage);
-      mount3d(stage, p);
+      mount3d(stage, p, m);
     });
     const form = $('#add-form');
-    if (!p || !form) return;
-    const price = () => { $('#pdp-price').textContent = eur(sizeOf(p, form.size.value)?.price ?? p.price); };
-    form.addEventListener('change', price);
+    if (!form) return;
+    // cambio modello o paese: ridisegno la pagina senza tornare in cima
+    const redraw = (type) => {
+      const y = scrollY;
+      history.replaceState(null, '', `#/p/${p.slug}?m=${type}`);
+      render();
+      scrollTo(0, y);
+    };
+    $$('input[name="model"]', form).forEach((r) => r.addEventListener('change', () => redraw(r.value)));
+    $('#ship-to').addEventListener('change', (e) => {
+      store.set('yfd-customer', { ...store.get('yfd-customer', {}), country: e.target.value });
+      redraw(m.type);
+    });
+    const price = () => { $('#pdp-price').textContent = eur(m.sizes.find((s) => s.size === form.size?.value)?.price ?? m.price); };
+    $('.sizes', form).addEventListener('change', price);
     price();
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const size = form.size.value;
       if (!size) return toast(t.chooseSize);
-      const line = cart.find((i) => i.productId === p.id && i.size === size);
-      if (line) line.qty++; else cart.push({ productId: p.id, size, qty: 1 });
+      const line = cart.find((i) => i.productId === m.id && i.size === size);
+      if (line) line.qty++; else cart.push({ productId: m.id, size, qty: 1 });
       saveCart();
       toast(t.added(size));
-      await quoteShipping(store.get('yfd-customer', {}).country || 'IT');
+      await quoteShipping(country());
       openCart();
     });
   }
   if (route === 'checkout') {
     const form = $('#checkout-form');
     if (!form) return;
-    const pay = PREVIEW || config.payments;
+    const buttons = $$('[data-pay]', form);
+    const label = () => {
+      const due = eur(total() + (shipQuote?.rate || 0));
+      buttons.forEach((b) => { b.textContent = t[b.dataset.pay](due); });
+    };
     const refresh = async () => {
-      await quoteShipping(form.country.value);
+      const c = form.country.value;
+      store.set('yfd-customer', { ...store.get('yfd-customer', {}), country: c });
+      await quoteShipping(c);
       $('#checkout-receipt').innerHTML = receipt(false);
-      $('#pay-btn').textContent = (pay ? t.pay : t.send)(eur(total() + (shipQuote?.rate || 0)));
+      const blocked = cartBlocked(c);
+      $('#errors').textContent = blocked ? t.cartZone(countryName(c)) : (params.get('pay') === 'failed' ? t.payFailed : '');
+      buttons.forEach((b) => { b.disabled = blocked; });
+      label();
     };
     form.country.addEventListener('change', refresh);
     refresh();
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const provider = e.submitter?.value || buttons[0]?.value || '';
       const data = Object.fromEntries(new FormData(form));
       const missing = $$('[required]', form).filter((el) => !el.value.trim());
       $$('input', form).forEach((el) => el.removeAttribute('aria-invalid'));
@@ -571,16 +634,18 @@ function bindPage(route, arg, params) {
         (missing[0] || $('#c-email')).focus();
         return;
       }
+      if (cartBlocked(data.country)) return;
       store.set('yfd-customer', data);
-      const btn = $('#pay-btn');
-      btn.disabled = true; btn.textContent = t.sending;
+      const btn = e.submitter || buttons[0];
+      buttons.forEach((b) => { b.disabled = true; });
+      btn.textContent = t.sending;
       try {
         if (PREVIEW) {
           cart = []; saveCart(false);
           location.hash = `#/grazie/${t.previewId}-${Date.now().toString(36).toUpperCase()}`;
           return;
         }
-        const res = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: data, items: cart, lang }) });
+        const res = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: data, items: cart, lang, provider }) });
         const out = await res.json();
         if (!res.ok) throw new Error((out.errors || [out.error]).join('. '));
         if (out.payUrl) { store.set('yfd-pending', out.id); location.href = out.payUrl; return; }
@@ -588,13 +653,15 @@ function bindPage(route, arg, params) {
         location.hash = `#/grazie/${encodeURIComponent(out.id)}`;
       } catch (err) {
         $('#errors').textContent = t.sendFail(err.message);
-        btn.disabled = false; btn.textContent = (pay ? t.pay : t.send)(eur(total() + (shipQuote?.rate || 0)));
+        buttons.forEach((b) => { b.disabled = false; });
+        label();
       }
     });
   }
-  if (route === 'grazie' && params.get('session_id') && !PREVIEW) {
-    // Ritorno da Stripe: svuoto il carrello e controllo il pagamento.
+  if (route === 'grazie' && !PREVIEW && (params.get('paid') || params.get('session_id'))) {
+    // Ritorno dal pagamento: svuoto il carrello. Con Stripe controllo anche lo stato.
     cart = []; saveCart(false);
+    if (!params.get('session_id')) return;
     (async () => {
       for (let i = 0; i < 6; i++) {
         const out = await fetch(`/api/orders/${encodeURIComponent(arg)}/status`).then((r) => r.json()).catch(() => ({}));
@@ -633,7 +700,7 @@ async function start() {
     else if (r) cart.splice(+r.dataset.remove, 1);
     else { if (e.target.closest('[data-close]')) closeCart(); return; }
     saveCart();
-    await quoteShipping(store.get('yfd-customer', {}).country || 'IT');
+    await quoteShipping(country());
     $('#drawer-body').innerHTML = receipt(true);
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#drawer').hidden) closeCart(); });

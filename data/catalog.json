@@ -1,10 +1,9 @@
 {
   "store": "Your Favorite Daddy Shop",
   "storeId": 15135959,
-  "syncedAt": "2026-10-10T09:17:23.805Z",
+  "syncedAt": "2026-10-10T16:11:45.734Z",
   "products": [
     {
-      "id": "sync:480105590",
       "slug": "call-me-daddy",
       "name": "Call me daddy.",
       "it": {
@@ -22,95 +21,536 @@
       "price": 29.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564112141,
-          "variantId": 9527,
+          "id": "sync:480105590",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564112141,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564112139,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564112138,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564112137,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564112140,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564112133,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564112134,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564112135,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564112136,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy/flat-front.jpg",
+          "couple": "img/pf/call-me-daddy/couple-front.jpg",
+          "gallery": [
+            "img/pf/call-me-daddy/flat-front.jpg",
+            "img/pf/call-me-daddy/couple-front.jpg",
+            "img/pf/call-me-daddy/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-daddy/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564112139,
-          "variantId": 4016,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564112138,
-          "variantId": 4017,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564112137,
-          "variantId": 4018,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564112140,
-          "variantId": 4019,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564112133,
-          "variantId": 4020,
+          "id": "sync:480209360",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564112134,
-          "variantId": 5295,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564112135,
-          "variantId": 5310,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564112136,
-          "variantId": 12871,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564717913,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564717912,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564717911,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564717914,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564717909,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564717910,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy/donna/flat-front.jpg",
+          "couple": "img/pf/call-me-daddy/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/call-me-daddy/donna/flat-front.jpg",
+            "img/pf/call-me-daddy/donna/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-daddy/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/call-me-daddy/flat-front.jpg",
-      "couple": "img/pf/call-me-daddy/couple-front.jpg",
-      "gallery": [
-        "img/pf/call-me-daddy/flat-front.jpg",
-        "img/pf/call-me-daddy/couple-front.jpg",
-        "img/pf/call-me-daddy/men-s-lifestyle-front.jpg",
-        "img/pf/call-me-daddy/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/call-me-daddy.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480105590
-      },
       "available": true,
       "rank": 0
     },
     {
-      "id": "sync:480120480",
+      "slug": "call-me-mommy",
+      "name": "Call me mommy.",
+      "it": {
+        "traduzione": "Chiamami mammina.",
+        "frase": "Se riesci a starmi dietro."
+      },
+      "en": {
+        "frase": "If you can keep up."
+      },
+      "sections": [
+        "donna"
+      ],
+      "spice": 5,
+      "price": 29.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "back": false,
+      "by": "yfd",
+      "models": [
+        {
+          "id": "sync:480209363",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564717920,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564717919,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564717918,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564717921,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564717916,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564717917,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-mommy/donna/flat-front.jpg",
+          "couple": "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/call-me-mommy/donna/flat-front.jpg",
+            "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-mommy/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209364",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
+          "price": 29.9,
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564717930,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564717928,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564717927,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564717926,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564717929,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564717922,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564717923,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564717924,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564717925,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-mommy/flat-front.jpg",
+          "couple": "img/pf/call-me-mommy/couple-front.jpg",
+          "gallery": [
+            "img/pf/call-me-mommy/flat-front.jpg",
+            "img/pf/call-me-mommy/couple-front.jpg",
+            "img/pf/call-me-mommy/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-mommy/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        }
+      ],
+      "available": true,
+      "rank": 1
+    },
+    {
       "slug": "whos-your-daddy-tonight",
       "name": "Who's your daddy tonight?",
       "it": {
@@ -128,98 +568,268 @@
       "price": 35.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": true,
       "by": "daniele",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186100,
-          "variantId": 9527,
+          "id": "sync:480120480",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 35.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186100,
+              "variantId": 9527,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186098,
+              "variantId": 4016,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186097,
+              "variantId": 4017,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186096,
+              "variantId": 4018,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186099,
+              "variantId": 4019,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186092,
+              "variantId": 4020,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186093,
+              "variantId": 5295,
+              "price": 39.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186094,
+              "variantId": 5310,
+              "price": 41.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186095,
+              "variantId": 12871,
+              "price": 43.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy-tonight/flat-front.jpg",
+          "couple": "img/pf/whos-your-daddy-tonight/couple-front.jpg",
+          "gallery": [
+            "img/pf/whos-your-daddy-tonight/flat-front.jpg",
+            "img/pf/whos-your-daddy-tonight/couple-front.jpg",
+            "img/pf/whos-your-daddy-tonight/women-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy-tonight/men-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy-tonight/flat-back.jpg",
+            "img/pf/whos-your-daddy-tonight/couple-back.jpg",
+            "img/pf/whos-your-daddy-tonight/women-s-lifestyle-back.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564186098,
-          "variantId": 4016,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186097,
-          "variantId": 4017,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186096,
-          "variantId": 4018,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186099,
-          "variantId": 4019,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186092,
-          "variantId": 4020,
+          "id": "sync:480209366",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 37.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186093,
-          "variantId": 5295,
-          "price": 39.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186094,
-          "variantId": 5310,
-          "price": 41.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186095,
-          "variantId": 12871,
-          "price": 43.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718005,
+              "variantId": 10187,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718002,
+              "variantId": 10188,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718001,
+              "variantId": 10189,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718006,
+              "variantId": 10190,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564717999,
+              "variantId": 10191,
+              "price": 39.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718000,
+              "variantId": 10192,
+              "price": 41.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy-tonight/donna/flat-front.jpg",
+          "couple": "img/pf/whos-your-daddy-tonight/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/whos-your-daddy-tonight/donna/flat-front.jpg",
+            "img/pf/whos-your-daddy-tonight/donna/women-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy-tonight/donna/women-s-front.jpg",
+            "img/pf/whos-your-daddy-tonight/donna/flat-back.jpg",
+            "img/pf/whos-your-daddy-tonight/donna/women-s-back.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/whos-your-daddy-tonight/flat-front.jpg",
-      "couple": "img/pf/whos-your-daddy-tonight/couple-front.jpg",
-      "gallery": [
-        "img/pf/whos-your-daddy-tonight/flat-front.jpg",
-        "img/pf/whos-your-daddy-tonight/couple-front.jpg",
-        "img/pf/whos-your-daddy-tonight/men-s-lifestyle-front.jpg",
-        "img/pf/whos-your-daddy-tonight/women-s-lifestyle-front.jpg",
-        "img/pf/whos-your-daddy-tonight/flat-back.jpg",
-        "img/pf/whos-your-daddy-tonight/couple-back.jpg",
-        "img/pf/whos-your-daddy-tonight/women-s-lifestyle-back.jpg"
-      ],
-      "art": "img/art/whos-your-daddy-tonight.png",
-      "artBack": "img/art/whos-your-daddy-tonight-back.png",
-      "source": {
-        "type": "sync",
-        "id": 480120480
-      },
       "available": true,
-      "rank": 1
+      "rank": 2
     },
     {
-      "id": "sync:480105591",
       "slug": "borrow-a-kiss",
       "name": "Can I borrow a kiss? I'll give it back.",
       "it": {
@@ -237,95 +847,518 @@
       "price": 29.9,
       "color": "White",
       "colorHex": "#f4f3ef",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564112150,
-          "variantId": 9526,
+          "id": "sync:480105591",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564112150,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564112148,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564112147,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564112146,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564112149,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564112142,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564112143,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564112144,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564112145,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/borrow-a-kiss/flat-front.jpg",
+          "couple": "img/pf/borrow-a-kiss/couple-front.jpg",
+          "gallery": [
+            "img/pf/borrow-a-kiss/flat-front.jpg",
+            "img/pf/borrow-a-kiss/couple-front.jpg",
+            "img/pf/borrow-a-kiss/women-s-lifestyle-front.jpg",
+            "img/pf/borrow-a-kiss/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564112148,
-          "variantId": 4011,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564112147,
-          "variantId": 4012,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564112146,
-          "variantId": 4013,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564112149,
-          "variantId": 4014,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564112142,
-          "variantId": 4015,
+          "id": "sync:480209369",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564112143,
-          "variantId": 5294,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564112144,
-          "variantId": 5309,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564112145,
-          "variantId": 12872,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718011,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718010,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718009,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718013,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718007,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718008,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/borrow-a-kiss/donna/flat-front.jpg",
+          "couple": "img/pf/borrow-a-kiss/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/borrow-a-kiss/donna/flat-front.jpg",
+            "img/pf/borrow-a-kiss/donna/women-s-lifestyle-front.jpg",
+            "img/pf/borrow-a-kiss/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/borrow-a-kiss/flat-front.jpg",
-      "couple": "img/pf/borrow-a-kiss/couple-front.jpg",
-      "gallery": [
-        "img/pf/borrow-a-kiss/flat-front.jpg",
-        "img/pf/borrow-a-kiss/couple-front.jpg",
-        "img/pf/borrow-a-kiss/men-s-lifestyle-front.jpg",
-        "img/pf/borrow-a-kiss/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/borrow-a-kiss.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480105591
-      },
       "available": true,
-      "rank": 2
+      "rank": 3
     },
     {
-      "id": "sync:480120481",
+      "slug": "buy-me-a-drink-first",
+      "name": "Buy me a drink first. Then we'll talk.",
+      "it": {
+        "traduzione": "Prima offrimi da bere. Poi parliamo.",
+        "frase": "Poi parliamo."
+      },
+      "en": {
+        "frase": "Then we'll talk."
+      },
+      "sections": [
+        "donna"
+      ],
+      "spice": 3,
+      "price": 29.9,
+      "color": "White",
+      "colorHex": "#f4f3ef",
+      "back": false,
+      "by": "yfd",
+      "models": [
+        {
+          "id": "sync:480209373",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718021,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718020,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718019,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718022,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718017,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718018,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/buy-me-a-drink-first/donna/flat-front.jpg",
+          "couple": "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/buy-me-a-drink-first/donna/flat-front.jpg",
+            "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
+            "img/pf/buy-me-a-drink-first/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209382",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
+          "price": 29.9,
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564718043,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564718041,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718040,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718039,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718042,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718035,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718036,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564718037,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564718038,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/buy-me-a-drink-first/flat-front.jpg",
+          "couple": "img/pf/buy-me-a-drink-first/couple-front.jpg",
+          "gallery": [
+            "img/pf/buy-me-a-drink-first/flat-front.jpg",
+            "img/pf/buy-me-a-drink-first/couple-front.jpg",
+            "img/pf/buy-me-a-drink-first/women-s-lifestyle-front.jpg",
+            "img/pf/buy-me-a-drink-first/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        }
+      ],
+      "available": true,
+      "rank": 4
+    },
+    {
       "slug": "happy-vibe",
       "name": "I need a happy vibe, not a happy ending.",
       "it": {
@@ -343,95 +1376,263 @@
       "price": 29.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "daniele",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186109,
-          "variantId": 9527,
+          "id": "sync:480120481",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186109,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186107,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186106,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186105,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186108,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186101,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186102,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186103,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186104,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/happy-vibe/flat-front.jpg",
+          "couple": "img/pf/happy-vibe/couple-front.jpg",
+          "gallery": [
+            "img/pf/happy-vibe/flat-front.jpg",
+            "img/pf/happy-vibe/couple-front.jpg",
+            "img/pf/happy-vibe/women-s-lifestyle-front.jpg",
+            "img/pf/happy-vibe/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564186107,
-          "variantId": 4016,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186106,
-          "variantId": 4017,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186105,
-          "variantId": 4018,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186108,
-          "variantId": 4019,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186101,
-          "variantId": 4020,
+          "id": "sync:480209385",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186102,
-          "variantId": 5295,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186103,
-          "variantId": 5310,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186104,
-          "variantId": 12871,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718123,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718122,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718121,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718124,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718119,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718120,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/happy-vibe/donna/flat-front.jpg",
+          "couple": "img/pf/happy-vibe/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/happy-vibe/donna/flat-front.jpg",
+            "img/pf/happy-vibe/donna/women-s-lifestyle-front.jpg",
+            "img/pf/happy-vibe/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/happy-vibe/flat-front.jpg",
-      "couple": "img/pf/happy-vibe/couple-front.jpg",
-      "gallery": [
-        "img/pf/happy-vibe/flat-front.jpg",
-        "img/pf/happy-vibe/couple-front.jpg",
-        "img/pf/happy-vibe/men-s-lifestyle-front.jpg",
-        "img/pf/happy-vibe/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/happy-vibe.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480120481
-      },
       "available": true,
-      "rank": 3
+      "rank": 5
     },
     {
-      "id": "sync:480105592",
       "slug": "love-at-first-sight",
       "name": "Do you believe in love at first sight, or should I walk by again?",
       "it": {
@@ -449,95 +1650,527 @@
       "price": 29.9,
       "color": "White",
       "colorHex": "#f4f3ef",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564112159,
-          "variantId": 9526,
+          "id": "sync:480105592",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564112159,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564112157,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564112156,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564112155,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564112158,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564112151,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564112152,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564112153,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564112154,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/love-at-first-sight/flat-front.jpg",
+          "couple": "img/pf/love-at-first-sight/couple-front.jpg",
+          "gallery": [
+            "img/pf/love-at-first-sight/flat-front.jpg",
+            "img/pf/love-at-first-sight/couple-front.jpg",
+            "img/pf/love-at-first-sight/women-s-lifestyle-front.jpg",
+            "img/pf/love-at-first-sight/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564112157,
-          "variantId": 4011,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564112156,
-          "variantId": 4012,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564112155,
-          "variantId": 4013,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564112158,
-          "variantId": 4014,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564112151,
-          "variantId": 4015,
+          "id": "sync:480209388",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564112152,
-          "variantId": 5294,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564112153,
-          "variantId": 5309,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564112154,
-          "variantId": 12872,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718158,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718157,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718155,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718159,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718150,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718152,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/love-at-first-sight/donna/flat-front.jpg",
+          "couple": "img/pf/love-at-first-sight/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/love-at-first-sight/donna/flat-front.jpg",
+            "img/pf/love-at-first-sight/donna/women-s-lifestyle-front.jpg",
+            "img/pf/love-at-first-sight/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/love-at-first-sight/flat-front.jpg",
-      "couple": "img/pf/love-at-first-sight/couple-front.jpg",
-      "gallery": [
-        "img/pf/love-at-first-sight/flat-front.jpg",
-        "img/pf/love-at-first-sight/couple-front.jpg",
-        "img/pf/love-at-first-sight/men-s-lifestyle-front.jpg",
-        "img/pf/love-at-first-sight/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/love-at-first-sight.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480105592
-      },
       "available": true,
-      "rank": 4
+      "rank": 6
     },
     {
-      "id": "sync:480120483",
+      "slug": "out-of-your-league",
+      "name": "Out of your league. Try anyway.",
+      "it": {
+        "traduzione": "Fuori dalla tua portata. Provaci lo stesso.",
+        "frase": "Casa 10, tu 0."
+      },
+      "en": {
+        "frase": "Home 10, you 0."
+      },
+      "sections": [
+        "donna"
+      ],
+      "spice": 4,
+      "price": 29.9,
+      "color": "Black",
+      "colorHex": "#141416",
+      "back": false,
+      "by": "yfd",
+      "models": [
+        {
+          "id": "sync:480209390",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718164,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718163,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718162,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718165,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718160,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718161,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/out-of-your-league/donna/flat-front.jpg",
+          "couple": "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/out-of-your-league/donna/flat-front.jpg",
+            "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
+            "img/pf/out-of-your-league/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209604",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
+          "price": 29.9,
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564719034,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564719032,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719031,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719030,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719033,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719026,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719027,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564719028,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564719029,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/out-of-your-league/flat-front.jpg",
+          "couple": "img/pf/out-of-your-league/couple-front.jpg",
+          "gallery": [
+            "img/pf/out-of-your-league/flat-front.jpg",
+            "img/pf/out-of-your-league/couple-front.jpg",
+            "img/pf/out-of-your-league/women-s-lifestyle-front.jpg",
+            "img/pf/out-of-your-league/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        }
+      ],
+      "available": true,
+      "rank": 7
+    },
+    {
       "slug": "whos-your-daddy",
       "name": "Who's your daddy? Ask nicely or pay the price.",
       "it": {
@@ -554,98 +2187,170 @@
       "price": 35.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": true,
       "by": "daniele",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186129,
-          "variantId": 9527,
+          "id": "sync:480120483",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "S",
-          "syncVariantId": 5564186127,
-          "variantId": 4016,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186126,
-          "variantId": 4017,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186125,
-          "variantId": 4018,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186128,
-          "variantId": 4019,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186119,
-          "variantId": 4020,
-          "price": 37.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186121,
-          "variantId": 5295,
-          "price": 39.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186123,
-          "variantId": 5310,
-          "price": 41.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186124,
-          "variantId": 12871,
-          "price": 43.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186129,
+              "variantId": 9527,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186127,
+              "variantId": 4016,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186126,
+              "variantId": 4017,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186125,
+              "variantId": 4018,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186128,
+              "variantId": 4019,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186119,
+              "variantId": 4020,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186121,
+              "variantId": 5295,
+              "price": 39.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186123,
+              "variantId": 5310,
+              "price": 41.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186124,
+              "variantId": 12871,
+              "price": 43.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy/flat-front.jpg",
+          "couple": "img/pf/whos-your-daddy/couple-front.jpg",
+          "gallery": [
+            "img/pf/whos-your-daddy/flat-front.jpg",
+            "img/pf/whos-your-daddy/couple-front.jpg",
+            "img/pf/whos-your-daddy/women-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy/men-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy/flat-back.jpg",
+            "img/pf/whos-your-daddy/couple-back.jpg",
+            "img/pf/whos-your-daddy/women-s-lifestyle-back.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/whos-your-daddy/flat-front.jpg",
-      "couple": "img/pf/whos-your-daddy/couple-front.jpg",
-      "gallery": [
-        "img/pf/whos-your-daddy/flat-front.jpg",
-        "img/pf/whos-your-daddy/couple-front.jpg",
-        "img/pf/whos-your-daddy/men-s-lifestyle-front.jpg",
-        "img/pf/whos-your-daddy/women-s-lifestyle-front.jpg",
-        "img/pf/whos-your-daddy/flat-back.jpg",
-        "img/pf/whos-your-daddy/couple-back.jpg",
-        "img/pf/whos-your-daddy/women-s-lifestyle-back.jpg"
-      ],
-      "art": "img/art/whos-your-daddy.png",
-      "artBack": "img/art/whos-your-daddy-back.png",
-      "source": {
-        "type": "sync",
-        "id": 480120483
-      },
       "available": true,
-      "rank": 5
+      "rank": 8
     },
     {
-      "id": "sync:480105593",
       "slug": "picture-us-together",
       "name": "I'm no photographer, but I can picture us together.",
       "it": {
@@ -663,95 +2368,527 @@
       "price": 29.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564112168,
-          "variantId": 9527,
+          "id": "sync:480105593",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564112168,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564112166,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564112165,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564112164,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564112167,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564112160,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564112161,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564112162,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564112163,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/picture-us-together/flat-front.jpg",
+          "couple": "img/pf/picture-us-together/couple-front.jpg",
+          "gallery": [
+            "img/pf/picture-us-together/flat-front.jpg",
+            "img/pf/picture-us-together/couple-front.jpg",
+            "img/pf/picture-us-together/women-s-lifestyle-front.jpg",
+            "img/pf/picture-us-together/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564112166,
-          "variantId": 4016,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564112165,
-          "variantId": 4017,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564112164,
-          "variantId": 4018,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564112167,
-          "variantId": 4019,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564112160,
-          "variantId": 4020,
+          "id": "sync:480209607",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564112161,
-          "variantId": 5295,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564112162,
-          "variantId": 5310,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564112163,
-          "variantId": 12871,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719041,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719040,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719039,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719042,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719037,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719038,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/picture-us-together/donna/flat-front.jpg",
+          "couple": "img/pf/picture-us-together/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/picture-us-together/donna/flat-front.jpg",
+            "img/pf/picture-us-together/donna/women-s-lifestyle-front.jpg",
+            "img/pf/picture-us-together/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/picture-us-together/flat-front.jpg",
-      "couple": "img/pf/picture-us-together/couple-front.jpg",
-      "gallery": [
-        "img/pf/picture-us-together/flat-front.jpg",
-        "img/pf/picture-us-together/couple-front.jpg",
-        "img/pf/picture-us-together/men-s-lifestyle-front.jpg",
-        "img/pf/picture-us-together/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/picture-us-together.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480105593
-      },
       "available": true,
-      "rank": 6
+      "rank": 9
     },
     {
-      "id": "sync:480120489",
+      "slug": "talk-flirty-to-me",
+      "name": "Talk flirty to me.",
+      "it": {
+        "traduzione": "Parlami in modo civettuolo.",
+        "frase": "Dai, ti ascolto."
+      },
+      "en": {
+        "frase": "Go on, I'm listening."
+      },
+      "sections": [
+        "donna"
+      ],
+      "spice": 3,
+      "price": 29.9,
+      "color": "White",
+      "colorHex": "#f4f3ef",
+      "back": false,
+      "by": "yfd",
+      "models": [
+        {
+          "id": "sync:480209609",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719048,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719047,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719046,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719049,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719044,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719045,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/talk-flirty-to-me/donna/flat-front.jpg",
+          "couple": "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/talk-flirty-to-me/donna/flat-front.jpg",
+            "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
+            "img/pf/talk-flirty-to-me/donna/women-s-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209610",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
+          "price": 29.9,
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564719058,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564719056,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719055,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719054,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719057,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719050,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719051,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564719052,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564719053,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/talk-flirty-to-me/flat-front.jpg",
+          "couple": "img/pf/talk-flirty-to-me/couple-front.jpg",
+          "gallery": [
+            "img/pf/talk-flirty-to-me/flat-front.jpg",
+            "img/pf/talk-flirty-to-me/couple-front.jpg",
+            "img/pf/talk-flirty-to-me/women-s-lifestyle-front.jpg",
+            "img/pf/talk-flirty-to-me/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
+        }
+      ],
+      "available": true,
+      "rank": 10
+    },
+    {
       "slug": "parking-ticket",
       "name": "Are you a parking ticket? 'Cause you've got FINE written all over you.",
       "it": {
@@ -769,95 +2906,250 @@
       "price": 29.9,
       "color": "White",
       "colorHex": "#f4f3ef",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186147,
-          "variantId": 9526,
+          "id": "sync:480120489",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186147,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186145,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186144,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186143,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186146,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186139,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186140,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186141,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186142,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/parking-ticket/flat-front.jpg",
+          "couple": "img/pf/parking-ticket/couple-front.jpg",
+          "gallery": [
+            "img/pf/parking-ticket/flat-front.jpg",
+            "img/pf/parking-ticket/couple-front.jpg",
+            "img/pf/parking-ticket/women-s-lifestyle-front.jpg",
+            "img/pf/parking-ticket/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564186145,
-          "variantId": 4011,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186144,
-          "variantId": 4012,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186143,
-          "variantId": 4013,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186146,
-          "variantId": 4014,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186139,
-          "variantId": 4015,
+          "id": "sync:480209611",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186140,
-          "variantId": 5294,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186141,
-          "variantId": 5309,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186142,
-          "variantId": 12872,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719099,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719098,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719097,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719100,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719087,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719096,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": null,
+          "couple": null,
+          "gallery": [],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/parking-ticket/flat-front.jpg",
-      "couple": "img/pf/parking-ticket/couple-front.jpg",
-      "gallery": [
-        "img/pf/parking-ticket/flat-front.jpg",
-        "img/pf/parking-ticket/couple-front.jpg",
-        "img/pf/parking-ticket/men-s-lifestyle-front.jpg",
-        "img/pf/parking-ticket/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/parking-ticket.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480120489
-      },
       "available": true,
-      "rank": 7
+      "rank": 11
     },
     {
-      "id": "sync:480105594",
       "slug": "running-through-my-mind",
       "name": "Tired? You've been running through my mind all night.",
       "it": {
@@ -875,95 +3167,250 @@
       "price": 29.9,
       "color": "White",
       "colorHex": "#f4f3ef",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564112177,
-          "variantId": 9526,
+          "id": "sync:480105594",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564112177,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564112175,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564112174,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564112173,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564112176,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564112169,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564112170,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564112171,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564112172,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/running-through-my-mind/flat-front.jpg",
+          "couple": "img/pf/running-through-my-mind/couple-front.jpg",
+          "gallery": [
+            "img/pf/running-through-my-mind/flat-front.jpg",
+            "img/pf/running-through-my-mind/couple-front.jpg",
+            "img/pf/running-through-my-mind/women-s-lifestyle-front.jpg",
+            "img/pf/running-through-my-mind/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564112175,
-          "variantId": 4011,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564112174,
-          "variantId": 4012,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564112173,
-          "variantId": 4013,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564112176,
-          "variantId": 4014,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564112169,
-          "variantId": 4015,
+          "id": "sync:480209615",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564112170,
-          "variantId": 5294,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564112171,
-          "variantId": 5309,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564112172,
-          "variantId": 12872,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719124,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719123,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719122,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719125,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719120,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719121,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": null,
+          "couple": null,
+          "gallery": [],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/running-through-my-mind/flat-front.jpg",
-      "couple": "img/pf/running-through-my-mind/couple-front.jpg",
-      "gallery": [
-        "img/pf/running-through-my-mind/flat-front.jpg",
-        "img/pf/running-through-my-mind/couple-front.jpg",
-        "img/pf/running-through-my-mind/men-s-lifestyle-front.jpg",
-        "img/pf/running-through-my-mind/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/running-through-my-mind.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480105594
-      },
       "available": true,
-      "rank": 8
+      "rank": 12
     },
     {
-      "id": "sync:480120495",
       "slug": "call-me-daddy-classic",
       "name": "Call me daddy. The classic.",
       "it": {
@@ -980,95 +3427,167 @@
       "price": 29.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "daniele",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186200,
-          "variantId": 9527,
+          "id": "sync:480120495",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "S",
-          "syncVariantId": 5564186198,
-          "variantId": 4016,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186197,
-          "variantId": 4017,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186196,
-          "variantId": 4018,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186199,
-          "variantId": 4019,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186192,
-          "variantId": 4020,
-          "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186193,
-          "variantId": 5295,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186194,
-          "variantId": 5310,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186195,
-          "variantId": 12871,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186200,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186198,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186197,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186196,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186199,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186192,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186193,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186194,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186195,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy-classic/flat-front.jpg",
+          "couple": "img/pf/call-me-daddy-classic/couple-front.jpg",
+          "gallery": [
+            "img/pf/call-me-daddy-classic/flat-front.jpg",
+            "img/pf/call-me-daddy-classic/couple-front.jpg",
+            "img/pf/call-me-daddy-classic/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-daddy-classic/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/call-me-daddy-classic/flat-front.jpg",
-      "couple": "img/pf/call-me-daddy-classic/couple-front.jpg",
-      "gallery": [
-        "img/pf/call-me-daddy-classic/flat-front.jpg",
-        "img/pf/call-me-daddy-classic/couple-front.jpg",
-        "img/pf/call-me-daddy-classic/men-s-lifestyle-front.jpg",
-        "img/pf/call-me-daddy-classic/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/call-me-daddy-classic.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480120495
-      },
       "available": true,
-      "rank": 9
+      "rank": 13
     },
     {
-      "id": "sync:480120829",
       "slug": "stole-the-stars",
       "name": "Is your dad a thief? He stole the stars and put them in your eyes.",
       "it": {
@@ -1086,95 +3605,259 @@
       "price": 29.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186796,
-          "variantId": 9527,
+          "id": "sync:480120829",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186796,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186794,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186793,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186792,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186795,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186788,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186789,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186790,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186791,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/stole-the-stars/flat-front.jpg",
+          "couple": "img/pf/stole-the-stars/couple-front.jpg",
+          "gallery": [
+            "img/pf/stole-the-stars/flat-front.jpg",
+            "img/pf/stole-the-stars/couple-front.jpg",
+            "img/pf/stole-the-stars/women-s-lifestyle-front.jpg",
+            "img/pf/stole-the-stars/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564186794,
-          "variantId": 4016,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186793,
-          "variantId": 4017,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186792,
-          "variantId": 4018,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186795,
-          "variantId": 4019,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186788,
-          "variantId": 4020,
+          "id": "sync:480209616",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186789,
-          "variantId": 5295,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186790,
-          "variantId": 5310,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186791,
-          "variantId": 12871,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719131,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719130,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719129,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719132,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719127,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719128,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": null,
+          "couple": null,
+          "gallery": [],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/stole-the-stars/flat-front.jpg",
-      "couple": "img/pf/stole-the-stars/couple-front.jpg",
-      "gallery": [
-        "img/pf/stole-the-stars/flat-front.jpg",
-        "img/pf/stole-the-stars/couple-front.jpg",
-        "img/pf/stole-the-stars/men-s-lifestyle-front.jpg",
-        "img/pf/stole-the-stars/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/stole-the-stars.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480120829
-      },
       "available": true,
-      "rank": 10
+      "rank": 14
     },
     {
-      "id": "sync:480105597",
       "slug": "lost-in-your-eyes",
       "name": "Got a map? I just got lost in your eyes.",
       "it": {
@@ -1192,95 +3875,259 @@
       "price": 29.9,
       "color": "Black",
       "colorHex": "#141416",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "yfd",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564112221,
-          "variantId": 9527,
+          "id": "sync:480105597",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564112221,
+              "variantId": 9527,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564112219,
+              "variantId": 4016,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564112218,
+              "variantId": 4017,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564112217,
+              "variantId": 4018,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564112220,
+              "variantId": 4019,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564112213,
+              "variantId": 4020,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564112214,
+              "variantId": 5295,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564112215,
+              "variantId": 5310,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564112216,
+              "variantId": 12871,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "CA"
+              ]
+            }
+          ],
+          "image": "img/pf/lost-in-your-eyes/flat-front.jpg",
+          "couple": "img/pf/lost-in-your-eyes/couple-front.jpg",
+          "gallery": [
+            "img/pf/lost-in-your-eyes/flat-front.jpg",
+            "img/pf/lost-in-your-eyes/couple-front.jpg",
+            "img/pf/lost-in-your-eyes/women-s-lifestyle-front.jpg",
+            "img/pf/lost-in-your-eyes/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         },
         {
-          "size": "S",
-          "syncVariantId": 5564112219,
-          "variantId": 4016,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564112218,
-          "variantId": 4017,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564112217,
-          "variantId": 4018,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564112220,
-          "variantId": 4019,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564112213,
-          "variantId": 4020,
+          "id": "sync:480209618",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
           "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564112214,
-          "variantId": 5295,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564112215,
-          "variantId": 5310,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564112216,
-          "variantId": 12871,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719137,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719136,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719135,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719138,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719133,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719134,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": null,
+          "couple": null,
+          "gallery": [],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/lost-in-your-eyes/flat-front.jpg",
-      "couple": "img/pf/lost-in-your-eyes/couple-front.jpg",
-      "gallery": [
-        "img/pf/lost-in-your-eyes/flat-front.jpg",
-        "img/pf/lost-in-your-eyes/couple-front.jpg",
-        "img/pf/lost-in-your-eyes/men-s-lifestyle-front.jpg",
-        "img/pf/lost-in-your-eyes/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/lost-in-your-eyes.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480105597
-      },
       "available": true,
-      "rank": 11
+      "rank": 15
     },
     {
-      "id": "sync:480120833",
       "slug": "filipina-girls",
       "name": "Resisting Filipina girls: a lost cause.",
       "it": {
@@ -1297,92 +4144,160 @@
       "price": 29.9,
       "color": "White",
       "colorHex": "#f4f3ef",
-      "blank": {
-        "title": "Bella+Canvas 3001 unisex"
-      },
       "back": false,
       "by": "daniele",
-      "sizes": [
+      "models": [
         {
-          "size": "XS",
-          "syncVariantId": 5564186874,
-          "variantId": 9526,
+          "id": "sync:480120833",
+          "type": "unisex",
+          "label": {
+            "it": "Classica unisex",
+            "en": "Classic unisex"
+          },
+          "blank": "Bella+Canvas 3001 unisex",
           "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "S",
-          "syncVariantId": 5564186872,
-          "variantId": 4011,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "M",
-          "syncVariantId": 5564186871,
-          "variantId": 4012,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "L",
-          "syncVariantId": 5564186870,
-          "variantId": 4013,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "XL",
-          "syncVariantId": 5564186873,
-          "variantId": 4014,
-          "price": 29.9,
-          "inStock": true
-        },
-        {
-          "size": "2XL",
-          "syncVariantId": 5564186855,
-          "variantId": 4015,
-          "price": 31.9,
-          "inStock": true
-        },
-        {
-          "size": "3XL",
-          "syncVariantId": 5564186861,
-          "variantId": 5294,
-          "price": 33.9,
-          "inStock": true
-        },
-        {
-          "size": "4XL",
-          "syncVariantId": 5564186865,
-          "variantId": 5309,
-          "price": 35.9,
-          "inStock": true
-        },
-        {
-          "size": "5XL",
-          "syncVariantId": 5564186867,
-          "variantId": 12872,
-          "price": 37.9,
-          "inStock": true
+          "sizes": [
+            {
+              "size": "XS",
+              "syncVariantId": 5564186874,
+              "variantId": 9526,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "S",
+              "syncVariantId": 5564186872,
+              "variantId": 4011,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564186871,
+              "variantId": 4012,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564186870,
+              "variantId": 4013,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564186873,
+              "variantId": 4014,
+              "price": 29.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564186855,
+              "variantId": 4015,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU",
+                "JP",
+                "BR"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564186861,
+              "variantId": 5294,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5564186865,
+              "variantId": 5309,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5564186867,
+              "variantId": 12872,
+              "price": 37.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/filipina-girls/flat-front.jpg",
+          "couple": "img/pf/filipina-girls/couple-front.jpg",
+          "gallery": [
+            "img/pf/filipina-girls/flat-front.jpg",
+            "img/pf/filipina-girls/couple-front.jpg",
+            "img/pf/filipina-girls/women-s-lifestyle-front.jpg",
+            "img/pf/filipina-girls/men-s-lifestyle-front.jpg"
+          ],
+          "flat": null,
+          "flatBack": null,
+          "available": true
         }
       ],
-      "image": "img/pf/filipina-girls/flat-front.jpg",
-      "couple": "img/pf/filipina-girls/couple-front.jpg",
-      "gallery": [
-        "img/pf/filipina-girls/flat-front.jpg",
-        "img/pf/filipina-girls/couple-front.jpg",
-        "img/pf/filipina-girls/men-s-lifestyle-front.jpg",
-        "img/pf/filipina-girls/women-s-lifestyle-front.jpg"
-      ],
-      "art": "img/art/filipina-girls.png",
-      "artBack": null,
-      "source": {
-        "type": "sync",
-        "id": 480120833
-      },
       "available": true,
-      "rank": 12
+      "rank": 16
     }
   ]
 }

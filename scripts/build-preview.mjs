@@ -8,7 +8,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pub = (f) => path.join(root, 'public', f);
 const html = await fs.readFile(pub('index.html'), 'utf8');
 const css = await fs.readFile(pub('styles.css'), 'utf8');
-const js = await fs.readFile(pub('app.js'), 'utf8');
+// app.js importa regions.js: in anteprima lo incollo dentro
+const regions = (await fs.readFile(pub('regions.js'), 'utf8')).replace(/^export /gm, '');
+const js = (await fs.readFile(pub('app.js'), 'utf8')).replace(/^import \{[^}]+\} from '\.\/regions\.js';$/m, regions);
 const tee = (await fs.readFile(pub('tee3d.js'), 'utf8'))
   .replace("'./vendor/three.module.min.js'", "'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js'");
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'data/catalog.json'), 'utf8'));
@@ -18,19 +20,18 @@ const inline = async (file) => {
   if (!file?.startsWith('img/')) return file;
   if (cache.has(file)) return cache.get(file);
   const buf = await fs.readFile(pub(file)).catch(() => null);
-  const type = file.endsWith('.png') ? 'image/png' : 'image/jpeg';
+  const type = { png: 'image/png', webp: 'image/webp' }[file.split('.').pop()] || 'image/jpeg';
   const out = buf ? `data:${type};base64,${buf.toString('base64')}` : null;
   cache.set(file, out);
   return out;
 };
-for (const p of catalog.products) {
-  p.gallery = await Promise.all((p.gallery || []).map(inline));
-  for (const k of ['image', 'couple', 'art', 'artBack']) p[k] = await inline(p[k]);
-}
 // le foto si riconoscono dal nome del file: lo tengo in un frammento dopo il data URI
+const named = async (file) => { const src = await inline(file); return src && `${src}#/${file.split('/').pop()}`; };
 for (const p of catalog.products) {
-  const names = (await fs.readFile(path.join(root, 'data/catalog.json'), 'utf8').then(JSON.parse)).products.find((x) => x.id === p.id).gallery;
-  p.gallery = p.gallery.map((src, i) => `${src}#/${names[i].split('/').pop()}`);
+  for (const m of p.models) {
+    m.gallery = await Promise.all((m.gallery || []).map(named));
+    for (const k of ['image', 'couple', 'flat', 'flatBack']) m[k] = await named(m[k]);
+  }
 }
 
 const body = html.match(/<!--APP-->([\s\S]*)<!--\/APP-->/)[1];
