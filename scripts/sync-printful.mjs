@@ -38,7 +38,7 @@ for (const [rank, d] of data.designs.entries()) {
     const shot = (tipo) => m.mockup?.find((x) => x.tipo === tipo)?.src || null;
     const dir = `img/pf/${d.slug}/${m.tipo === 'unisex' ? '' : m.tipo + '/'}`;
     models.push({
-      id: `sync:${m.printful}`, type: m.tipo, label: LABEL[m.tipo], blank: data.modelli[m.tipo].maglietta,
+      id: `sync:${m.printful}`, type: m.tipo, label: LABEL[m.tipo], blank: data.modelli[m.tipo].maglietta.replace(/ (unisex|donna).*$/, ''),
       price: Math.min(...sizes.map((s) => s.price)), sizes,
       image: shot('flat-front'), couple: shot('couple-front') || shot('women-s-lifestyle-front'),
       gallery: GALLERY.map(shot).filter(Boolean),

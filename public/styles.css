@@ -222,7 +222,7 @@ main:focus { outline: none; }
 .f input:focus, .f textarea:focus, .f select:focus { border-color: var(--ink); outline: none; }
 .f input[aria-invalid="true"] { border-color: var(--accent); }
 .errors { grid-column: 1 / -1; color: var(--accent); font-weight: 600; }
-.form .btn { grid-column: 1 / -1; }
+.form .btn, .form > .notice, .form > .pay-badges, .form > .pay-btns { grid-column: 1 / -1; }
 
 /* Grazie */
 .thanks { padding-top: 56px; display: grid; gap: 18px; justify-items: start; max-width: 640px; }
@@ -414,3 +414,4 @@ main > * { min-width: 0; }
 .pay-btns { display: grid; gap: 10px; }
 .btn.paypal { background: #ffc439; border-color: #ffc439; color: #111; }
 .btn.paypal:hover { background: #f2ba36; }
+.gallery-main:has(.stage) > img { visibility: hidden; }

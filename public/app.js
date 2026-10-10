@@ -520,7 +520,7 @@ function render() {
   else if (route === 'grazie') html = thanks(arg, params);
   else html = notFound();
   $('#main').innerHTML = html;
-  const current = route === 'p' ? (document.body.dataset.sec || bySlug(arg)?.sections[0]) : route;
+  const current = route === 'p' ? (ctxSec || bySlug(arg)?.sections[0]) : route;
   $$('[data-nav]').forEach((a) => (a.dataset.nav === current ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current')));
   bindPage(route, arg, params);
 }

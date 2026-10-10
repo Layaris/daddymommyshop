@@ -1177,7 +1177,27 @@
         },
         {
           "tipo": "donna",
-          "printful": 480209618
+          "printful": 480209618,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
         }
       ]
     },

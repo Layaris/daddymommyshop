@@ -1,7 +1,7 @@
 {
   "store": "Your Favorite Daddy Shop",
   "storeId": 15135959,
-  "syncedAt": "2026-10-10T16:11:45.734Z",
+  "syncedAt": "2026-10-10T16:19:21.121Z",
   "products": [
     {
       "slug": "call-me-daddy",
@@ -31,7 +31,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -173,7 +173,7 @@
             "img/pf/call-me-daddy/women-s-lifestyle-front.jpg",
             "img/pf/call-me-daddy/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/call-me-daddy/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -184,7 +184,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -269,7 +269,7 @@
             "img/pf/call-me-daddy/donna/women-s-lifestyle-front.jpg",
             "img/pf/call-me-daddy/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/call-me-daddy/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -304,7 +304,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -389,7 +389,7 @@
             "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
             "img/pf/call-me-mommy/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/call-me-mommy/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -400,7 +400,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -542,7 +542,7 @@
             "img/pf/call-me-mommy/women-s-lifestyle-front.jpg",
             "img/pf/call-me-mommy/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/call-me-mommy/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -578,7 +578,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 35.9,
           "sizes": [
             {
@@ -723,8 +723,8 @@
             "img/pf/whos-your-daddy-tonight/couple-back.jpg",
             "img/pf/whos-your-daddy-tonight/women-s-lifestyle-back.jpg"
           ],
-          "flat": null,
-          "flatBack": null,
+          "flat": "img/pf/whos-your-daddy-tonight/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy-tonight/flat-back.webp",
           "available": true
         },
         {
@@ -734,7 +734,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 37.9,
           "sizes": [
             {
@@ -821,8 +821,8 @@
             "img/pf/whos-your-daddy-tonight/donna/flat-back.jpg",
             "img/pf/whos-your-daddy-tonight/donna/women-s-back.jpg"
           ],
-          "flat": null,
-          "flatBack": null,
+          "flat": "img/pf/whos-your-daddy-tonight/donna/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy-tonight/donna/flat-back.webp",
           "available": true
         }
       ],
@@ -857,7 +857,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -994,7 +994,7 @@
             "img/pf/borrow-a-kiss/women-s-lifestyle-front.jpg",
             "img/pf/borrow-a-kiss/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/borrow-a-kiss/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -1005,7 +1005,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -1086,7 +1086,7 @@
             "img/pf/borrow-a-kiss/donna/women-s-lifestyle-front.jpg",
             "img/pf/borrow-a-kiss/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/borrow-a-kiss/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -1121,7 +1121,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -1202,7 +1202,7 @@
             "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
             "img/pf/buy-me-a-drink-first/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/buy-me-a-drink-first/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -1213,7 +1213,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -1350,7 +1350,7 @@
             "img/pf/buy-me-a-drink-first/women-s-lifestyle-front.jpg",
             "img/pf/buy-me-a-drink-first/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/buy-me-a-drink-first/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -1386,7 +1386,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -1528,7 +1528,7 @@
             "img/pf/happy-vibe/women-s-lifestyle-front.jpg",
             "img/pf/happy-vibe/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/happy-vibe/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -1539,7 +1539,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -1624,7 +1624,7 @@
             "img/pf/happy-vibe/donna/women-s-lifestyle-front.jpg",
             "img/pf/happy-vibe/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/happy-vibe/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -1660,7 +1660,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -1797,7 +1797,7 @@
             "img/pf/love-at-first-sight/women-s-lifestyle-front.jpg",
             "img/pf/love-at-first-sight/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/love-at-first-sight/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -1808,7 +1808,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -1889,7 +1889,7 @@
             "img/pf/love-at-first-sight/donna/women-s-lifestyle-front.jpg",
             "img/pf/love-at-first-sight/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/love-at-first-sight/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -1924,7 +1924,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -2009,7 +2009,7 @@
             "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
             "img/pf/out-of-your-league/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/out-of-your-league/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -2020,7 +2020,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -2162,7 +2162,7 @@
             "img/pf/out-of-your-league/women-s-lifestyle-front.jpg",
             "img/pf/out-of-your-league/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/out-of-your-league/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -2197,7 +2197,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 35.9,
           "sizes": [
             {
@@ -2342,8 +2342,8 @@
             "img/pf/whos-your-daddy/couple-back.jpg",
             "img/pf/whos-your-daddy/women-s-lifestyle-back.jpg"
           ],
-          "flat": null,
-          "flatBack": null,
+          "flat": "img/pf/whos-your-daddy/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy/flat-back.webp",
           "available": true
         }
       ],
@@ -2378,7 +2378,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -2520,7 +2520,7 @@
             "img/pf/picture-us-together/women-s-lifestyle-front.jpg",
             "img/pf/picture-us-together/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/picture-us-together/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -2531,7 +2531,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -2616,7 +2616,7 @@
             "img/pf/picture-us-together/donna/women-s-lifestyle-front.jpg",
             "img/pf/picture-us-together/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/picture-us-together/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -2651,7 +2651,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -2732,7 +2732,7 @@
             "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
             "img/pf/talk-flirty-to-me/donna/women-s-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/talk-flirty-to-me/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -2743,7 +2743,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -2880,7 +2880,7 @@
             "img/pf/talk-flirty-to-me/women-s-lifestyle-front.jpg",
             "img/pf/talk-flirty-to-me/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/talk-flirty-to-me/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -2916,7 +2916,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -3053,7 +3053,7 @@
             "img/pf/parking-ticket/women-s-lifestyle-front.jpg",
             "img/pf/parking-ticket/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/parking-ticket/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -3064,7 +3064,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -3138,10 +3138,14 @@
               ]
             }
           ],
-          "image": null,
-          "couple": null,
-          "gallery": [],
-          "flat": null,
+          "image": "img/pf/parking-ticket/donna/flat-front.jpg",
+          "couple": "img/pf/parking-ticket/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/parking-ticket/donna/flat-front.jpg",
+            "img/pf/parking-ticket/donna/women-s-lifestyle-front.jpg",
+            "img/pf/parking-ticket/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/parking-ticket/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -3177,7 +3181,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -3314,7 +3318,7 @@
             "img/pf/running-through-my-mind/women-s-lifestyle-front.jpg",
             "img/pf/running-through-my-mind/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/running-through-my-mind/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -3325,7 +3329,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -3399,10 +3403,14 @@
               ]
             }
           ],
-          "image": null,
-          "couple": null,
-          "gallery": [],
-          "flat": null,
+          "image": "img/pf/running-through-my-mind/donna/flat-front.jpg",
+          "couple": "img/pf/running-through-my-mind/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/running-through-my-mind/donna/flat-front.jpg",
+            "img/pf/running-through-my-mind/donna/women-s-lifestyle-front.jpg",
+            "img/pf/running-through-my-mind/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/running-through-my-mind/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -3437,7 +3445,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -3579,7 +3587,7 @@
             "img/pf/call-me-daddy-classic/women-s-lifestyle-front.jpg",
             "img/pf/call-me-daddy-classic/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/call-me-daddy-classic/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -3615,7 +3623,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -3757,7 +3765,7 @@
             "img/pf/stole-the-stars/women-s-lifestyle-front.jpg",
             "img/pf/stole-the-stars/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/stole-the-stars/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -3768,7 +3776,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -3846,10 +3854,14 @@
               ]
             }
           ],
-          "image": null,
-          "couple": null,
-          "gallery": [],
-          "flat": null,
+          "image": "img/pf/stole-the-stars/donna/flat-front.jpg",
+          "couple": "img/pf/stole-the-stars/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/stole-the-stars/donna/flat-front.jpg",
+            "img/pf/stole-the-stars/donna/women-s-lifestyle-front.jpg",
+            "img/pf/stole-the-stars/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/stole-the-stars/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -3885,7 +3897,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -4027,7 +4039,7 @@
             "img/pf/lost-in-your-eyes/women-s-lifestyle-front.jpg",
             "img/pf/lost-in-your-eyes/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/lost-in-your-eyes/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -4038,7 +4050,7 @@
             "it": "Donna, morbida",
             "en": "Women's relaxed"
           },
-          "blank": "Bella+Canvas 6400 donna, vestibilità morbida",
+          "blank": "Bella+Canvas 6400",
           "price": 31.9,
           "sizes": [
             {
@@ -4116,10 +4128,14 @@
               ]
             }
           ],
-          "image": null,
-          "couple": null,
-          "gallery": [],
-          "flat": null,
+          "image": "img/pf/lost-in-your-eyes/donna/flat-front.jpg",
+          "couple": "img/pf/lost-in-your-eyes/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/lost-in-your-eyes/donna/flat-front.jpg",
+            "img/pf/lost-in-your-eyes/donna/women-s-lifestyle-front.jpg",
+            "img/pf/lost-in-your-eyes/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/lost-in-your-eyes/donna/flat-front.webp",
           "flatBack": null,
           "available": true
         }
@@ -4154,7 +4170,7 @@
             "it": "Classica unisex",
             "en": "Classic unisex"
           },
-          "blank": "Bella+Canvas 3001 unisex",
+          "blank": "Bella+Canvas 3001",
           "price": 29.9,
           "sizes": [
             {
@@ -4291,7 +4307,7 @@
             "img/pf/filipina-girls/women-s-lifestyle-front.jpg",
             "img/pf/filipina-girls/men-s-lifestyle-front.jpg"
           ],
-          "flat": null,
+          "flat": "img/pf/filipina-girls/flat-front.webp",
           "flatBack": null,
           "available": true
         }

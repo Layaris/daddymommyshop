@@ -3,6 +3,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const pub = (f) => path.join(root, 'public', f);
@@ -15,11 +16,13 @@ const tee = (await fs.readFile(pub('tee3d.js'), 'utf8'))
   .replace("'./vendor/three.module.min.js'", "'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js'");
 const catalog = JSON.parse(await fs.readFile(path.join(root, 'data/catalog.json'), 'utf8'));
 
+// foto ridotte a 640px (dist/small) così il file resta sotto i 16 MB
+execFileSync('python3', [path.join(root, 'scripts/preview-images.py')], { stdio: 'inherit' });
 const cache = new Map();
 const inline = async (file) => {
   if (!file?.startsWith('img/')) return file;
   if (cache.has(file)) return cache.get(file);
-  const buf = await fs.readFile(pub(file)).catch(() => null);
+  const buf = await fs.readFile(path.join(root, 'dist/small', file)).catch(() => fs.readFile(pub(file))).catch(() => null);
   const type = { png: 'image/png', webp: 'image/webp' }[file.split('.').pop()] || 'image/jpeg';
   const out = buf ? `data:${type};base64,${buf.toString('base64')}` : null;
   cache.set(file, out);
