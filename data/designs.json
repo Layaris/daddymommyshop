@@ -922,7 +922,21 @@
         },
         {
           "tipo": "premium",
-          "printful": 480981566
+          "printful": 480981566,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/premium/women-s-front.jpg"
+            }
+          ]
         },
         {
           "tipo": "donna",
@@ -970,7 +984,27 @@
       "modelli": [
         {
           "tipo": "essenziale",
-          "printful": 480981570
+          "printful": 480981570,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
         },
         {
           "tipo": "unisex",
