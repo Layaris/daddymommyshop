@@ -1,7 +1,7 @@
 {
   "store": "Your Favorite Daddy Shop",
   "storeId": 15135959,
-  "syncedAt": "2026-10-13T04:39:42.714Z",
+  "syncedAt": "2026-10-13T05:02:59.963Z",
   "products": [
     {
       "slug": "cant-read-chinese",
@@ -444,12 +444,148 @@
         "donna"
       ],
       "spice": 5,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981388",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333251,
+              "variantId": 11546,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333247,
+              "variantId": 11547,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333245,
+              "variantId": 11548,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333268,
+              "variantId": 11549,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333241,
+              "variantId": 11550,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333242,
+              "variantId": 12644,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333243,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569333244,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy/essenziale/flat-front.jpg",
+          "couple": "img/pf/call-me-daddy/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/call-me-daddy/essenziale/flat-front.jpg",
+            "img/pf/call-me-daddy/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-daddy/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/call-me-daddy/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480105590",
           "type": "unisex",
@@ -608,6 +744,120 @@
           "available": true
         },
         {
+          "id": "sync:480981392",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333276,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333275,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333274,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333278,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333271,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333272,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333273,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/call-me-daddy/premium/flat-front.jpg",
+            "img/pf/call-me-daddy/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/call-me-daddy/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209360",
           "type": "donna",
           "label": {
@@ -725,109 +975,145 @@
         "donna"
       ],
       "spice": 5,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "yfd",
       "models": [
         {
-          "id": "sync:480209363",
-          "type": "donna",
+          "id": "sync:480981396",
+          "type": "essenziale",
           "label": {
-            "it": "Donna, morbida",
-            "en": "Women's relaxed"
+            "it": "Essenziale",
+            "en": "Essential"
           },
           "desc": {
-            "it": "Vestibilità morbida",
-            "en": "Relaxed fit"
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
           },
-          "blank": "Bella+Canvas 6400",
-          "price": 31.9,
+          "blank": "Gildan 5000",
+          "price": 24.9,
           "sizes": [
             {
               "size": "S",
-              "syncVariantId": 5564717920,
-              "variantId": 10187,
-              "price": 31.9,
+              "syncVariantId": 5569333287,
+              "variantId": 11546,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "M",
-              "syncVariantId": 5564717919,
-              "variantId": 10188,
-              "price": 31.9,
+              "syncVariantId": 5569333286,
+              "variantId": 11547,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "L",
-              "syncVariantId": 5564717918,
-              "variantId": 10189,
-              "price": 31.9,
+              "syncVariantId": 5569333285,
+              "variantId": 11548,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "XL",
-              "syncVariantId": 5564717921,
-              "variantId": 10190,
-              "price": 31.9,
+              "syncVariantId": 5569333288,
+              "variantId": 11549,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "2XL",
-              "syncVariantId": 5564717916,
-              "variantId": 10191,
-              "price": 33.9,
+              "syncVariantId": 5569333281,
+              "variantId": 11550,
+              "price": 26.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "3XL",
-              "syncVariantId": 5564717917,
-              "variantId": 10192,
-              "price": 35.9,
+              "syncVariantId": 5569333282,
+              "variantId": 12644,
+              "price": 28.9,
               "inStock": true,
               "regions": [
-                "US"
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333283,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569333284,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
               ]
             }
           ],
-          "image": "img/pf/call-me-mommy/donna/flat-front.jpg",
-          "couple": "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
+          "image": "img/pf/call-me-mommy/essenziale/flat-front.jpg",
+          "couple": "img/pf/call-me-mommy/essenziale/women-s-lifestyle-front.jpg",
           "gallery": [
-            "img/pf/call-me-mommy/donna/flat-front.jpg",
-            "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
-            "img/pf/call-me-mommy/donna/women-s-front.jpg"
+            "img/pf/call-me-mommy/essenziale/flat-front.jpg",
+            "img/pf/call-me-mommy/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-mommy/essenziale/men-s-lifestyle-front.jpg"
           ],
-          "flat": "img/pf/call-me-mommy/donna/flat-front.webp",
+          "flat": "img/pf/call-me-mommy/essenziale/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -987,6 +1273,220 @@
           "flat": "img/pf/call-me-mommy/flat-front.webp",
           "flatBack": null,
           "available": true
+        },
+        {
+          "id": "sync:480981399",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333296,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333295,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333294,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333297,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333291,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333292,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333293,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-mommy/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/call-me-mommy/premium/flat-front.jpg",
+            "img/pf/call-me-mommy/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/call-me-mommy/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209363",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "desc": {
+            "it": "Vestibilità morbida",
+            "en": "Relaxed fit"
+          },
+          "blank": "Bella+Canvas 6400",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564717920,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564717919,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564717918,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564717921,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564717916,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564717917,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-mommy/donna/flat-front.jpg",
+          "couple": "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/call-me-mommy/donna/flat-front.jpg",
+            "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-mommy/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/call-me-mommy/donna/flat-front.webp",
+          "flatBack": null,
+          "available": true
         }
       ],
       "available": true,
@@ -1007,12 +1507,149 @@
         "donna"
       ],
       "spice": 5,
-      "price": 35.9,
+      "price": 30.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": true,
       "by": "daniele",
       "models": [
+        {
+          "id": "sync:480981400",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 30.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333304,
+              "variantId": 11546,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333303,
+              "variantId": 11547,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333302,
+              "variantId": 11548,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333305,
+              "variantId": 11549,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333298,
+              "variantId": 11550,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333299,
+              "variantId": 12644,
+              "price": 34.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333300,
+              "variantId": 12645,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569333301,
+              "variantId": 12646,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy-tonight/essenziale/flat-front.jpg",
+          "couple": "img/pf/whos-your-daddy-tonight/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/whos-your-daddy-tonight/essenziale/flat-front.jpg",
+            "img/pf/whos-your-daddy-tonight/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy-tonight/essenziale/men-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy-tonight/essenziale/flat-back.jpg"
+          ],
+          "flat": "img/pf/whos-your-daddy-tonight/essenziale/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy-tonight/essenziale/flat-back.webp",
+          "available": true
+        },
         {
           "id": "sync:480120480",
           "type": "unisex",
@@ -1174,6 +1811,122 @@
           "available": true
         },
         {
+          "id": "sync:480981402",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 42.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333320,
+              "variantId": 15114,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333319,
+              "variantId": 15115,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333318,
+              "variantId": 15116,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333321,
+              "variantId": 15117,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333315,
+              "variantId": 15118,
+              "price": 44.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333316,
+              "variantId": 16326,
+              "price": 46.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333317,
+              "variantId": 17500,
+              "price": 48.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy-tonight/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/whos-your-daddy-tonight/premium/flat-front.jpg",
+            "img/pf/whos-your-daddy-tonight/premium/women-s-front.jpg",
+            "img/pf/whos-your-daddy-tonight/premium/flat-back.jpg",
+            "img/pf/whos-your-daddy-tonight/premium/women-s-back.jpg"
+          ],
+          "flat": "img/pf/whos-your-daddy-tonight/premium/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy-tonight/premium/flat-back.webp",
+          "available": true
+        },
+        {
           "id": "sync:480209366",
           "type": "donna",
           "label": {
@@ -1294,12 +2047,147 @@
         "donna"
       ],
       "spice": 4,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981403",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333334,
+              "variantId": 11576,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333333,
+              "variantId": 11577,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333332,
+              "variantId": 11578,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333335,
+              "variantId": 11579,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333322,
+              "variantId": 11580,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333323,
+              "variantId": 12650,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333324,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569333327,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/borrow-a-kiss/essenziale/flat-front.jpg",
+          "couple": "img/pf/borrow-a-kiss/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/borrow-a-kiss/essenziale/flat-front.jpg",
+            "img/pf/borrow-a-kiss/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/borrow-a-kiss/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/borrow-a-kiss/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480105591",
           "type": "unisex",
@@ -1453,6 +2341,120 @@
           "available": true
         },
         {
+          "id": "sync:480981405",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333341,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333340,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333339,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333342,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333336,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333337,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333338,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/borrow-a-kiss/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/borrow-a-kiss/premium/flat-front.jpg",
+            "img/pf/borrow-a-kiss/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/borrow-a-kiss/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209369",
           "type": "donna",
           "label": {
@@ -1566,105 +2568,144 @@
         "donna"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "yfd",
       "models": [
         {
-          "id": "sync:480209373",
-          "type": "donna",
+          "id": "sync:480981406",
+          "type": "essenziale",
           "label": {
-            "it": "Donna, morbida",
-            "en": "Women's relaxed"
+            "it": "Essenziale",
+            "en": "Essential"
           },
           "desc": {
-            "it": "Vestibilità morbida",
-            "en": "Relaxed fit"
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
           },
-          "blank": "Bella+Canvas 6400",
-          "price": 31.9,
+          "blank": "Gildan 5000",
+          "price": 24.9,
           "sizes": [
             {
               "size": "S",
-              "syncVariantId": 5564718021,
-              "variantId": 10252,
-              "price": 31.9,
+              "syncVariantId": 5569333349,
+              "variantId": 11576,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "M",
-              "syncVariantId": 5564718020,
-              "variantId": 10253,
-              "price": 31.9,
+              "syncVariantId": 5569333348,
+              "variantId": 11577,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "L",
-              "syncVariantId": 5564718019,
-              "variantId": 10254,
-              "price": 31.9,
+              "syncVariantId": 5569333347,
+              "variantId": 11578,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "XL",
-              "syncVariantId": 5564718022,
-              "variantId": 10255,
-              "price": 31.9,
+              "syncVariantId": 5569333350,
+              "variantId": 11579,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "2XL",
-              "syncVariantId": 5564718017,
-              "variantId": 10256,
-              "price": 33.9,
+              "syncVariantId": 5569333343,
+              "variantId": 11580,
+              "price": 26.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "3XL",
-              "syncVariantId": 5564718018,
-              "variantId": 10257,
-              "price": 35.9,
+              "syncVariantId": 5569333344,
+              "variantId": 12650,
+              "price": 28.9,
               "inStock": true,
               "regions": [
-                "US"
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333345,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569333346,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
               ]
             }
           ],
-          "image": "img/pf/buy-me-a-drink-first/donna/flat-front.jpg",
-          "couple": "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
+          "image": "img/pf/buy-me-a-drink-first/essenziale/flat-front.jpg",
+          "couple": "img/pf/buy-me-a-drink-first/essenziale/women-s-lifestyle-front.jpg",
           "gallery": [
-            "img/pf/buy-me-a-drink-first/donna/flat-front.jpg",
-            "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
-            "img/pf/buy-me-a-drink-first/donna/women-s-front.jpg"
+            "img/pf/buy-me-a-drink-first/essenziale/flat-front.jpg",
+            "img/pf/buy-me-a-drink-first/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/buy-me-a-drink-first/essenziale/men-s-lifestyle-front.jpg"
           ],
-          "flat": "img/pf/buy-me-a-drink-first/donna/flat-front.webp",
+          "flat": "img/pf/buy-me-a-drink-first/essenziale/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -1819,6 +2860,216 @@
           "flat": "img/pf/buy-me-a-drink-first/flat-front.webp",
           "flatBack": null,
           "available": true
+        },
+        {
+          "id": "sync:480981407",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569333356,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569333355,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569333354,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569333358,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569333351,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569333352,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569333353,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/buy-me-a-drink-first/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/buy-me-a-drink-first/premium/flat-front.jpg",
+            "img/pf/buy-me-a-drink-first/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/buy-me-a-drink-first/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209373",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "desc": {
+            "it": "Vestibilità morbida",
+            "en": "Relaxed fit"
+          },
+          "blank": "Bella+Canvas 6400",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718021,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718020,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718019,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718022,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718017,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718018,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/buy-me-a-drink-first/donna/flat-front.jpg",
+          "couple": "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/buy-me-a-drink-first/donna/flat-front.jpg",
+            "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg",
+            "img/pf/buy-me-a-drink-first/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/buy-me-a-drink-first/donna/flat-front.webp",
+          "flatBack": null,
+          "available": true
         }
       ],
       "available": true,
@@ -1839,12 +3090,148 @@
         "donna"
       ],
       "spice": 4,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "daniele",
       "models": [
+        {
+          "id": "sync:480981560",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334066,
+              "variantId": 11546,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334065,
+              "variantId": 11547,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334064,
+              "variantId": 11548,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334067,
+              "variantId": 11549,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334060,
+              "variantId": 11550,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334061,
+              "variantId": 12644,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334062,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334063,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/happy-vibe/essenziale/flat-front.jpg",
+          "couple": "img/pf/happy-vibe/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/happy-vibe/essenziale/flat-front.jpg",
+            "img/pf/happy-vibe/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/happy-vibe/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/happy-vibe/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480120481",
           "type": "unisex",
@@ -2003,6 +3390,120 @@
           "available": true
         },
         {
+          "id": "sync:480981562",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334091,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334090,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334089,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334092,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334086,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334087,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334088,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/happy-vibe/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/happy-vibe/premium/flat-front.jpg",
+            "img/pf/happy-vibe/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/happy-vibe/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209385",
           "type": "donna",
           "label": {
@@ -2121,12 +3622,147 @@
         "donna"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981563",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334103,
+              "variantId": 11576,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334102,
+              "variantId": 11577,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334101,
+              "variantId": 11578,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334104,
+              "variantId": 11579,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334097,
+              "variantId": 11580,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334098,
+              "variantId": 12650,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334099,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334100,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/love-at-first-sight/essenziale/flat-front.jpg",
+          "couple": "img/pf/love-at-first-sight/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/love-at-first-sight/essenziale/flat-front.jpg",
+            "img/pf/love-at-first-sight/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/love-at-first-sight/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/love-at-first-sight/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480105592",
           "type": "unisex",
@@ -2280,6 +3916,120 @@
           "available": true
         },
         {
+          "id": "sync:480981566",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334115,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334114,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334113,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334116,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334110,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334111,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334112,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/love-at-first-sight/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/love-at-first-sight/premium/flat-front.jpg",
+            "img/pf/love-at-first-sight/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/love-at-first-sight/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209388",
           "type": "donna",
           "label": {
@@ -2393,109 +4143,145 @@
         "donna"
       ],
       "spice": 4,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "yfd",
       "models": [
         {
-          "id": "sync:480209390",
-          "type": "donna",
+          "id": "sync:480981570",
+          "type": "essenziale",
           "label": {
-            "it": "Donna, morbida",
-            "en": "Women's relaxed"
+            "it": "Essenziale",
+            "en": "Essential"
           },
           "desc": {
-            "it": "Vestibilità morbida",
-            "en": "Relaxed fit"
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
           },
-          "blank": "Bella+Canvas 6400",
-          "price": 31.9,
+          "blank": "Gildan 5000",
+          "price": 24.9,
           "sizes": [
             {
               "size": "S",
-              "syncVariantId": 5564718164,
-              "variantId": 10187,
-              "price": 31.9,
+              "syncVariantId": 5569334164,
+              "variantId": 11546,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "M",
-              "syncVariantId": 5564718163,
-              "variantId": 10188,
-              "price": 31.9,
+              "syncVariantId": 5569334163,
+              "variantId": 11547,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "L",
-              "syncVariantId": 5564718162,
-              "variantId": 10189,
-              "price": 31.9,
+              "syncVariantId": 5569334162,
+              "variantId": 11548,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "XL",
-              "syncVariantId": 5564718165,
-              "variantId": 10190,
-              "price": 31.9,
+              "syncVariantId": 5569334165,
+              "variantId": 11549,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
                 "CA",
-                "UK"
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "2XL",
-              "syncVariantId": 5564718160,
-              "variantId": 10191,
-              "price": 33.9,
+              "syncVariantId": 5569334155,
+              "variantId": 11550,
+              "price": 26.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "3XL",
-              "syncVariantId": 5564718161,
-              "variantId": 10192,
-              "price": 35.9,
+              "syncVariantId": 5569334159,
+              "variantId": 12644,
+              "price": 28.9,
               "inStock": true,
               "regions": [
-                "US"
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334160,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334161,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
               ]
             }
           ],
-          "image": "img/pf/out-of-your-league/donna/flat-front.jpg",
-          "couple": "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
+          "image": "img/pf/out-of-your-league/essenziale/flat-front.jpg",
+          "couple": "img/pf/out-of-your-league/essenziale/women-s-lifestyle-front.jpg",
           "gallery": [
-            "img/pf/out-of-your-league/donna/flat-front.jpg",
-            "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
-            "img/pf/out-of-your-league/donna/women-s-front.jpg"
+            "img/pf/out-of-your-league/essenziale/flat-front.jpg",
+            "img/pf/out-of-your-league/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/out-of-your-league/essenziale/men-s-lifestyle-front.jpg"
           ],
-          "flat": "img/pf/out-of-your-league/donna/flat-front.webp",
+          "flat": "img/pf/out-of-your-league/essenziale/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -2655,6 +4441,220 @@
           "flat": "img/pf/out-of-your-league/flat-front.webp",
           "flatBack": null,
           "available": true
+        },
+        {
+          "id": "sync:480981572",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334172,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334170,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334169,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334173,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334166,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334167,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334168,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/out-of-your-league/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/out-of-your-league/premium/flat-front.jpg",
+            "img/pf/out-of-your-league/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/out-of-your-league/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209390",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "desc": {
+            "it": "Vestibilità morbida",
+            "en": "Relaxed fit"
+          },
+          "blank": "Bella+Canvas 6400",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564718164,
+              "variantId": 10187,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564718163,
+              "variantId": 10188,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564718162,
+              "variantId": 10189,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564718165,
+              "variantId": 10190,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564718160,
+              "variantId": 10191,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564718161,
+              "variantId": 10192,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/out-of-your-league/donna/flat-front.jpg",
+          "couple": "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/out-of-your-league/donna/flat-front.jpg",
+            "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg",
+            "img/pf/out-of-your-league/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/out-of-your-league/donna/flat-front.webp",
+          "flatBack": null,
+          "available": true
         }
       ],
       "available": true,
@@ -2674,12 +4674,149 @@
         "uomo"
       ],
       "spice": 5,
-      "price": 35.9,
+      "price": 30.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": true,
       "by": "daniele",
       "models": [
+        {
+          "id": "sync:480981575",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 30.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334215,
+              "variantId": 11546,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334214,
+              "variantId": 11547,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334213,
+              "variantId": 11548,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334216,
+              "variantId": 11549,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334209,
+              "variantId": 11550,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334210,
+              "variantId": 12644,
+              "price": 34.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334211,
+              "variantId": 12645,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334212,
+              "variantId": 12646,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy/essenziale/flat-front.jpg",
+          "couple": "img/pf/whos-your-daddy/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/whos-your-daddy/essenziale/flat-front.jpg",
+            "img/pf/whos-your-daddy/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy/essenziale/men-s-lifestyle-front.jpg",
+            "img/pf/whos-your-daddy/essenziale/flat-back.jpg"
+          ],
+          "flat": "img/pf/whos-your-daddy/essenziale/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy/essenziale/flat-back.webp",
+          "available": true
+        },
         {
           "id": "sync:480120483",
           "type": "unisex",
@@ -2839,6 +4976,122 @@
           "flat": "img/pf/whos-your-daddy/flat-front.webp",
           "flatBack": "img/pf/whos-your-daddy/flat-back.webp",
           "available": true
+        },
+        {
+          "id": "sync:480981576",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 42.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334222,
+              "variantId": 15114,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334221,
+              "variantId": 15115,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334220,
+              "variantId": 15116,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334223,
+              "variantId": 15117,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334217,
+              "variantId": 15118,
+              "price": 44.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334218,
+              "variantId": 16326,
+              "price": 46.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334219,
+              "variantId": 17500,
+              "price": 48.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/whos-your-daddy/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/whos-your-daddy/premium/flat-front.jpg",
+            "img/pf/whos-your-daddy/premium/women-s-front.jpg",
+            "img/pf/whos-your-daddy/premium/flat-back.jpg",
+            "img/pf/whos-your-daddy/premium/women-s-back.jpg"
+          ],
+          "flat": "img/pf/whos-your-daddy/premium/flat-front.webp",
+          "flatBack": "img/pf/whos-your-daddy/premium/flat-back.webp",
+          "available": true
         }
       ],
       "available": true,
@@ -2859,12 +5112,148 @@
         "donna"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981577",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334230,
+              "variantId": 11546,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334229,
+              "variantId": 11547,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334228,
+              "variantId": 11548,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334231,
+              "variantId": 11549,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334224,
+              "variantId": 11550,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334225,
+              "variantId": 12644,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334226,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334227,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/picture-us-together/essenziale/flat-front.jpg",
+          "couple": "img/pf/picture-us-together/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/picture-us-together/essenziale/flat-front.jpg",
+            "img/pf/picture-us-together/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/picture-us-together/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/picture-us-together/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480105593",
           "type": "unisex",
@@ -3023,6 +5412,120 @@
           "available": true
         },
         {
+          "id": "sync:480981578",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334237,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334236,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334235,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334239,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334232,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334233,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334234,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/picture-us-together/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/picture-us-together/premium/flat-front.jpg",
+            "img/pf/picture-us-together/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/picture-us-together/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209607",
           "type": "donna",
           "label": {
@@ -3140,105 +5643,144 @@
         "donna"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "yfd",
       "models": [
         {
-          "id": "sync:480209609",
-          "type": "donna",
+          "id": "sync:480981705",
+          "type": "essenziale",
           "label": {
-            "it": "Donna, morbida",
-            "en": "Women's relaxed"
+            "it": "Essenziale",
+            "en": "Essential"
           },
           "desc": {
-            "it": "Vestibilità morbida",
-            "en": "Relaxed fit"
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
           },
-          "blank": "Bella+Canvas 6400",
-          "price": 31.9,
+          "blank": "Gildan 5000",
+          "price": 24.9,
           "sizes": [
             {
               "size": "S",
-              "syncVariantId": 5564719048,
-              "variantId": 10252,
-              "price": 31.9,
+              "syncVariantId": 5569334846,
+              "variantId": 11576,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "M",
-              "syncVariantId": 5564719047,
-              "variantId": 10253,
-              "price": 31.9,
+              "syncVariantId": 5569334837,
+              "variantId": 11577,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "L",
-              "syncVariantId": 5564719046,
-              "variantId": 10254,
-              "price": 31.9,
+              "syncVariantId": 5569334827,
+              "variantId": 11578,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "XL",
-              "syncVariantId": 5564719049,
-              "variantId": 10255,
-              "price": 31.9,
+              "syncVariantId": 5569334856,
+              "variantId": 11579,
+              "price": 24.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "2XL",
-              "syncVariantId": 5564719044,
-              "variantId": 10256,
-              "price": 33.9,
+              "syncVariantId": 5569334787,
+              "variantId": 11580,
+              "price": 26.9,
               "inStock": true,
               "regions": [
                 "US",
                 "EU",
-                "UK"
+                "CA",
+                "UK",
+                "AU"
               ]
             },
             {
               "size": "3XL",
-              "syncVariantId": 5564719045,
-              "variantId": 10257,
-              "price": 35.9,
+              "syncVariantId": 5569334794,
+              "variantId": 12650,
+              "price": 28.9,
               "inStock": true,
               "regions": [
-                "US"
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334808,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334819,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
               ]
             }
           ],
-          "image": "img/pf/talk-flirty-to-me/donna/flat-front.jpg",
-          "couple": "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
+          "image": "img/pf/talk-flirty-to-me/essenziale/flat-front.jpg",
+          "couple": "img/pf/talk-flirty-to-me/essenziale/women-s-lifestyle-front.jpg",
           "gallery": [
-            "img/pf/talk-flirty-to-me/donna/flat-front.jpg",
-            "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
-            "img/pf/talk-flirty-to-me/donna/women-s-front.jpg"
+            "img/pf/talk-flirty-to-me/essenziale/flat-front.jpg",
+            "img/pf/talk-flirty-to-me/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/talk-flirty-to-me/essenziale/men-s-lifestyle-front.jpg"
           ],
-          "flat": "img/pf/talk-flirty-to-me/donna/flat-front.webp",
+          "flat": "img/pf/talk-flirty-to-me/essenziale/flat-front.webp",
           "flatBack": null,
           "available": true
         },
@@ -3393,6 +5935,216 @@
           "flat": "img/pf/talk-flirty-to-me/flat-front.webp",
           "flatBack": null,
           "available": true
+        },
+        {
+          "id": "sync:480981715",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334898,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334897,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334896,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334899,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334893,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334894,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334895,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/talk-flirty-to-me/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/talk-flirty-to-me/premium/flat-front.jpg",
+            "img/pf/talk-flirty-to-me/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/talk-flirty-to-me/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480209609",
+          "type": "donna",
+          "label": {
+            "it": "Donna, morbida",
+            "en": "Women's relaxed"
+          },
+          "desc": {
+            "it": "Vestibilità morbida",
+            "en": "Relaxed fit"
+          },
+          "blank": "Bella+Canvas 6400",
+          "price": 31.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5564719048,
+              "variantId": 10252,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5564719047,
+              "variantId": 10253,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5564719046,
+              "variantId": 10254,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5564719049,
+              "variantId": 10255,
+              "price": 31.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5564719044,
+              "variantId": 10256,
+              "price": 33.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5564719045,
+              "variantId": 10257,
+              "price": 35.9,
+              "inStock": true,
+              "regions": [
+                "US"
+              ]
+            }
+          ],
+          "image": "img/pf/talk-flirty-to-me/donna/flat-front.jpg",
+          "couple": "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/talk-flirty-to-me/donna/flat-front.jpg",
+            "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg",
+            "img/pf/talk-flirty-to-me/donna/women-s-front.jpg"
+          ],
+          "flat": "img/pf/talk-flirty-to-me/donna/flat-front.webp",
+          "flatBack": null,
+          "available": true
         }
       ],
       "available": true,
@@ -3413,12 +6165,147 @@
         "donna"
       ],
       "spice": 4,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981718",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334908,
+              "variantId": 11576,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334907,
+              "variantId": 11577,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334906,
+              "variantId": 11578,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334909,
+              "variantId": 11579,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334902,
+              "variantId": 11580,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334903,
+              "variantId": 12650,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334904,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334905,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/parking-ticket/essenziale/flat-front.jpg",
+          "couple": "img/pf/parking-ticket/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/parking-ticket/essenziale/flat-front.jpg",
+            "img/pf/parking-ticket/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/parking-ticket/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/parking-ticket/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480120489",
           "type": "unisex",
@@ -3572,6 +6459,120 @@
           "available": true
         },
         {
+          "id": "sync:480981719",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334915,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334914,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334913,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334916,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334910,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334911,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334912,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/parking-ticket/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/parking-ticket/premium/flat-front.jpg",
+            "img/pf/parking-ticket/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/parking-ticket/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209611",
           "type": "donna",
           "label": {
@@ -3686,12 +6687,147 @@
         "donna"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981720",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334923,
+              "variantId": 11576,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334922,
+              "variantId": 11577,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334921,
+              "variantId": 11578,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334924,
+              "variantId": 11579,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334917,
+              "variantId": 11580,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334918,
+              "variantId": 12650,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334919,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334920,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/running-through-my-mind/essenziale/flat-front.jpg",
+          "couple": "img/pf/running-through-my-mind/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/running-through-my-mind/essenziale/flat-front.jpg",
+            "img/pf/running-through-my-mind/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/running-through-my-mind/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/running-through-my-mind/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480105594",
           "type": "unisex",
@@ -3845,6 +6981,120 @@
           "available": true
         },
         {
+          "id": "sync:480981722",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334931,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334930,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334929,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334932,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334926,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334927,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334928,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/running-through-my-mind/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/running-through-my-mind/premium/flat-front.jpg",
+            "img/pf/running-through-my-mind/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/running-through-my-mind/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209615",
           "type": "donna",
           "label": {
@@ -3958,12 +7208,148 @@
         "uomo"
       ],
       "spice": 5,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "daniele",
       "models": [
+        {
+          "id": "sync:480981723",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334939,
+              "variantId": 11546,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334938,
+              "variantId": 11547,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334937,
+              "variantId": 11548,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334940,
+              "variantId": 11549,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334933,
+              "variantId": 11550,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334934,
+              "variantId": 12644,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334935,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334936,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy-classic/essenziale/flat-front.jpg",
+          "couple": "img/pf/call-me-daddy-classic/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/call-me-daddy-classic/essenziale/flat-front.jpg",
+            "img/pf/call-me-daddy-classic/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/call-me-daddy-classic/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/call-me-daddy-classic/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480120495",
           "type": "unisex",
@@ -4120,6 +7506,120 @@
           "flat": "img/pf/call-me-daddy-classic/flat-front.webp",
           "flatBack": null,
           "available": true
+        },
+        {
+          "id": "sync:480981724",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334946,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334945,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334944,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334947,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334941,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334942,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334943,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/call-me-daddy-classic/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/call-me-daddy-classic/premium/flat-front.jpg",
+            "img/pf/call-me-daddy-classic/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/call-me-daddy-classic/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
         }
       ],
       "available": true,
@@ -4140,12 +7640,148 @@
         "donna"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981727",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334959,
+              "variantId": 11546,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334958,
+              "variantId": 11547,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334957,
+              "variantId": 11548,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334960,
+              "variantId": 11549,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334951,
+              "variantId": 11550,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334952,
+              "variantId": 12644,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334954,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569334955,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/stole-the-stars/essenziale/flat-front.jpg",
+          "couple": "img/pf/stole-the-stars/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/stole-the-stars/essenziale/flat-front.jpg",
+            "img/pf/stole-the-stars/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/stole-the-stars/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/stole-the-stars/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480120829",
           "type": "unisex",
@@ -4304,6 +7940,120 @@
           "available": true
         },
         {
+          "id": "sync:480981732",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569334969,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569334968,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569334967,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569334970,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569334963,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569334964,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569334966,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/stole-the-stars/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/stole-the-stars/premium/flat-front.jpg",
+            "img/pf/stole-the-stars/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/stole-the-stars/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209616",
           "type": "donna",
           "label": {
@@ -4422,12 +8172,148 @@
         "donna"
       ],
       "spice": 2,
-      "price": 29.9,
+      "price": 24.9,
       "color": "Black",
       "colorHex": "#141416",
       "back": false,
       "by": "yfd",
       "models": [
+        {
+          "id": "sync:480981901",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569335700,
+              "variantId": 11546,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569335699,
+              "variantId": 11547,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569335698,
+              "variantId": 11548,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569335701,
+              "variantId": 11549,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569335693,
+              "variantId": 11550,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569335695,
+              "variantId": 12644,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569335696,
+              "variantId": 12645,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569335697,
+              "variantId": 12646,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/lost-in-your-eyes/essenziale/flat-front.jpg",
+          "couple": "img/pf/lost-in-your-eyes/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/lost-in-your-eyes/essenziale/flat-front.jpg",
+            "img/pf/lost-in-your-eyes/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/lost-in-your-eyes/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/lost-in-your-eyes/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480105597",
           "type": "unisex",
@@ -4586,6 +8472,120 @@
           "available": true
         },
         {
+          "id": "sync:480981907",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569335710,
+              "variantId": 15114,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569335708,
+              "variantId": 15115,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569335707,
+              "variantId": 15116,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569335711,
+              "variantId": 15117,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569335704,
+              "variantId": 15118,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569335705,
+              "variantId": 16326,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569335706,
+              "variantId": 17500,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/lost-in-your-eyes/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/lost-in-your-eyes/premium/flat-front.jpg",
+            "img/pf/lost-in-your-eyes/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/lost-in-your-eyes/premium/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
           "id": "sync:480209618",
           "type": "donna",
           "label": {
@@ -4703,12 +8703,147 @@
         "uomo"
       ],
       "spice": 3,
-      "price": 29.9,
+      "price": 24.9,
       "color": "White",
       "colorHex": "#f4f3ef",
       "back": false,
       "by": "daniele",
       "models": [
+        {
+          "id": "sync:480981910",
+          "type": "essenziale",
+          "label": {
+            "it": "Essenziale",
+            "en": "Essential"
+          },
+          "desc": {
+            "it": "Cotone pesante, taglio classico",
+            "en": "Heavy cotton, classic cut"
+          },
+          "blank": "Gildan 5000",
+          "price": 24.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569335721,
+              "variantId": 11576,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569335720,
+              "variantId": 11577,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569335719,
+              "variantId": 11578,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569335722,
+              "variantId": 11579,
+              "price": 24.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569335715,
+              "variantId": 11580,
+              "price": 26.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569335716,
+              "variantId": 12650,
+              "price": 28.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569335717,
+              "variantId": 12651,
+              "price": 30.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            },
+            {
+              "size": "5XL",
+              "syncVariantId": 5569335718,
+              "variantId": 12652,
+              "price": 32.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK",
+                "AU"
+              ]
+            }
+          ],
+          "image": "img/pf/filipina-girls/essenziale/flat-front.jpg",
+          "couple": "img/pf/filipina-girls/essenziale/women-s-lifestyle-front.jpg",
+          "gallery": [
+            "img/pf/filipina-girls/essenziale/flat-front.jpg",
+            "img/pf/filipina-girls/essenziale/women-s-lifestyle-front.jpg",
+            "img/pf/filipina-girls/essenziale/men-s-lifestyle-front.jpg"
+          ],
+          "flat": "img/pf/filipina-girls/essenziale/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
         {
           "id": "sync:480120833",
           "type": "unisex",
@@ -4858,6 +8993,120 @@
             "img/pf/filipina-girls/men-s-lifestyle-front.jpg"
           ],
           "flat": "img/pf/filipina-girls/flat-front.webp",
+          "flatBack": null,
+          "available": true
+        },
+        {
+          "id": "sync:480981913",
+          "type": "premium",
+          "label": {
+            "it": "Premium pesante",
+            "en": "Premium heavyweight"
+          },
+          "desc": {
+            "it": "Spessa, tinta in capo, effetto vissuto",
+            "en": "Thick, garment-dyed, lived-in feel"
+          },
+          "blank": "Comfort Colors 1717",
+          "price": 36.9,
+          "sizes": [
+            {
+              "size": "S",
+              "syncVariantId": 5569335730,
+              "variantId": 15124,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "M",
+              "syncVariantId": 5569335727,
+              "variantId": 15125,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "L",
+              "syncVariantId": 5569335726,
+              "variantId": 15126,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "XL",
+              "syncVariantId": 5569335731,
+              "variantId": 15127,
+              "price": 36.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "2XL",
+              "syncVariantId": 5569335723,
+              "variantId": 15128,
+              "price": 38.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "CA",
+                "UK"
+              ]
+            },
+            {
+              "size": "3XL",
+              "syncVariantId": 5569335724,
+              "variantId": 16335,
+              "price": 40.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            },
+            {
+              "size": "4XL",
+              "syncVariantId": 5569335725,
+              "variantId": 17508,
+              "price": 42.9,
+              "inStock": true,
+              "regions": [
+                "US",
+                "EU",
+                "UK"
+              ]
+            }
+          ],
+          "image": "img/pf/filipina-girls/premium/flat-front.jpg",
+          "couple": null,
+          "gallery": [
+            "img/pf/filipina-girls/premium/flat-front.jpg",
+            "img/pf/filipina-girls/premium/women-s-front.jpg"
+          ],
+          "flat": "img/pf/filipina-girls/premium/flat-front.webp",
           "flatBack": null,
           "available": true
         }
