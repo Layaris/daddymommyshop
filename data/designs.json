@@ -1,10 +1,103 @@
 {
-  "_leggimi": "Elenco dei design in vendita. Ogni voce diventa un prodotto Printful (Bella+Canvas 3001) con scripts/printful-setup.mjs, poi npm run sync aggiorna data/catalog.json. Le frasi sulle magliette sono in inglese; it.traduzione e it.frase servono solo al sito in italiano.",
+  "_leggimi": "Elenco dei design in vendita. Ogni voce diventa un prodotto Printful per ogni modello (vedi \"modelli\" in fondo: essenziale Gildan 5000, unisex Bella+Canvas 3001, premium Comfort Colors 1717, donna Bella+Canvas 6400) con scripts/printful-setup.mjs, poi npm run sync aggiorna data/catalog.json. Le frasi sulle magliette sono in inglese; it.traduzione e it.frase servono solo al sito in italiano.",
   "prezzoRetro": 6,
   "nascondi": [
     371005574
   ],
   "designs": [
+    {
+      "slug": "cant-read-chinese",
+      "nome": "I can't read Chinese, but I can understand this.",
+      "colore": "White",
+      "fronte": "design/frasi/cant-read-chinese.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 5,
+      "en": {
+        "frase": "Free translation included."
+      },
+      "it": {
+        "traduzione": "Non so leggere il cinese, ma questo lo capisco.",
+        "frase": "Traduzione libera inclusa."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480980563,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "unisex",
+          "printful": 480980564,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480980566,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/premium/women-s-front.jpg"
+            }
+          ]
+        }
+      ]
+    },
     {
       "slug": "call-me-daddy",
       "nome": "Call me daddy.",
@@ -24,6 +117,30 @@
       },
       "autore": "yfd",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981388,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480105590,
@@ -51,6 +168,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/call-me-daddy/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981392,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy/premium/women-s-front.jpg"
             }
           ]
         },
@@ -99,26 +234,26 @@
       "autore": "yfd",
       "modelli": [
         {
-          "tipo": "donna",
-          "printful": 480209363,
+          "tipo": "essenziale",
+          "printful": 480981396,
           "mockup": [
             {
               "tipo": "flat-front",
               "gruppo": "Flat",
               "vista": "Front",
-              "src": "img/pf/call-me-mommy/donna/flat-front.jpg"
+              "src": "img/pf/call-me-mommy/essenziale/flat-front.jpg"
             },
             {
-              "tipo": "women-s-front",
-              "gruppo": "Women's",
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/call-me-mommy/donna/women-s-front.jpg"
+              "src": "img/pf/call-me-mommy/essenziale/men-s-lifestyle-front.jpg"
             },
             {
               "tipo": "women-s-lifestyle-front",
               "gruppo": "Women's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg"
+              "src": "img/pf/call-me-mommy/essenziale/women-s-lifestyle-front.jpg"
             }
           ]
         },
@@ -151,6 +286,48 @@
               "src": "img/pf/call-me-mommy/flat-front.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981399,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-mommy/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/call-me-mommy/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 480209363,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-mommy/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/call-me-mommy/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-mommy/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
         }
       ]
     },
@@ -174,6 +351,36 @@
       },
       "autore": "daniele",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981400,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/essenziale/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-back",
+              "gruppo": "Flat",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy-tonight/essenziale/flat-back.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480120480,
@@ -219,6 +426,36 @@
               "gruppo": "Flat",
               "vista": "Back",
               "src": "img/pf/whos-your-daddy-tonight/flat-back.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981402,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy-tonight/premium/women-s-front.jpg"
+            },
+            {
+              "tipo": "flat-back",
+              "gruppo": "Flat",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy-tonight/premium/flat-back.jpg"
+            },
+            {
+              "tipo": "women-s-back",
+              "gruppo": "Women's",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy-tonight/premium/women-s-back.jpg"
             }
           ]
         },
@@ -280,6 +517,30 @@
       "autore": "yfd",
       "modelli": [
         {
+          "tipo": "essenziale",
+          "printful": 480981403,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
           "tipo": "unisex",
           "printful": 480105591,
           "mockup": [
@@ -306,6 +567,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/borrow-a-kiss/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981405,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/borrow-a-kiss/premium/women-s-front.jpg"
             }
           ]
         },
@@ -354,26 +633,26 @@
       "autore": "yfd",
       "modelli": [
         {
-          "tipo": "donna",
-          "printful": 480209373,
+          "tipo": "essenziale",
+          "printful": 480981406,
           "mockup": [
             {
               "tipo": "flat-front",
               "gruppo": "Flat",
               "vista": "Front",
-              "src": "img/pf/buy-me-a-drink-first/donna/flat-front.jpg"
+              "src": "img/pf/buy-me-a-drink-first/essenziale/flat-front.jpg"
             },
             {
-              "tipo": "women-s-front",
-              "gruppo": "Women's",
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/buy-me-a-drink-first/donna/women-s-front.jpg"
+              "src": "img/pf/buy-me-a-drink-first/essenziale/men-s-lifestyle-front.jpg"
             },
             {
               "tipo": "women-s-lifestyle-front",
               "gruppo": "Women's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg"
+              "src": "img/pf/buy-me-a-drink-first/essenziale/women-s-lifestyle-front.jpg"
             }
           ]
         },
@@ -406,6 +685,48 @@
               "src": "img/pf/buy-me-a-drink-first/flat-front.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981407,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/buy-me-a-drink-first/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/buy-me-a-drink-first/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 480209373,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/buy-me-a-drink-first/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/buy-me-a-drink-first/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/buy-me-a-drink-first/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
         }
       ]
     },
@@ -428,6 +749,30 @@
       },
       "autore": "daniele",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981560,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480120481,
@@ -455,6 +800,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/happy-vibe/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981562,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/happy-vibe/premium/women-s-front.jpg"
             }
           ]
         },
@@ -504,6 +867,30 @@
       "autore": "yfd",
       "modelli": [
         {
+          "tipo": "essenziale",
+          "printful": 480981563,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
           "tipo": "unisex",
           "printful": 480105592,
           "mockup": [
@@ -530,6 +917,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/love-at-first-sight/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981566,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/love-at-first-sight/premium/women-s-front.jpg"
             }
           ]
         },
@@ -578,26 +983,26 @@
       "autore": "yfd",
       "modelli": [
         {
-          "tipo": "donna",
-          "printful": 480209390,
+          "tipo": "essenziale",
+          "printful": 480981570,
           "mockup": [
             {
               "tipo": "flat-front",
               "gruppo": "Flat",
               "vista": "Front",
-              "src": "img/pf/out-of-your-league/donna/flat-front.jpg"
+              "src": "img/pf/out-of-your-league/essenziale/flat-front.jpg"
             },
             {
-              "tipo": "women-s-front",
-              "gruppo": "Women's",
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/out-of-your-league/donna/women-s-front.jpg"
+              "src": "img/pf/out-of-your-league/essenziale/men-s-lifestyle-front.jpg"
             },
             {
               "tipo": "women-s-lifestyle-front",
               "gruppo": "Women's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg"
+              "src": "img/pf/out-of-your-league/essenziale/women-s-lifestyle-front.jpg"
             }
           ]
         },
@@ -630,6 +1035,48 @@
               "src": "img/pf/out-of-your-league/flat-front.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981572,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 480209390,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/out-of-your-league/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
         }
       ]
     },
@@ -652,6 +1099,36 @@
       },
       "autore": "daniele",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981575,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/essenziale/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-back",
+              "gruppo": "Flat",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy/essenziale/flat-back.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480120483,
@@ -699,6 +1176,36 @@
               "src": "img/pf/whos-your-daddy/flat-back.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981576,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/whos-your-daddy/premium/women-s-front.jpg"
+            },
+            {
+              "tipo": "flat-back",
+              "gruppo": "Flat",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy/premium/flat-back.jpg"
+            },
+            {
+              "tipo": "women-s-back",
+              "gruppo": "Women's",
+              "vista": "Back",
+              "src": "img/pf/whos-your-daddy/premium/women-s-back.jpg"
+            }
+          ]
         }
       ]
     },
@@ -721,6 +1228,30 @@
       },
       "autore": "yfd",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981577,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480105593,
@@ -748,6 +1279,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/picture-us-together/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981578,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/picture-us-together/premium/women-s-front.jpg"
             }
           ]
         },
@@ -796,26 +1345,26 @@
       "autore": "yfd",
       "modelli": [
         {
-          "tipo": "donna",
-          "printful": 480209609,
+          "tipo": "essenziale",
+          "printful": 480981705,
           "mockup": [
             {
               "tipo": "flat-front",
               "gruppo": "Flat",
               "vista": "Front",
-              "src": "img/pf/talk-flirty-to-me/donna/flat-front.jpg"
+              "src": "img/pf/talk-flirty-to-me/essenziale/flat-front.jpg"
             },
             {
-              "tipo": "women-s-front",
-              "gruppo": "Women's",
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/talk-flirty-to-me/donna/women-s-front.jpg"
+              "src": "img/pf/talk-flirty-to-me/essenziale/men-s-lifestyle-front.jpg"
             },
             {
               "tipo": "women-s-lifestyle-front",
               "gruppo": "Women's Lifestyle",
               "vista": "Front",
-              "src": "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg"
+              "src": "img/pf/talk-flirty-to-me/essenziale/women-s-lifestyle-front.jpg"
             }
           ]
         },
@@ -848,6 +1397,48 @@
               "src": "img/pf/talk-flirty-to-me/flat-front.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981715,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/talk-flirty-to-me/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/talk-flirty-to-me/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 480209609,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/talk-flirty-to-me/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/talk-flirty-to-me/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/talk-flirty-to-me/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
         }
       ]
     },
@@ -870,6 +1461,30 @@
       },
       "autore": "yfd",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981718,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480120489,
@@ -897,6 +1512,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/parking-ticket/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981719,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/parking-ticket/premium/women-s-front.jpg"
             }
           ]
         },
@@ -946,6 +1579,30 @@
       "autore": "yfd",
       "modelli": [
         {
+          "tipo": "essenziale",
+          "printful": 480981720,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
           "tipo": "unisex",
           "printful": 480105594,
           "mockup": [
@@ -972,6 +1629,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/running-through-my-mind/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981722,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/running-through-my-mind/premium/women-s-front.jpg"
             }
           ]
         },
@@ -1020,6 +1695,30 @@
       "autore": "daniele",
       "modelli": [
         {
+          "tipo": "essenziale",
+          "printful": 480981723,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
           "tipo": "unisex",
           "printful": 480120495,
           "mockup": [
@@ -1048,6 +1747,24 @@
               "src": "img/pf/call-me-daddy-classic/flat-front.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981724,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/call-me-daddy-classic/premium/women-s-front.jpg"
+            }
+          ]
         }
       ]
     },
@@ -1070,6 +1787,30 @@
       },
       "autore": "yfd",
       "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 480981727,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
         {
           "tipo": "unisex",
           "printful": 480120829,
@@ -1097,6 +1838,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/stole-the-stars/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981732,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/stole-the-stars/premium/women-s-front.jpg"
             }
           ]
         },
@@ -1146,6 +1905,30 @@
       "autore": "yfd",
       "modelli": [
         {
+          "tipo": "essenziale",
+          "printful": 480981901,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
           "tipo": "unisex",
           "printful": 480105597,
           "mockup": [
@@ -1172,6 +1955,24 @@
               "gruppo": "Flat",
               "vista": "Front",
               "src": "img/pf/lost-in-your-eyes/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981907,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/lost-in-your-eyes/premium/women-s-front.jpg"
             }
           ]
         },
@@ -1220,6 +2021,30 @@
       "autore": "daniele",
       "modelli": [
         {
+          "tipo": "essenziale",
+          "printful": 480981910,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
           "tipo": "unisex",
           "printful": 480120833,
           "mockup": [
@@ -1248,6 +2073,24 @@
               "src": "img/pf/filipina-girls/flat-front.jpg"
             }
           ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 480981913,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/filipina-girls/premium/women-s-front.jpg"
+            }
+          ]
         }
       ]
     }
@@ -1261,7 +2104,20 @@
     "donna": {
       "base": 360,
       "maglietta": "Bella+Canvas 6400 donna, vestibilità morbida",
-      "prezzo": 31.9
+      "prezzo": 31.9,
+      "nomeEn": "Women's Relaxed"
+    },
+    "essenziale": {
+      "base": 438,
+      "maglietta": "Gildan 5000 unisex, cotone pesante",
+      "prezzo": 24.9,
+      "nomeEn": "Essential Tee"
+    },
+    "premium": {
+      "base": 586,
+      "maglietta": "Comfort Colors 1717 unisex, heavyweight tinta in capo",
+      "prezzo": 36.9,
+      "nomeEn": "Premium Heavyweight"
     }
   }
 }

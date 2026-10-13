@@ -24,6 +24,10 @@ const SETUP = {
     position: { area_width: 1800, area_height: 2400, width: 1800, height: 2160, top: 0, left: 0 } },
   donna: { groups: ['Flat', "Women's Lifestyle", "Women's"], main: 'Flat',
     position: { area_width: 1500, area_height: 1800, width: 1500, height: 1800, top: 0, left: 0 } },
+  essenziale: { groups: ['Flat', "Men's Lifestyle", "Women's Lifestyle"], main: 'Flat',
+    position: { area_width: 1800, area_height: 2400, width: 1800, height: 2160, top: 0, left: 0 } },
+  premium: { groups: ['Flat', "Men's", "Women's"], main: 'Flat',
+    position: { area_width: 1800, area_height: 2400, width: 1800, height: 2160, top: 0, left: 0 } },
 };
 const blanks = {};
 for (const [tipo, m] of Object.entries(data.modelli)) blanks[tipo] = await pf(`/products/${m.base}`);

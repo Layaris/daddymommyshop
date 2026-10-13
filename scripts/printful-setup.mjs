@@ -1,5 +1,6 @@
 // Crea o aggiorna su Printful un prodotto per ogni design e modello di data/designs.json
-// (unisex: Bella+Canvas 3001, donna: Bella+Canvas 6400; colore del design, tutte le taglie).
+// (essenziale: Gildan 5000, unisex: Bella+Canvas 3001, premium: Comfort Colors 1717, donna: Bella+Canvas 6400;
+// colore del design, tutte le taglie).
 // Scrive l'id Printful nel file. I file di stampa li prende da GitHub (repo pubblica).
 // Uso: node scripts/printful-setup.mjs [--aggiorna] [slug ...]   (--aggiorna rimanda anche i prodotti già creati)
 import fs from 'node:fs/promises';
@@ -27,7 +28,7 @@ for (const d of data.designs) {
     const files = [{ type: 'default', url: RAW + d.fronte }];
     if (d.retro) files.push({ type: 'back', url: RAW + d.retro });
     const suffix = m.tipo === 'unisex' ? '' : `-${m.tipo}`;
-    const name = m.tipo === 'unisex' ? d.nome : `${d.nome} (Women's Relaxed)`;
+    const name = m.tipo === 'unisex' ? d.nome : `${d.nome} (${model.nomeEn})`;
     const variant = (v, id) => ({
       ...(id ? { id } : { variant_id: v.id }),
       external_id: `yfd-${d.slug}${suffix}-${v.size}`.toLowerCase(),

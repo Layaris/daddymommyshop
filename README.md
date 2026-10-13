@@ -12,6 +12,8 @@ Node 20+, nessuna dipendenza (three.js è in public/vendor).
 1. Metti il PNG (4500x5400, fondo trasparente) in design/ e fai push su GitHub (Printful lo scarica da lì).
 2. Aggiungi la voce in data/designs.json (nome = la frase in inglese, colore, sezioni, sfacciataggine, testi it/en).
    In `modelli` elenca le versioni: `unisex` (Bella+Canvas 3001) e/o `donna` (Bella+Canvas 6400, vestibilità morbida).
+   Per vendere lo stesso design in tre qualità usa `essenziale` (Gildan 5000, 24,90), `unisex` (29,90) e `premium`
+   (Comfort Colors 1717 heavyweight, 36,90): sul sito il cliente sceglie la qualità e il prezzo cambia.
 3. `node scripts/printful-setup.mjs <slug>`: crea su Printful un prodotto per ogni modello (tutte le taglie).
 4. `node scripts/printful-mockups.mjs <slug>`: scarica le foto reali (piatta, coppia, uomo, donna, indossata) e la maglietta trasparente per il 3D.
 5. `python3 scripts/images.py` e `npm run sync`.
