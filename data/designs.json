@@ -1,10 +1,40 @@
 {
-  "_leggimi": "Elenco dei design in vendita. Ogni voce diventa un prodotto Printful (Bella+Canvas 3001) con scripts/printful-setup.mjs, poi npm run sync aggiorna data/catalog.json. Le frasi sulle magliette sono in inglese; it.traduzione e it.frase servono solo al sito in italiano.",
+  "_leggimi": "Elenco dei design in vendita. Ogni voce diventa un prodotto Printful per ogni modello (vedi \"modelli\" in fondo: essenziale Gildan 5000, unisex Bella+Canvas 3001, premium Comfort Colors 1717, donna Bella+Canvas 6400) con scripts/printful-setup.mjs, poi npm run sync aggiorna data/catalog.json. Le frasi sulle magliette sono in inglese; it.traduzione e it.frase servono solo al sito in italiano.",
   "prezzoRetro": 6,
   "nascondi": [
     371005574
   ],
   "designs": [
+    {
+      "slug": "cant-read-chinese",
+      "nome": "I can't read Chinese, but I can understand this.",
+      "colore": "White",
+      "fronte": "design/frasi/cant-read-chinese.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 5,
+      "en": {
+        "frase": "Free translation included."
+      },
+      "it": {
+        "traduzione": "Non so leggere il cinese, ma questo lo capisco.",
+        "frase": "Traduzione libera inclusa."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale"
+        },
+        {
+          "tipo": "unisex"
+        },
+        {
+          "tipo": "premium"
+        }
+      ]
+    },
     {
       "slug": "call-me-daddy",
       "nome": "Call me daddy.",
@@ -1261,7 +1291,20 @@
     "donna": {
       "base": 360,
       "maglietta": "Bella+Canvas 6400 donna, vestibilità morbida",
-      "prezzo": 31.9
+      "prezzo": 31.9,
+      "nomeEn": "Women's Relaxed"
+    },
+    "essenziale": {
+      "base": 438,
+      "maglietta": "Gildan 5000 unisex, cotone pesante",
+      "prezzo": 24.9,
+      "nomeEn": "Essential Tee"
+    },
+    "premium": {
+      "base": 586,
+      "maglietta": "Comfort Colors 1717 unisex, heavyweight tinta in capo",
+      "prezzo": 36.9,
+      "nomeEn": "Premium Heavyweight"
     }
   }
 }

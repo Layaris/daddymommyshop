@@ -1,6 +1,6 @@
 // Costruisce data/catalog.json dai design (data/designs.json) e dai prodotti Printful:
 // prezzi, taglie e zone di produzione arrivano da Printful, testi, sezioni e foto dal file dei design.
-// Ogni design ha uno o più modelli (unisex, donna), ognuno è un prodotto Printful a sé.
+// Ogni design ha uno o più modelli (essenziale, unisex, premium, donna), ognuno è un prodotto Printful a sé.
 // Uso: node scripts/sync-printful.mjs
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -11,10 +11,19 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const data = JSON.parse(await fs.readFile(path.join(root, 'data/designs.json'), 'utf8'));
 const SIZE_ORDER = ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL', '4XL', '5XL'];
 const LABEL = {
+  essenziale: { it: 'Essenziale', en: 'Essential' },
   unisex: { it: 'Classica unisex', en: 'Classic unisex' },
+  premium: { it: 'Premium pesante', en: 'Premium heavyweight' },
   donna: { it: 'Donna, morbida', en: "Women's relaxed" },
 };
-const GALLERY = ['flat-front', 'couple-front', 'women-s-lifestyle-front', 'women-s-front', 'men-s-lifestyle-front', 'flat-back', 'couple-back', 'women-s-lifestyle-back', 'women-s-back'];
+// Due parole sulla qualità, sotto il nome del modello.
+const DESC = {
+  essenziale: { it: 'Cotone pesante, taglio classico', en: 'Heavy cotton, classic cut' },
+  unisex: { it: 'Morbida e leggera, la più scelta', en: 'Soft and light, the favourite' },
+  premium: { it: 'Spessa, tinta in capo, effetto vissuto', en: 'Thick, garment-dyed, lived-in feel' },
+  donna: { it: 'Vestibilità morbida', en: 'Relaxed fit' },
+};
+const GALLERY = ['flat-front', 'couple-front', 'women-s-lifestyle-front', 'women-s-front', 'men-s-lifestyle-front', 'men-s-front', 'flat-back', 'couple-back', 'women-s-lifestyle-back', 'women-s-back'];
 const exists = (f) => fs.access(path.join(root, 'public', f)).then(() => true, () => false);
 
 // Zone dove Printful produce ogni variante (EU_LV, EU_ES contano come EU).
@@ -38,7 +47,7 @@ for (const [rank, d] of data.designs.entries()) {
     const shot = (tipo) => m.mockup?.find((x) => x.tipo === tipo)?.src || null;
     const dir = `img/pf/${d.slug}/${m.tipo === 'unisex' ? '' : m.tipo + '/'}`;
     models.push({
-      id: `sync:${m.printful}`, type: m.tipo, label: LABEL[m.tipo], blank: data.modelli[m.tipo].maglietta.replace(/ (unisex|donna).*$/, ''),
+      id: `sync:${m.printful}`, type: m.tipo, label: LABEL[m.tipo], desc: DESC[m.tipo], blank: data.modelli[m.tipo].maglietta.replace(/ (unisex|donna).*$/, ''),
       price: Math.min(...sizes.map((s) => s.price)), sizes,
       image: shot('flat-front'), couple: shot('couple-front') || shot('women-s-lifestyle-front'),
       gallery: GALLERY.map(shot).filter(Boolean),

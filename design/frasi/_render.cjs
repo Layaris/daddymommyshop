@@ -17,6 +17,57 @@ const fonts = [
 const PINK = '#ff2e7e', CREAM = '#fff4e2', RED = '#e8112d', INK = '#141014', YEL = '#ffd21f';
 const dash = `<div style="height:10px;background:repeating-linear-gradient(90deg,${INK} 0 40px,transparent 40px 64px)"></div>`;
 
+
+// --- Finti ideogrammi a pennello (I can't read Chinese) ---
+// Pennellata: curva cubica con spessore che parte pieno (attacco del pennello, tagliato in diagonale) e si assottiglia.
+// s = [x0,y0, x1,y1, x2,y2, x3,y3, w0, w1]   (w1 piccolo = punta, w1 grande = fine tonda)
+function brush([x0, y0, x1, y1, x2, y2, x3, y3, w0, w1 = 4]) {
+  const N = 56, L = [], R = [];
+  const pt = (t) => { const u = 1 - t; return [u*u*u*x0 + 3*u*u*t*x1 + 3*u*t*t*x2 + t*t*t*x3, u*u*u*y0 + 3*u*u*t*y1 + 3*u*t*t*y2 + t*t*t*y3]; };
+  let d0;
+  for (let i = 0; i <= N; i++) {
+    const t = i / N, [x, y] = pt(t), [xa, ya] = pt(Math.max(0, t - 0.01)), [xb, yb] = pt(Math.min(1, t + 0.01));
+    let dx = xb - xa, dy = yb - ya; const d = Math.hypot(dx, dy) || 1; dx /= d; dy /= d;
+    if (!i) d0 = [dx, dy];
+    const w = (w0 + (w1 - w0) * Math.pow(t, 1.8)) * (1 + 0.22 * Math.exp(-t * 18)) / 2;
+    L.push([x - dy * w, y + dx * w]); R.push([x + dy * w, y - dx * w]);
+  }
+  const f = (p) => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
+  // attacco: punta del pennello che sporge in alto a sinistra
+  const k = [x0 - d0[0] * w0 * 0.55 - Math.abs(d0[1]) * w0 * 0.25, y0 - d0[1] * w0 * 0.55 - w0 * 0.35];
+  const end = w1 > 12 ? `A${w1 / 2} ${w1 / 2} 0 0 0` : 'L';
+  return `<path d="M${f(R[0])} Q${f(k)} ${f(L[0])} L${L.slice(1).map(f).join(' L')} ${end} ${R.slice().reverse().map(f).join(' L')} Z"/>`;
+}
+// FREE: F sopra a sinistra (stessa asta della prima E), R sopra a destra, E E sotto.
+const FREE = [
+  [262,118, 360,100, 450,84, 545,62, 74,10],     // F barra alta, sale verso destra
+  [300,110, 295,300, 280,480, 250,640, 82,40],   // asta comune F / E
+  [110,330, 230,315, 340,305, 460,290, 64,10],   // F barra media che attraversa l'asta
+  [655,150, 650,300, 645,420, 630,560, 76,24],   // R asta
+  [640,165, 960,110, 960,350, 680,380, 66,14],   // R occhiello
+  [720,380, 800,450, 880,520, 990,575, 70,6],    // R gamba lunga (come un 乀)
+  [250,640, 245,740, 240,830, 225,935, 82,34],   // E1 asta
+  [255,650, 330,642, 410,636, 480,625, 60,10],
+  [245,790, 310,782, 370,778, 430,770, 54,10],
+  [225,925, 330,915, 440,905, 540,890, 66,8],
+  [620,640, 625,750, 620,850, 605,945, 78,30],   // E2 asta
+  [615,650, 720,640, 820,632, 900,618, 62,8],
+  [620,795, 690,786, 760,782, 830,772, 54,8],
+  [605,935, 740,922, 880,910, 1010,880, 70,6],   // ultima barra lunga
+];
+// SEX: S in alto come un 乙, E sotto a sinistra, X sotto a destra come un 乂.
+const SEX = [
+  [760,60, 600,30, 360,110, 470,230, 76,46],     // S curva alta
+  [470,230, 650,320, 720,430, 300,500, 68,6],    // S curva bassa che si chiude in punta
+  [190,580, 195,700, 192,820, 178,945, 80,32],   // E asta
+  [180,590, 270,580, 350,575, 430,560, 62,8],
+  [190,760, 250,752, 310,748, 370,738, 54,8],
+  [178,935, 280,925, 380,915, 470,895, 66,6],
+  [560,560, 660,690, 780,830, 960,960, 84,8],    // X discendente
+  [930,560, 840,690, 700,840, 520,985, 78,6],    // X ascendente
+];
+const ink = (strokes, x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})" fill="${INK}">${strokes.map(brush).join('')}</g>`;
+
 const designs = {
   // Maglietta nera
   'call-me-daddy': `
@@ -129,6 +180,15 @@ const designs = {
       <div style="font:400 205px/0.95 'Dela Gothic One'">TALK<br>FLIRTY</div>
       <div style="font:400 250px/0.9 'Mr Dafoe';color:${PINK};transform:rotate(-5deg);align-self:flex-end;margin-right:40px">to me</div>
     </div>`,
+  // Maglietta bianca: finti ideogrammi che dicono FREE SEX
+  'cant-read-chinese': `
+    <div style="position:absolute;left:0;right:0;top:170px;text-align:center;white-space:nowrap;font:400 94px/1 'Archivo Black';color:${INK};letter-spacing:-1px;transform:skewX(-9deg)">I CAN'T READ CHINESE</div>
+    <svg style="position:absolute;left:0;top:330px" width="1500" height="680" viewBox="0 0 1500 680">
+      ${ink(FREE, 95, 25, 0.6)}${ink(SEX, 790, 25, 0.6)}
+      <g transform="translate(1335 545) rotate(-5)"><rect x="0" y="0" width="92" height="100" rx="10" fill="${RED}"/>
+        <text x="46" y="74" text-anchor="middle" font-family="Dela Gothic One" font-size="50" letter-spacing="-2" fill="#fff">69</text></g>
+    </svg>
+    <div style="position:absolute;left:0;right:0;top:1060px;text-align:center;white-space:nowrap;font:400 94px/1.05 'Archivo Black';color:${INK};letter-spacing:-1px;transform:skewX(-9deg)">BUT I CAN UNDERSTAND<br><span style="font-size:200px;line-height:1.08">THIS</span></div>`,
 };
 
 (async () => {

@@ -52,7 +52,7 @@ const TEXT = {
     soon: 'Nuove frasi in arrivo.',
     soldOut: 'Esaurita', hot: 'Piccante', backPrint: 'Fronte e retro', spice: 'Sfacciataggine', spiceOf: (n) => `Sfacciataggine ${n} su 5`,
     tee: 'maglietta', colors: { White: 'bianca', Black: 'nera' },
-    size: 'Taglia', model: 'Modello', shipTo: 'Spedisci in',
+    size: 'Taglia', model: 'Modello', quality: 'Qualità', shipTo: 'Spedisci in',
     sizeZone: (c) => `Le taglie barrate non si producono per ${c}.`,
     addToBill: 'Aggiungi al conto', chooseSize: 'Scegli una taglia',
     added: (size) => `Aggiunta al conto (taglia ${size})`,
@@ -60,7 +60,7 @@ const TEXT = {
     printVal: 'Diretta su tessuto (DTG)', printBoth: 'Davanti e dietro (DTG)', shipVal: '3–7 giorni lavorativi',
     returns: 'Stampata su richiesta: per questo non accettiamo resi per cambio idea, ma se arriva difettosa la ristampiamo gratis.',
     pairWith: 'Abbinala con', meaning: 'Tradotto:',
-    views: { 'flat-front': 'Davanti', 'couple-front': 'In coppia', 'men-s-lifestyle-front': 'Su di lui', 'women-s-lifestyle-front': 'Su di lei', 'women-s-front': 'Indossata', 'flat-back': 'Dietro', 'couple-back': 'Dietro, in coppia', 'women-s-lifestyle-back': 'Dietro, su di lei', 'women-s-back': 'Dietro, indossata' },
+    views: { 'flat-front': 'Davanti', 'couple-front': 'In coppia', 'men-s-lifestyle-front': 'Su di lui', 'men-s-front': 'Indossata da lui', 'women-s-lifestyle-front': 'Su di lei', 'women-s-front': 'Indossata', 'flat-back': 'Dietro', 'couple-back': 'Dietro, in coppia', 'women-s-lifestyle-back': 'Dietro, su di lei', 'women-s-back': 'Dietro, indossata' },
     view3d: 'Girala in 3D',
     emptyBillTitle: 'Il conto è vuoto.', emptyBillSub: 'Scegli prima una frase.', backToShop: 'Torna al negozio',
     who: 'Chi la indossa', where: 'Dove spediamo',
@@ -126,7 +126,7 @@ const TEXT = {
     soon: 'New lines coming soon.',
     soldOut: 'Sold out', hot: 'Spicy', backPrint: 'Front and back', spice: 'Boldness', spiceOf: (n) => `Boldness ${n} of 5`,
     tee: 'tee', colors: { White: 'white', Black: 'black' },
-    size: 'Size', model: 'Fit', shipTo: 'Ship to',
+    size: 'Size', model: 'Fit', quality: 'Quality', shipTo: 'Ship to',
     sizeZone: (c) => `Crossed-out sizes aren't made for ${c}.`,
     addToBill: 'Add to bill', chooseSize: 'Pick a size',
     added: (size) => `Added to your bill (size ${size})`,
@@ -134,7 +134,7 @@ const TEXT = {
     printVal: 'Direct to garment (DTG)', printBoth: 'Front and back (DTG)', shipVal: '3–7 business days',
     returns: "Printed on demand, so we don't take returns for a change of heart, but if it arrives faulty we reprint it for free.",
     pairWith: 'Pair it with', meaning: '',
-    views: { 'flat-front': 'Front', 'couple-front': 'As a couple', 'men-s-lifestyle-front': 'On him', 'women-s-lifestyle-front': 'On her', 'women-s-front': 'Worn', 'flat-back': 'Back', 'couple-back': 'Back, as a couple', 'women-s-lifestyle-back': 'Back, on her', 'women-s-back': 'Back, worn' },
+    views: { 'flat-front': 'Front', 'couple-front': 'As a couple', 'men-s-lifestyle-front': 'On him', 'men-s-front': 'Worn by him', 'women-s-lifestyle-front': 'On her', 'women-s-front': 'Worn', 'flat-back': 'Back', 'couple-back': 'Back, as a couple', 'women-s-lifestyle-back': 'Back, on her', 'women-s-back': 'Back, worn' },
     view3d: 'Spin it in 3D',
     emptyBillTitle: 'Your bill is empty.', emptyBillSub: 'Pick a line first.', backToShop: 'Back to the shop',
     who: "Who's wearing it", where: 'Where we ship',
@@ -179,8 +179,8 @@ let ctxSec = ''; // sezione da cui arriva il cliente: in Donna si mostra il mode
 const shown = () => catalog.products;
 const bySlug = (slug) => catalog.products.find((p) => p.slug === slug);
 const inSection = (s) => shown().filter((p) => s === 'tutte' || p.sections.includes(s));
-// Ogni design ha uno o più modelli (unisex, donna): foto, taglie e prezzi stanno nel modello.
-const modelOf = (p, type) => p.models.find((m) => m.type === (type || (ctxSec === 'donna' ? 'donna' : 'unisex'))) || p.models[0];
+// Ogni design ha uno o più modelli (unisex, donna, o le tre qualità essenziale/unisex/premium): foto, taglie e prezzi stanno nel modello.
+const modelOf = (p, type) => p.models.find((m) => m.type === (type || (ctxSec === 'donna' ? 'donna' : 'unisex'))) || p.models.find((m) => m.type === 'unisex') || p.models[0];
 // Riga del carrello: productId è l'id del modello.
 function lookup(id, size) {
   for (const p of catalog.products) {
@@ -305,8 +305,9 @@ function product(slug, type) {
   const zoneNote = m.sizes.some((s, i) => s.inStock && !ok[i]);
   const others = shown().filter((x) => x.slug !== p.slug && x.available && x.sections.some((s) => p.sections.includes(s))).slice(0, 4);
   const views = (m.gallery || []).map((src) => [src, t.views[src.split('/').pop().replace('.jpg', '')] || '']);
-  const models = p.models.length > 1 ? `<div class="field-label">${t.model}</div>
-        <fieldset class="models"><legend class="sr">${t.model}</legend>${p.models.map((x) => `<label><input type="radio" name="model" value="${esc(x.type)}" ${x === m ? 'checked' : ''}><span><strong>${esc(x.label[lang])}</strong><small>${esc(x.blank)} · ${eur(x.price)}</small></span></label>`).join('')}</fieldset>` : '';
+  const tiers = p.models.some((x) => x.type === 'premium' || x.type === 'essenziale');
+  const models = p.models.length > 1 ? `<div class="field-label">${tiers ? t.quality : t.model}</div>
+        <fieldset class="models"><legend class="sr">${tiers ? t.quality : t.model}</legend>${p.models.map((x) => `<label><input type="radio" name="model" value="${esc(x.type)}" ${x === m ? 'checked' : ''}><span><strong>${esc(x.label[lang])}</strong>${tiers && x.desc ? `<small>${esc(x.desc[lang])}</small>` : ''}<small>${esc(x.blank)} · ${eur(x.price)}</small></span></label>`).join('')}</fieldset>` : '';
   return `
   <section class="product">
     <div class="gallery">
