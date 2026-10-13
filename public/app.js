@@ -307,7 +307,7 @@ function product(slug, type) {
   const views = (m.gallery || []).map((src) => [src, t.views[src.split('/').pop().replace('.jpg', '')] || '']);
   const tiers = p.models.some((x) => x.type === 'premium' || x.type === 'essenziale');
   const models = p.models.length > 1 ? `<div class="field-label">${tiers ? t.quality : t.model}</div>
-        <fieldset class="models"><legend class="sr">${tiers ? t.quality : t.model}</legend>${p.models.map((x) => `<label><input type="radio" name="model" value="${esc(x.type)}" ${x === m ? 'checked' : ''}><span><strong>${esc(x.label[lang])}</strong>${tiers && x.desc ? `<small>${esc(x.desc[lang])}</small>` : ''}<small>${esc(x.blank)} · ${eur(x.price)}</small></span></label>`).join('')}</fieldset>` : '';
+        <fieldset class="models${tiers ? ' tiers' : ''}"><legend class="sr">${tiers ? t.quality : t.model}</legend>${p.models.map((x) => `<label><input type="radio" name="model" value="${esc(x.type)}" ${x === m ? 'checked' : ''}><span><strong>${esc(x.label[lang])}</strong>${tiers && x.desc ? `<small>${esc(x.desc[lang])}</small>` : ''}<small>${esc(x.blank)} · ${eur(x.price)}</small></span></label>`).join('')}</fieldset>` : '';
   return `
   <section class="product">
     <div class="gallery">

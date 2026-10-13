@@ -25,13 +25,76 @@
       "autore": "yfd",
       "modelli": [
         {
-          "tipo": "essenziale"
+          "tipo": "essenziale",
+          "printful": 480980563,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "unisex"
+          "tipo": "unisex",
+          "printful": 480980564,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/flat-front.jpg"
+            }
+          ]
         },
         {
-          "tipo": "premium"
+          "tipo": "premium",
+          "printful": 480980566,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/cant-read-chinese/premium/women-s-front.jpg"
+            }
+          ]
         }
       ]
     },
