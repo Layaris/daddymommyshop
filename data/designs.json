@@ -99,6 +99,105 @@
       ]
     },
     {
+      "slug": "cyrillic-sexy",
+      "nome": "I can't read Russian, but I can understand this.",
+      "colore": "White",
+      "fronte": "design/frasi/cyrillic-sexy.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 4,
+      "en": {
+        "frase": "Some words need no translation."
+      },
+      "it": {
+        "traduzione": "Non so leggere il russo, ma questo lo capisco.",
+        "frase": "Certe parole non hanno bisogno di traduzione."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale"
+        },
+        {
+          "tipo": "unisex"
+        },
+        {
+          "tipo": "premium"
+        },
+        {
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
+      "slug": "barcode-single",
+      "nome": "Single. 100% available.",
+      "colore": "White",
+      "fronte": "design/frasi/barcode-single.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 3,
+      "en": {
+        "frase": "Scan me for my number."
+      },
+      "it": {
+        "traduzione": "Single. Disponibile al 100%.",
+        "frase": "Scansionami per il mio numero."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale"
+        },
+        {
+          "tipo": "unisex"
+        },
+        {
+          "tipo": "premium"
+        },
+        {
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
+      "slug": "braille-touch-me",
+      "nome": "Can't read Braille? I'll teach you.",
+      "colore": "Black",
+      "fronte": "design/frasi/braille-touch-me.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 5,
+      "en": {
+        "frase": "Hands-on lessons only."
+      },
+      "it": {
+        "traduzione": "Non sai leggere il Braille? Ti insegno io.",
+        "frase": "Solo lezioni pratiche. (I punti dicono TOUCH ME)"
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale"
+        },
+        {
+          "tipo": "unisex"
+        },
+        {
+          "tipo": "premium"
+        },
+        {
+          "tipo": "donna"
+        }
+      ]
+    },
+    {
       "slug": "call-me-daddy",
       "nome": "Call me daddy.",
       "colore": "Black",
