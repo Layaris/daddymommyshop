@@ -193,6 +193,88 @@ add('text-me-when-brave', 'White', `
     <div style="margin-top:auto;font:400 220px/0.88 Anton;color:${INK};letter-spacing:4px">TEXT ME WHEN<br>YOU'RE <span style="color:${RED}">BRAVE</span></div>
   </div>`);
 
+// ---------------- SECONDO GIRO: da decifrare (come I can't read Chinese) ----------------
+const MORSE = { K: '-.-', I: '..', S: '...', M: '--', E: '.' };
+const morseRow = (word, c) => `<div style="display:flex;gap:70px;justify-content:center">${[...word].map((l) => `<div style="display:flex;gap:22px;align-items:center">${[...MORSE[l]].map((s) => s === '.' ? `<span style="width:56px;height:56px;border-radius:50%;background:${c}"></span>` : `<span style="width:150px;height:56px;border-radius:28px;background:${c}"></span>`).join('')}</div>`).join('')}</div>`;
+add('morse-kiss-me', 'Black', `
+  <div style="${center};gap:70px">
+    <div style="font:400 104px/1.05 'Archivo Black';color:${CREAM};letter-spacing:-1px;transform:skewX(-9deg)">I DON'T SPEAK MORSE</div>
+    ${morseRow('KISS', PINK)}${morseRow('ME', PINK)}
+    <div style="font:400 104px/1.05 'Archivo Black';color:${CREAM};letter-spacing:-1px;transform:skewX(-9deg)">BUT I GOT<br><span style="font-size:190px;color:${YEL}">THE MESSAGE</span></div>
+  </div>`);
+const EYE = [['U', 300], ['R H', 220], ['O T C', 170], ['A L L M', 130], ['E T O N', 100], ['I G H T', 76]];
+add('eye-chart', 'White', `
+  <div style="${center};gap:34px">
+    <div style="font:400 72px 'Archivo Black';color:${INK};letter-spacing:10px">EYE TEST</div>
+    ${EYE.map(([t, s], i) => `<div style="display:flex;align-items:center;gap:60px"><span style="font:400 40px 'Archivo Black';color:${RED};width:60px">${i + 1}</span><span style="font:400 ${s}px/1 'Archivo Black';color:${INK};letter-spacing:${s / 4}px">${t}</span></div>`).join('')}
+    <div style="height:10px;width:900px;background:${RED};margin-top:20px"></div>
+    <div style="font:400 150px/1 'Mr Dafoe';color:${RED};transform:rotate(-4deg)">read it again, slowly</div>
+  </div>`);
+const BIN = { S: '01010011', E: '01000101', X: '01011000', Y: '01011001' };
+add('binary-sexy', 'Black', `
+  <div style="${center};gap:50px">
+    <div style="font:400 96px/1.1 Bungee;color:${CREAM}">I'M NOT A NERD</div>
+    <div style="display:grid;gap:26px;font:400 118px/1 'Rubik Mono One';letter-spacing:10px">${Object.entries(BIN).map(([l, b]) => `<div><span style="color:${CREAM}">${b}</span></div>`).join('')}</div>
+    <div style="font:400 96px/1.1 Bungee;color:${CREAM}">BUT I SPEAK FLUENT</div>
+    <div style="font:400 300px/0.85 Anton;color:${PINK};letter-spacing:20px">S E X Y</div>
+  </div>`);
+const bars = Array.from({ length: 40 }, (_, i) => [3, 1, 2, 1, 4, 1, 1, 2, 3, 1][i % 10] * (i % 7 === 3 ? 1.6 : 1));
+add('barcode-single', 'White', `
+  <div style="${center};gap:30px">
+    <div style="font:400 300px/0.85 Anton;color:${INK};letter-spacing:8px">SINGLE</div>
+    <div style="font:400 74px 'Archivo Black';color:${RED};letter-spacing:8px">100% AVAILABLE</div>
+    <div style="display:flex;align-items:stretch;gap:10px;height:480px;margin-top:20px">${bars.map((w, i) => `<span style="width:${w * 6}px;background:${i % 2 ? 'transparent' : INK}"></span>`).join('')}</div>
+    <div style="font:400 84px 'Rubik Mono One';color:${INK};letter-spacing:22px">0 69 6969 69 0</div>
+    <div style="font:400 160px/1 'Mr Dafoe';color:${RED};transform:rotate(-4deg)">scan me for my number</div>
+  </div>`);
+add('too-close', 'White', `
+  <div style="${center};gap:40px">
+    <div style="font:400 64px/1.3 'Archivo Black';color:${INK};letter-spacing:4px">IF YOU CAN READ THIS<br>YOU'RE TOO CLOSE</div>
+    <div style="font:400 120px/1 'Mr Dafoe';color:${RED};transform:rotate(-4deg)">...don't move</div>
+  </div>`);
+add('cyrillic-sexy', 'White', `
+  <div style="${center};gap:50px">
+    <div style="font:400 112px/1 'Archivo Black';color:${INK};letter-spacing:-1px;transform:skewX(-9deg)">I CAN'T READ RUSSIAN</div>
+    <div style="display:flex;align-items:flex-start;gap:14px;font:400 340px/1 'Dela Gothic One';color:${INK};height:390px"><span>SEX</span><svg style="margin-top:68px" width="256" height="320" viewBox="0 0 80 100"><path d="M4 0 H28 L42 46 L54 0 H76 L46 78 C40 94 30 100 12 98 L14 84 C24 86 28 82 31 74 Z" fill="${INK}"/></svg></div>
+    <div style="font:400 112px/1.05 'Archivo Black';color:${INK};letter-spacing:-1px;transform:skewX(-9deg)">BUT I CAN UNDERSTAND<br><span style="font-size:210px;color:${RED}">THIS</span></div>
+  </div>`);
+add('solve-for-x', 'Black', `
+  <div style="${center};gap:30px;color:${CREAM}">
+    <div style="font:400 130px/1 Sedgwick">I'm bad at math</div>
+    <div style="font:400 130px/1 Sedgwick">but I solved for</div>
+    <div style="display:flex;align-items:center;gap:60px;font:400 420px/1 Sedgwick;margin-top:60px"><span style="color:${PINK}">x</span><span>=</span><span style="color:${YEL}">you</span></div>
+    <svg width="900" height="120" viewBox="0 0 300 40"><path d="M5 30 C80 5 200 5 295 26" fill="none" stroke="${CREAM}" stroke-width="5" stroke-linecap="round"/></svg>
+  </div>`);
+const BR = { T: [2, 3, 4, 5], O: [1, 3, 5], U: [1, 3, 6], C: [1, 4], H: [1, 2, 5], M: [1, 3, 4], E: [1, 5] };
+const cell = (l, c) => `<svg width="150" height="230" viewBox="0 0 30 46">${[1, 2, 3, 4, 5, 6].map((d) => { const x = d > 3 ? 23 : 7, y = 7 + ((d - 1) % 3) * 16; return BR[l].includes(d) ? `<circle cx="${x}" cy="${y}" r="6" fill="${c}"/>` : `<circle cx="${x}" cy="${y}" r="3" fill="none" stroke="${c}" stroke-opacity=".35" stroke-width="1"/>`; }).join('')}</svg>`;
+add('braille-touch-me', 'Black', `
+  <div style="${center};gap:60px">
+    <div style="font:400 112px/1 'Archivo Black';color:${CREAM};letter-spacing:-1px;transform:skewX(-9deg)">CAN'T READ BRAILLE?</div>
+    <div style="display:flex;gap:30px">${[...'TOUCH'].map((l) => cell(l, PINK)).join('')}</div>
+    <div style="display:flex;gap:30px">${[...'ME'].map((l) => cell(l, PINK)).join('')}</div>
+    <div style="font:400 112px/1.05 'Archivo Black';color:${CREAM};letter-spacing:-1px;transform:skewX(-9deg)">I'LL TEACH YOU</div>
+    <div style="font:400 140px/1 'Mr Dafoe';color:${YEL};transform:rotate(-4deg)">hands-on lessons only</div>
+  </div>`);
+const dots = (n, c) => Array.from({ length: 6 }, (_, i) => `<span style="width:64px;height:64px;border-radius:50%;${i < n ? `background:${c}` : `border:8px solid ${c}`}"></span>`).join('');
+add('languages-cv', 'White', `
+  <div style="position:absolute;left:190px;right:190px;top:260px;bottom:260px;display:flex;flex-direction:column;gap:56px;color:${INK}">
+    <div style="font:400 210px/0.9 Anton;letter-spacing:6px">LANGUAGES</div>
+    ${dash}
+    ${[['ENGLISH', 4, INK], ['ITALIAN', 3, INK], ['RUSSIAN', 1, INK], ['FLIRTING', 6, RED]].map(([t, n, c]) => `<div style="display:flex;justify-content:space-between;align-items:center;font:400 84px 'Archivo Black';color:${c}"><span>${t}</span><span style="display:flex;gap:18px">${dots(n, c)}</span></div>`).join('')}
+    <div style="margin-top:auto;align-self:flex-end;font:400 150px/1 'Mr Dafoe';color:${RED};transform:rotate(-5deg)">native speaker</div>
+  </div>`);
+add('care-label', 'White', `
+  <div style="position:absolute;left:330px;right:330px;top:200px;bottom:200px;border:14px solid ${INK};border-radius:20px 20px 60px 60px;padding:70px 70px;display:flex;flex-direction:column;align-items:center;gap:44px;color:${INK};text-align:center">
+    <div style="font:400 64px 'Archivo Black';letter-spacing:12px">CARE LABEL</div>
+    ${dash.replace('height:10px', 'height:10px;width:100%')}
+    <div style="font:400 74px/1.25 'Archivo Black'">100% SINGLE<br>HANDLE WITH CARE</div>
+    <svg width="560" height="140" viewBox="0 0 160 40"><path d="M6 8 L18 34 H52 L64 8" fill="none" stroke="${INK}" stroke-width="4"/><path d="M14 16 C24 10 34 22 44 16 C50 12 54 14 58 16" fill="none" stroke="${INK}" stroke-width="3"/>
+      <rect x="92" y="6" width="30" height="30" fill="none" stroke="${INK}" stroke-width="4"/><circle cx="107" cy="21" r="10" fill="none" stroke="${INK}" stroke-width="4"/>
+      <path d="M130 36 L154 6 M130 6 L154 36" stroke="${RED}" stroke-width="4"/></svg>
+    <div style="font:400 66px/1.3 'Archivo Black'">WASH WITH: <span style="color:${RED}">YOU</span><br>DO NOT TUMBLE DRY ALONE<br>KEEP WARM AT NIGHT</div>
+    <div style="margin-top:auto;font:400 130px/1 'Mr Dafoe';color:${RED};transform:rotate(-4deg)">made with love</div>
+  </div>`);
+
 module.exports = { COLOR, designs };
 if (require.main === module) (async () => {
   const b = await chromium.launch();

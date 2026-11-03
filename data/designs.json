@@ -99,6 +99,357 @@
       ]
     },
     {
+      "slug": "cyrillic-sexy",
+      "nome": "I can't read Russian, but I can understand this.",
+      "colore": "White",
+      "fronte": "design/frasi/cyrillic-sexy.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 4,
+      "en": {
+        "frase": "Some words need no translation."
+      },
+      "it": {
+        "traduzione": "Non so leggere il russo, ma questo lo capisco.",
+        "frase": "Certe parole non hanno bisogno di traduzione."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 485011874,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "unisex",
+          "printful": 485011875,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 485011877,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 485011878,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/cyrillic-sexy/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "barcode-single",
+      "nome": "Single. 100% available.",
+      "colore": "White",
+      "fronte": "design/frasi/barcode-single.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 3,
+      "en": {
+        "frase": "Scan me for my number."
+      },
+      "it": {
+        "traduzione": "Single. Disponibile al 100%.",
+        "frase": "Scansionami per il mio numero."
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 485011879,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "unisex",
+          "printful": 485011881,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 485011882,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 485011884,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/barcode-single/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "braille-touch-me",
+      "nome": "Can't read Braille? I'll teach you.",
+      "colore": "Black",
+      "fronte": "design/frasi/braille-touch-me.png",
+      "sezioni": [
+        "uomo",
+        "donna"
+      ],
+      "sfacciataggine": 5,
+      "en": {
+        "frase": "Hands-on lessons only."
+      },
+      "it": {
+        "traduzione": "Non sai leggere il Braille? Ti insegno io.",
+        "frase": "Solo lezioni pratiche. (I punti dicono TOUCH ME)"
+      },
+      "autore": "yfd",
+      "modelli": [
+        {
+          "tipo": "essenziale",
+          "printful": 485011890,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/essenziale/flat-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/essenziale/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/essenziale/women-s-lifestyle-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "unisex",
+          "printful": 485011893,
+          "mockup": [
+            {
+              "tipo": "couple-front",
+              "gruppo": "Couple",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/couple-front.jpg"
+            },
+            {
+              "tipo": "men-s-lifestyle-front",
+              "gruppo": "Men's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/men-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/women-s-lifestyle-front.jpg"
+            },
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/flat-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "premium",
+          "printful": 485012182,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/premium/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/premium/women-s-front.jpg"
+            }
+          ]
+        },
+        {
+          "tipo": "donna",
+          "printful": 485012183,
+          "mockup": [
+            {
+              "tipo": "flat-front",
+              "gruppo": "Flat",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/donna/flat-front.jpg"
+            },
+            {
+              "tipo": "women-s-front",
+              "gruppo": "Women's",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/donna/women-s-front.jpg"
+            },
+            {
+              "tipo": "women-s-lifestyle-front",
+              "gruppo": "Women's Lifestyle",
+              "vista": "Front",
+              "src": "img/pf/braille-touch-me/donna/women-s-lifestyle-front.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "call-me-daddy",
       "nome": "Call me daddy.",
       "colore": "Black",
