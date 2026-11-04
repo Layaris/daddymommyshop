@@ -1,0 +1,63 @@
+# Controllo automatico a ogni push e pull request:
+# sintassi dei file JavaScript, validità dei JSON e avvio del server con
+# una prova delle pagine principali e delle API pubbliche.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # Versione fissata: ubuntu-latest sta passando a una nuova release e
+    # l'aggiornamento lo facciamo noi quando vogliamo, non a sorpresa.
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - name: Sintassi JavaScript
+        run: |
+          git ls-files '*.js' '*.mjs' | grep -v '^\.claude/' | while read -r f; do
+            node --check "$f" || exit 1
+          done
+
+      - name: JSON validi
+        run: |
+          for f in data/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" || { echo "JSON non valido: $f"; exit 1; }
+          done
+
+      - name: Avvio server e prova delle pagine
+        env:
+          PORT: 3000
+        run: |
+          node server.js > server.log 2>&1 &
+          for i in $(seq 1 30); do curl -fs http://localhost:3000/ > /dev/null && break; sleep 1; done
+          set -e
+          curl -fsS http://localhost:3000/ -o /dev/null
+          curl -fsS http://localhost:3000/admin -o /dev/null
+          curl -fsS http://localhost:3000/api/config
+          echo
+          curl -fsS http://localhost:3000/api/catalog | node -e "const c=JSON.parse(require('fs').readFileSync(0,'utf8')); const n=(c.products||[]).length; console.log('prodotti a catalogo:', n); if(!n) process.exit(1)"
+          code=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:3000/api/admin/orders)
+          echo "admin senza password -> $code"; test "$code" = 401 -o "$code" = 403
+
+      - name: Log del server
+        if: always()
+        run: cat server.log || true

@@ -1,0 +1,19 @@
+# Dependabot controlla ogni settimana se le action usate nei workflow hanno
+# nuove versioni e apre una pull request (aggiorna anche lo SHA fissato).
+# Il sito non ha dipendenze npm, quindi per ora non serve l'ecosistema npm:
+# se in futuro si aggiunge un package-lock.json, aggiungere il blocco commentato.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: main
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+  # - package-ecosystem: npm
+  #   directory: /
+  #   target-branch: main
+  #   schedule:
+  #     interval: weekly
